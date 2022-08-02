@@ -14,6 +14,8 @@ import android.content.pm.PackageManager
 import android.os.IBinder
 import android.os.ParcelUuid
 import android.util.Log
+import ca.berlingoqc.growbe_android_module.profiles.GrowbeModuleProfile
+import ca.berlingoqc.growbe_android_module.profiles.TimeProfile
 
 private const val TAG = "GattServerActivity"
 
@@ -55,9 +57,84 @@ class GattServerService : Service() {
     }
 
     private val gattServerCallback = object : BluetoothGattServerCallback() {
+
+        var mainboardId: String = ""
+
         override fun onConnectionStateChange(device: BluetoothDevice?, status: Int, newState: Int) {
             Log.i(TAG, "Connection state change. $device $status")
             super.onConnectionStateChange(device, status, newState)
+        }
+
+        override fun onCharacteristicReadRequest(
+            device: BluetoothDevice?,
+            requestId: Int,
+            offset: Int,
+            characteristic: BluetoothGattCharacteristic?
+        ) {
+            when {
+                GrowbeModuleProfile.MODULE_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read Module ID")
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        GrowbeModuleProfile.getModuleId().encodeToByteArray()
+                    )
+                }
+                GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read Module ID")
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        mainboardId.encodeToByteArray()
+                    )
+                }
+                else -> {
+                    // Invalid characteristic
+                    Log.w(TAG, "Invalid Characteristic Read: " + characteristic?.uuid)
+                    bluetoothGattServer?.sendResponse(device,
+                        requestId,
+                        BluetoothGatt.GATT_FAILURE,
+                        0,
+                        null)
+                }
+            }
+        }
+
+        override fun onCharacteristicWriteRequest(
+            device: BluetoothDevice?,
+            requestId: Int,
+            characteristic: BluetoothGattCharacteristic?,
+            preparedWrite: Boolean,
+            responseNeeded: Boolean,
+            offset: Int,
+            value: ByteArray?
+        ) {
+            when {
+                GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {
+                    val v = value?.toString()
+                    Log.i(TAG, "Write Module ID $v")
+                    mainboardId = v!!
+                    if (responseNeeded) {
+                        bluetoothGattServer?.sendResponse(device,
+                            requestId,
+                            BluetoothGatt.GATT_SUCCESS,
+                            0, null)
+                    }
+                }
+                else -> {
+                    // Invalid characteristic
+                    Log.w(TAG, "Invalid Characteristic Read: " + characteristic?.uuid)
+                    bluetoothGattServer?.sendResponse(device,
+                        requestId,
+                        BluetoothGatt.GATT_FAILURE,
+                        0,
+                        null)
+                }
+            }
         }
     }
 
@@ -95,7 +172,7 @@ class GattServerService : Service() {
     fun startServer() {
         bluetoothGattServer = bluetoothManager.openGattServer(this, gattServerCallback)
 
-        bluetoothGattServer?.addService(TimeProfile.createTimeService()) ?: Log.w(TAG, "Unable to create GATT server")
+        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService()) ?: Log.w(TAG, "Unable to create GATT server")
     }
 
     fun stopServer() {
