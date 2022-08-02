@@ -19,12 +19,11 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build Release APK
         run: ./gradlew assembleRelease
-      - name: Releasing using Hub
-        uses: VladDaniliuk/action-release-releaseapk@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION_VARIABLE: versionName
-          APP_FILE: buildSrc/Android.kt
-          APP_FOLDER: app
-          RELEASE_TITLE: New Build
-          NAME_VARIABLE: app-release.apk
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            ./app/build/outputs/apk/release/app-release-unsigned.apk
