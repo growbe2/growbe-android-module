@@ -1,4 +1,4 @@
-package ca.berlingoqc.growbe_android_module
+package ca.berlingoqc.growbe_android_module.services.gatt
 
 import android.app.Service
 import android.bluetooth.*
@@ -14,8 +14,8 @@ import android.content.pm.PackageManager
 import android.os.IBinder
 import android.os.ParcelUuid
 import android.util.Log
-import ca.berlingoqc.growbe_android_module.profiles.GrowbeModuleProfile
-import ca.berlingoqc.growbe_android_module.profiles.TimeProfile
+import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
+import ca.berlingoqc.growbe_android_module.services.gatt.profiles.TimeProfile
 
 private const val TAG = "GattServerActivity"
 
@@ -172,7 +172,8 @@ class GattServerService : Service() {
     fun startServer() {
         bluetoothGattServer = bluetoothManager.openGattServer(this, gattServerCallback)
 
-        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService()) ?: Log.w(TAG, "Unable to create GATT server")
+        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService(this.contentResolver)) ?: Log.w(
+            TAG, "Unable to create GATT server")
     }
 
     fun stopServer() {

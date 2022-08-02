@@ -3,12 +3,15 @@ package ca.berlingoqc.growbe_android_module
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.core.app.ActivityCompat
-
-
+import ca.berlingoqc.growbe_android_module.services.PositionService
+import ca.berlingoqc.growbe_android_module.services.SensorService
+import ca.berlingoqc.growbe_android_module.services.gatt.GattServerService
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -24,19 +27,35 @@ class SettingsActivity : AppCompatActivity() {
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        validatePermission()
+        validatePermissions()
 
-        val intent = Intent(this, GattServerService::class.java)
+        var intent = Intent(this, GattServerService::class.java)
+        startService(intent)
+
+        intent = Intent(this, SensorService::class.java)
+        startService(intent)
+
+        intent = Intent(this, PositionService::class.java)
         startService(intent)
     }
 
 
-    private fun validatePermission() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)  {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.BLUETOOTH_CONNECT), 1)
+    private fun validatePermissions() {
+        validatePermission(Manifest.permission.ACCESS_FINE_LOCATION)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            validatePermissionS()
         }
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADVERTISE) != PackageManager.PERMISSION_GRANTED)  {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.BLUETOOTH_ADVERTISE), 1)
+    }
+
+    @RequiresApi(Build.VERSION_CODES.S)
+    private fun validatePermissionS() {
+        validatePermission(Manifest.permission.BLUETOOTH_ADVERTISE)
+        validatePermission(Manifest.permission.BLUETOOTH_CONNECT)
+    }
+
+    private fun validatePermission(permission: String) {
+        if (ActivityCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED)  {
+            ActivityCompat.requestPermissions(this, arrayOf(permission), 1)
         }
     }
 

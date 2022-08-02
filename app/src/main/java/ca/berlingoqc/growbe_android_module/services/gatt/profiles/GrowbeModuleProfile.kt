@@ -1,8 +1,13 @@
-package ca.berlingoqc.growbe_android_module.profiles
+package ca.berlingoqc.growbe_android_module.services.gatt.profiles
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattService
+import android.content.ContentResolver
 import java.util.*
+import android.provider.Settings.Secure
+import android.provider.Settings.Secure.ANDROID_ID
+
 
 object GrowbeModuleProfile {
 
@@ -12,7 +17,16 @@ object GrowbeModuleProfile {
 
     val REGISTER_MAINBOARD_ID: UUID = UUID.fromString("373cfe9b-9735-48e6-89e7-199c5f68d47c")
 
-    fun createGrowbeModuleService(): BluetoothGattService {
+    var androidId: String = ""
+
+    @SuppressLint("HardwareIds")
+    fun createGrowbeModuleService(resolver: ContentResolver): BluetoothGattService {
+
+        androidId = Secure.getString(
+            resolver,
+            ANDROID_ID
+        ).substring(0, 9).uppercase()
+
         val service = BluetoothGattService(
             GROWBE_MODULE_SERVICE,
             BluetoothGattService.SERVICE_TYPE_PRIMARY
@@ -37,7 +51,7 @@ object GrowbeModuleProfile {
     }
 
     fun getModuleId(): String {
-        return "AND0000009"
+        return "AND$androidId"
     }
 
 }

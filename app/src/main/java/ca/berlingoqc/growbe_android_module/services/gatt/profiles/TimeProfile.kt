@@ -1,4 +1,4 @@
-package ca.berlingoqc.growbe_android_module.profiles
+package ca.berlingoqc.growbe_android_module.services.gatt.profiles
 
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattDescriptor
