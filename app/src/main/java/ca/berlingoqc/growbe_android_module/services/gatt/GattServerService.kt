@@ -58,8 +58,6 @@ class GattServerService : Service() {
 
     private val gattServerCallback = object : BluetoothGattServerCallback() {
 
-        var mainboardId: String = ""
-
         override fun onConnectionStateChange(device: BluetoothDevice?, status: Int, newState: Int) {
             Log.i(TAG, "Connection state change. $device $status")
             super.onConnectionStateChange(device, status, newState)
@@ -89,7 +87,7 @@ class GattServerService : Service() {
                         requestId,
                         BluetoothGatt.GATT_SUCCESS,
                         0,
-                        mainboardId.encodeToByteArray()
+                        GrowbeModuleProfile.getLinkMainboardId().toByteArray()
                     )
                 }
                 else -> {
@@ -117,7 +115,7 @@ class GattServerService : Service() {
                 GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {
                     val v = value?.toString()
                     Log.i(TAG, "Write Module ID $v")
-                    mainboardId = v!!
+                    GrowbeModuleProfile.setLinkMainboardId(v!!)
                     if (responseNeeded) {
                         bluetoothGattServer?.sendResponse(device,
                             requestId,
@@ -172,7 +170,7 @@ class GattServerService : Service() {
     fun startServer() {
         bluetoothGattServer = bluetoothManager.openGattServer(this, gattServerCallback)
 
-        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService(this.contentResolver)) ?: Log.w(
+        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService(this)) ?: Log.w(
             TAG, "Unable to create GATT server")
     }
 
