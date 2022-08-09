@@ -44,9 +44,14 @@ class GattServerService : Service() {
     }
 
     override fun onDestroy() {
-        stopServer()
-        stopAdvertising()
         super.onDestroy()
+        val bluetoothAdapter = bluetoothManager.adapter
+        if (bluetoothAdapter.isEnabled) {
+            stopServer()
+            stopAdvertising()
+        }
+
+        unregisterReceiver(bluetoothReceiver)
     }
 
     /**
