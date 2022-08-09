@@ -5,11 +5,12 @@ import android.app.Service
 import android.content.Intent
 import android.location.Location
 import android.os.IBinder
+import android.os.Looper
 import android.util.Log
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-
+import ca.berlingoqc.growbe_android_module.data.dataStore
+import ca.berlingoqc.growbe_android_module.proto.Module
+import ca.berlingoqc.growbe_android_module.proto.PhonePositionKt
+import com.google.android.gms.location.*
 
 
 private const val TAG = "GattServerActivity"
@@ -17,17 +18,28 @@ private const val TAG = "GattServerActivity"
 class PositionService : Service() {
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var locationCallback: LocationCallback
 
     @SuppressLint("MissingPermission")
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
+        locationCallback = object: LocationCallback() {
+            override fun onLocationResult(p0: LocationResult) {
+                Log.i(TAG, "Updating position $p0")
 
-        fusedLocationClient.lastLocation
-            .addOnSuccessListener { location: Location? ->
-                Log.i(TAG, "Location $location")
+                val lastLocation = p0.lastLocation ?: return
+
+                dataStore.position = Module.PhonePosition.newBuilder()
+                    .setLat(lastLocation.latitude.toFloat())
+                    .setLog(lastLocation.longitude.toFloat())
+                    .build()
             }
+        }
+
+        val request = LocationRequest.create();
+        fusedLocationClient.requestLocationUpdates(request, locationCallback, Looper.myLooper())
 
 
         return START_STICKY

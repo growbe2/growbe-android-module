@@ -14,11 +14,19 @@ import androidx.preference.PreferenceManager
 
 object GrowbeModuleProfile {
 
-    val GROWBE_MODULE_SERVICE: UUID = UUID.fromString("373cfe9b-9735-48e6-89e7-199c5f68d47a")
+    val GROWBE_MODULE_SERVICE: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000001")
 
-    val MODULE_ID: UUID = UUID.fromString("373cfe9b-9735-48e6-89e7-199c5f68d47b")
+    val MODULE_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000002")
 
-    val REGISTER_MAINBOARD_ID: UUID = UUID.fromString("373cfe9b-9735-48e6-89e7-199c5f68d47c")
+    val REGISTER_MAINBOARD_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000002")
+
+    val POSITION_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000003")
+
+    val ACCELERATION_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff0000004")
+
+    val LIGHT_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000005")
+
+    val PRESSURE_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000006")
 
     val MAINBOARD_ID_KEY_PREFERENCE: String = "ca.berlingoqc.growbe_android_module.mainboardId"
 
@@ -57,8 +65,36 @@ object GrowbeModuleProfile {
             BluetoothGattCharacteristic.PERMISSION_WRITE or BluetoothGattCharacteristic.PERMISSION_READ
         )
 
+        val positionId = BluetoothGattCharacteristic(
+            POSITION_ID,
+            BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_NOTIFY,
+            BluetoothGattCharacteristic.PERMISSION_READ
+        )
+
+        val accelerationId = BluetoothGattCharacteristic(
+            ACCELERATION_ID,
+            BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_NOTIFY,
+            BluetoothGattCharacteristic.PERMISSION_READ
+        )
+
+        val pressureId = BluetoothGattCharacteristic(
+            PRESSURE_ID,
+            BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_NOTIFY,
+            BluetoothGattCharacteristic.PERMISSION_READ
+        )
+
+        val lightId = BluetoothGattCharacteristic(
+            LIGHT_ID,
+            BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_NOTIFY,
+            BluetoothGattCharacteristic.PERMISSION_READ
+        )
+
         service.addCharacteristic(moduleId)
         service.addCharacteristic(registerMainboardId)
+        service.addCharacteristic(positionId)
+        service.addCharacteristic(accelerationId)
+        service.addCharacteristic(pressureId)
+        service.addCharacteristic(lightId)
 
         return service
     }

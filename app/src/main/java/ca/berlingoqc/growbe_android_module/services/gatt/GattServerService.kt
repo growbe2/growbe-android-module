@@ -14,8 +14,8 @@ import android.content.pm.PackageManager
 import android.os.IBinder
 import android.os.ParcelUuid
 import android.util.Log
+import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
-import ca.berlingoqc.growbe_android_module.services.gatt.profiles.TimeProfile
 
 private const val TAG = "GattServerActivity"
 
@@ -41,6 +41,12 @@ class GattServerService : Service() {
                 }
             }
         }
+    }
+
+    override fun onDestroy() {
+        stopServer()
+        stopAdvertising()
+        super.onDestroy()
     }
 
     /**
@@ -81,7 +87,7 @@ class GattServerService : Service() {
                     )
                 }
                 GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {
-                    Log.i(TAG, "Read Module ID")
+                    Log.i(TAG, "Read register mainboard ID")
                     bluetoothGattServer?.sendResponse(
                         device,
                         requestId,
@@ -90,6 +96,60 @@ class GattServerService : Service() {
                         GrowbeModuleProfile.getLinkMainboardId().toByteArray()
                     )
                 }
+
+                GrowbeModuleProfile.ACCELERATION_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read acceleration")
+                    val data = dataStore.acceleration?.toByteArray()
+
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        data
+                    )
+                }
+
+                GrowbeModuleProfile.PRESSURE_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read pressure")
+                    val data = dataStore.pressure?.toByteArray()
+
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        data
+                    )
+                }
+
+                GrowbeModuleProfile.LIGHT_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read light")
+                    val data = dataStore.light?.toByteArray()
+
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        data
+                    )
+                }
+
+                GrowbeModuleProfile.POSITION_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read position")
+
+                    val data = dataStore.position?.toByteArray()
+
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        data
+                    )
+                }
+
                 else -> {
                     // Invalid characteristic
                     Log.w(TAG, "Invalid Characteristic Read: " + characteristic?.uuid)
@@ -152,7 +212,7 @@ class GattServerService : Service() {
             val data = AdvertiseData.Builder()
                 .setIncludeDeviceName(true)
                 .setIncludeTxPowerLevel(false)
-                .addServiceUuid(ParcelUuid(TimeProfile.TIME_SERVICE))
+                .addServiceUuid(ParcelUuid(GrowbeModuleProfile.GROWBE_MODULE_SERVICE))
                 .build()
 
             it.startAdvertising(settings, data, advertiseCallback)

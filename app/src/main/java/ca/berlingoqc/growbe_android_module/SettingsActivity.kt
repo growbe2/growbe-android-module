@@ -2,6 +2,7 @@ package ca.berlingoqc.growbe_android_module
 
 import android.Manifest
 import android.content.Intent
+import android.content.pm.ModuleInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -9,6 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.core.app.ActivityCompat
+import ca.berlingoqc.growbe_android_module.proto.Module
 import ca.berlingoqc.growbe_android_module.services.PositionService
 import ca.berlingoqc.growbe_android_module.services.SensorService
 import ca.berlingoqc.growbe_android_module.services.gatt.GattServerService
@@ -37,6 +39,7 @@ class SettingsActivity : AppCompatActivity() {
 
         intent = Intent(this, PositionService::class.java)
         startService(intent)
+
     }
 
 
