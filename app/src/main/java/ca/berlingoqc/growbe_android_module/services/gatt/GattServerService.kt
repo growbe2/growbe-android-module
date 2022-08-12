@@ -88,7 +88,17 @@ class GattServerService : Service() {
                         requestId,
                         BluetoothGatt.GATT_SUCCESS,
                         0,
-                        GrowbeModuleProfile.getModuleId().encodeToByteArray()
+                        GrowbeModuleProfile.getId().encodeToByteArray()
+                    )
+                }
+                GrowbeModuleProfile.MODULES_SUPPORTED_ID == characteristic?.uuid -> {
+                    Log.i(TAG, "Read Module supported ID")
+                    bluetoothGattServer?.sendResponse(
+                        device,
+                        requestId,
+                        BluetoothGatt.GATT_SUCCESS,
+                        0,
+                        GrowbeModuleProfile.getSupportedModule().joinToString(";").encodeToByteArray()
                     )
                 }
                 GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {

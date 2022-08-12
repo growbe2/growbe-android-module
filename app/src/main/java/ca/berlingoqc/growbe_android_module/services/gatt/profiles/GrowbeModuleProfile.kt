@@ -16,6 +16,8 @@ object GrowbeModuleProfile {
 
     val GROWBE_MODULE_SERVICE: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000001")
 
+    val MODULES_SUPPORTED_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000000")
+
     val MODULE_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000002")
 
     val REGISTER_MAINBOARD_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000002")
@@ -59,6 +61,12 @@ object GrowbeModuleProfile {
             BluetoothGattCharacteristic.PERMISSION_READ
         )
 
+        val supportedModulesId = BluetoothGattCharacteristic(
+            MODULES_SUPPORTED_ID,
+            BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_NOTIFY,
+            BluetoothGattCharacteristic.PERMISSION_READ
+        )
+
         val registerMainboardId = BluetoothGattCharacteristic(
             REGISTER_MAINBOARD_ID,
             BluetoothGattCharacteristic.PROPERTY_READ or BluetoothGattCharacteristic.PROPERTY_WRITE,
@@ -90,6 +98,7 @@ object GrowbeModuleProfile {
         )
 
         service.addCharacteristic(moduleId)
+        service.addCharacteristic(supportedModulesId)
         service.addCharacteristic(registerMainboardId)
         service.addCharacteristic(positionId)
         service.addCharacteristic(accelerationId)
@@ -99,8 +108,12 @@ object GrowbeModuleProfile {
         return service
     }
 
-    fun getModuleId(): String {
-        return "AND$androidId"
+    fun getId(): String {
+        return "$androidId"
+    }
+
+    fun getSupportedModule(): Array<String> {
+        return arrayOf("PPO", "PAC", "PPR", "PAL")
     }
 
     fun getLinkMainboardId(): String {

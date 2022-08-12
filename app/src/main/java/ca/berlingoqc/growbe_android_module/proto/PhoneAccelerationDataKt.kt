@@ -3,24 +3,24 @@
 
 package ca.berlingoqc.growbe_android_module.proto;
 
-@kotlin.jvm.JvmName("-initializephoneAcceleration")
-inline fun phoneAcceleration(block: ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationKt.Dsl.() -> kotlin.Unit): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration =
-  ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationKt.Dsl._create(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.newBuilder()).apply { block() }._build()
-object PhoneAccelerationKt {
+@kotlin.jvm.JvmName("-initializephoneAccelerationData")
+inline fun phoneAccelerationData(block: ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationDataKt.Dsl.() -> kotlin.Unit): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData =
+  ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationDataKt.Dsl._create(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.newBuilder()).apply { block() }._build()
+object PhoneAccelerationDataKt {
   @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
   @com.google.protobuf.kotlin.ProtoDslMarker
   class Dsl private constructor(
-    private val _builder: ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder
+    private val _builder: ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.Builder
   ) {
     companion object {
       @kotlin.jvm.JvmSynthetic
       @kotlin.PublishedApi
-      internal fun _create(builder: ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder): Dsl = Dsl(builder)
+      internal fun _create(builder: ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.Builder): Dsl = Dsl(builder)
     }
 
     @kotlin.jvm.JvmSynthetic
     @kotlin.PublishedApi
-    internal fun _build(): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration = _builder.build()
+    internal fun _build(): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData = _builder.build()
 
     /**
      * <code>float gx = 1;</code>
@@ -75,6 +75,6 @@ object PhoneAccelerationKt {
   }
 }
 @kotlin.jvm.JvmSynthetic
-inline fun ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.copy(block: ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationKt.Dsl.() -> kotlin.Unit): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration =
-  ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+inline fun ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.copy(block: ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationDataKt.Dsl.() -> kotlin.Unit): ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData =
+  ca.berlingoqc.growbe_android_module.proto.PhoneAccelerationDataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

@@ -30814,8 +30814,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
   }
 
-  public interface PhonePositionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhonePosition)
+  public interface PhonePositionDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhonePositionData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -30831,25 +30831,25 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     float getLog();
   }
   /**
-   * Protobuf type {@code PhonePosition}
+   * Protobuf type {@code PhonePositionData}
    */
-  public static final class PhonePosition extends
+  public static final class PhonePositionData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhonePosition)
-      PhonePositionOrBuilder {
+      // @@protoc_insertion_point(message_implements:PhonePositionData)
+      PhonePositionDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PhonePosition.newBuilder() to construct.
-    private PhonePosition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PhonePositionData.newBuilder() to construct.
+    private PhonePositionData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PhonePosition() {
+    private PhonePositionData() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PhonePosition();
+      return new PhonePositionData();
     }
 
     @java.lang.Override
@@ -30857,7 +30857,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PhonePosition(
+    private PhonePositionData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -30908,15 +30908,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePosition_descriptor;
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePosition_fieldAccessorTable
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder.class);
+              ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.Builder.class);
     }
 
     public static final int LAT_FIELD_NUMBER = 1;
@@ -30988,10 +30988,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition)) {
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData)) {
         return super.equals(obj);
       }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition) obj;
+      ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData) obj;
 
       if (java.lang.Float.floatToIntBits(getLat())
           != java.lang.Float.floatToIntBits(
@@ -31021,69 +31021,69 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return hash;
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(byte[] data)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseDelimitedFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseDelimitedFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31096,7 +31096,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition prototype) {
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -31112,26 +31112,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return builder;
     }
     /**
-     * Protobuf type {@code PhonePosition}
+     * Protobuf type {@code PhonePositionData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhonePosition)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PhonePositionData)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePosition_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePosition_fieldAccessorTable
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder.class);
+                ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.Builder.class);
       }
 
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.newBuilder()
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -31159,17 +31159,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePosition_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionData_descriptor;
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.getDefaultInstance();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition result = buildPartial();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -31177,8 +31177,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition(this);
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData(this);
         result.lat_ = lat_;
         result.log_ = log_;
         onBuilt();
@@ -31219,16 +31219,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition)other);
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.getDefaultInstance()) return this;
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData.getDefaultInstance()) return this;
         if (other.getLat() != 0F) {
           setLat(other.getLat());
         }
@@ -31250,11 +31250,11 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition parsedMessage = null;
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition) e.getUnfinishedMessage();
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -31338,48 +31338,468 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PhonePosition)
+      // @@protoc_insertion_point(builder_scope:PhonePositionData)
     }
 
-    // @@protoc_insertion_point(class_scope:PhonePosition)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PhonePositionData)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition();
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData();
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getDefaultInstance() {
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PhonePosition>
-        PARSER = new com.google.protobuf.AbstractParser<PhonePosition>() {
+    private static final com.google.protobuf.Parser<PhonePositionData>
+        PARSER = new com.google.protobuf.AbstractParser<PhonePositionData>() {
       @java.lang.Override
-      public PhonePosition parsePartialFrom(
+      public PhonePositionData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhonePosition(input, extensionRegistry);
+        return new PhonePositionData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PhonePosition> parser() {
+    public static com.google.protobuf.Parser<PhonePositionData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhonePosition> getParserForType() {
+    public com.google.protobuf.Parser<PhonePositionData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getDefaultInstanceForType() {
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PhoneAccelerationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhoneAcceleration)
+  public interface PhonePositionConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhonePositionConfig)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code PhonePositionConfig}
+   */
+  public static final class PhonePositionConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PhonePositionConfig)
+      PhonePositionConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhonePositionConfig.newBuilder() to construct.
+    private PhonePositionConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhonePositionConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhonePositionConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhonePositionConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PhonePositionConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PhonePositionConfig)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePositionConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PhonePositionConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:PhonePositionConfig)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhonePositionConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PhonePositionConfig>() {
+      @java.lang.Override
+      public PhonePositionConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhonePositionConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhonePositionConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhonePositionConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PhoneAccelerationDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneAccelerationData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -31401,25 +31821,25 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     float getGz();
   }
   /**
-   * Protobuf type {@code PhoneAcceleration}
+   * Protobuf type {@code PhoneAccelerationData}
    */
-  public static final class PhoneAcceleration extends
+  public static final class PhoneAccelerationData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhoneAcceleration)
-      PhoneAccelerationOrBuilder {
+      // @@protoc_insertion_point(message_implements:PhoneAccelerationData)
+      PhoneAccelerationDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PhoneAcceleration.newBuilder() to construct.
-    private PhoneAcceleration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PhoneAccelerationData.newBuilder() to construct.
+    private PhoneAccelerationData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PhoneAcceleration() {
+    private PhoneAccelerationData() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PhoneAcceleration();
+      return new PhoneAccelerationData();
     }
 
     @java.lang.Override
@@ -31427,7 +31847,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PhoneAcceleration(
+    private PhoneAccelerationData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -31483,15 +31903,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAcceleration_descriptor;
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAcceleration_fieldAccessorTable
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder.class);
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.Builder.class);
     }
 
     public static final int GX_FIELD_NUMBER = 1;
@@ -31581,10 +32001,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration)) {
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData)) {
         return super.equals(obj);
       }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration) obj;
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData) obj;
 
       if (java.lang.Float.floatToIntBits(getGx())
           != java.lang.Float.floatToIntBits(
@@ -31620,69 +32040,69 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return hash;
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(byte[] data)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseDelimitedFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseDelimitedFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31695,7 +32115,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration prototype) {
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -31711,26 +32131,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return builder;
     }
     /**
-     * Protobuf type {@code PhoneAcceleration}
+     * Protobuf type {@code PhoneAccelerationData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhoneAcceleration)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PhoneAccelerationData)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAcceleration_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAcceleration_fieldAccessorTable
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder.class);
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.Builder.class);
       }
 
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.newBuilder()
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -31760,17 +32180,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAcceleration_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationData_descriptor;
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.getDefaultInstance();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration result = buildPartial();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -31778,8 +32198,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration(this);
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData(this);
         result.gx_ = gx_;
         result.gy_ = gy_;
         result.gz_ = gz_;
@@ -31821,16 +32241,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration)other);
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.getDefaultInstance()) return this;
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData.getDefaultInstance()) return this;
         if (other.getGx() != 0F) {
           setGx(other.getGx());
         }
@@ -31855,11 +32275,11 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration parsedMessage = null;
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration) e.getUnfinishedMessage();
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -31974,48 +32394,468 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PhoneAcceleration)
+      // @@protoc_insertion_point(builder_scope:PhoneAccelerationData)
     }
 
-    // @@protoc_insertion_point(class_scope:PhoneAcceleration)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PhoneAccelerationData)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration();
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData();
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getDefaultInstance() {
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PhoneAcceleration>
-        PARSER = new com.google.protobuf.AbstractParser<PhoneAcceleration>() {
+    private static final com.google.protobuf.Parser<PhoneAccelerationData>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneAccelerationData>() {
       @java.lang.Override
-      public PhoneAcceleration parsePartialFrom(
+      public PhoneAccelerationData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhoneAcceleration(input, extensionRegistry);
+        return new PhoneAccelerationData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PhoneAcceleration> parser() {
+    public static com.google.protobuf.Parser<PhoneAccelerationData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhoneAcceleration> getParserForType() {
+    public com.google.protobuf.Parser<PhoneAccelerationData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getDefaultInstanceForType() {
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PhoneAmbientLightOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhoneAmbientLight)
+  public interface PhoneAccelerationConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneAccelerationConfig)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code PhoneAccelerationConfig}
+   */
+  public static final class PhoneAccelerationConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PhoneAccelerationConfig)
+      PhoneAccelerationConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhoneAccelerationConfig.newBuilder() to construct.
+    private PhoneAccelerationConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhoneAccelerationConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhoneAccelerationConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhoneAccelerationConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PhoneAccelerationConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PhoneAccelerationConfig)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAccelerationConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PhoneAccelerationConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:PhoneAccelerationConfig)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhoneAccelerationConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneAccelerationConfig>() {
+      @java.lang.Override
+      public PhoneAccelerationConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhoneAccelerationConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhoneAccelerationConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhoneAccelerationConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PhoneAmbientLightDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneAmbientLightData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32025,25 +32865,25 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     float getSiLux();
   }
   /**
-   * Protobuf type {@code PhoneAmbientLight}
+   * Protobuf type {@code PhoneAmbientLightData}
    */
-  public static final class PhoneAmbientLight extends
+  public static final class PhoneAmbientLightData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhoneAmbientLight)
-      PhoneAmbientLightOrBuilder {
+      // @@protoc_insertion_point(message_implements:PhoneAmbientLightData)
+      PhoneAmbientLightDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PhoneAmbientLight.newBuilder() to construct.
-    private PhoneAmbientLight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PhoneAmbientLightData.newBuilder() to construct.
+    private PhoneAmbientLightData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PhoneAmbientLight() {
+    private PhoneAmbientLightData() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PhoneAmbientLight();
+      return new PhoneAmbientLightData();
     }
 
     @java.lang.Override
@@ -32051,7 +32891,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PhoneAmbientLight(
+    private PhoneAmbientLightData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -32097,15 +32937,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLight_descriptor;
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLight_fieldAccessorTable
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder.class);
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.Builder.class);
     }
 
     public static final int SI_LUX_FIELD_NUMBER = 1;
@@ -32159,10 +32999,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight)) {
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData)) {
         return super.equals(obj);
       }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight) obj;
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData) obj;
 
       if (java.lang.Float.floatToIntBits(getSiLux())
           != java.lang.Float.floatToIntBits(
@@ -32186,69 +33026,69 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return hash;
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(byte[] data)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseDelimitedFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseDelimitedFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -32261,7 +33101,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight prototype) {
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -32277,26 +33117,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return builder;
     }
     /**
-     * Protobuf type {@code PhoneAmbientLight}
+     * Protobuf type {@code PhoneAmbientLightData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhoneAmbientLight)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PhoneAmbientLightData)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLight_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLight_fieldAccessorTable
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder.class);
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.Builder.class);
       }
 
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.newBuilder()
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -32322,17 +33162,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLight_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightData_descriptor;
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.getDefaultInstance();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight result = buildPartial();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -32340,8 +33180,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight(this);
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData(this);
         result.siLux_ = siLux_;
         onBuilt();
         return result;
@@ -32381,16 +33221,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight)other);
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.getDefaultInstance()) return this;
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData.getDefaultInstance()) return this;
         if (other.getSiLux() != 0F) {
           setSiLux(other.getSiLux());
         }
@@ -32409,11 +33249,11 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight parsedMessage = null;
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight) e.getUnfinishedMessage();
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -32466,48 +33306,468 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PhoneAmbientLight)
+      // @@protoc_insertion_point(builder_scope:PhoneAmbientLightData)
     }
 
-    // @@protoc_insertion_point(class_scope:PhoneAmbientLight)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PhoneAmbientLightData)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight();
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData();
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getDefaultInstance() {
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PhoneAmbientLight>
-        PARSER = new com.google.protobuf.AbstractParser<PhoneAmbientLight>() {
+    private static final com.google.protobuf.Parser<PhoneAmbientLightData>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneAmbientLightData>() {
       @java.lang.Override
-      public PhoneAmbientLight parsePartialFrom(
+      public PhoneAmbientLightData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhoneAmbientLight(input, extensionRegistry);
+        return new PhoneAmbientLightData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PhoneAmbientLight> parser() {
+    public static com.google.protobuf.Parser<PhoneAmbientLightData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhoneAmbientLight> getParserForType() {
+    public com.google.protobuf.Parser<PhoneAmbientLightData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getDefaultInstanceForType() {
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PhonePressureOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhonePressure)
+  public interface PhoneAmbientLightConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneAmbientLightConfig)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code PhoneAmbientLightConfig}
+   */
+  public static final class PhoneAmbientLightConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PhoneAmbientLightConfig)
+      PhoneAmbientLightConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhoneAmbientLightConfig.newBuilder() to construct.
+    private PhoneAmbientLightConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhoneAmbientLightConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhoneAmbientLightConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhoneAmbientLightConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PhoneAmbientLightConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PhoneAmbientLightConfig)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneAmbientLightConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PhoneAmbientLightConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:PhoneAmbientLightConfig)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhoneAmbientLightConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneAmbientLightConfig>() {
+      @java.lang.Override
+      public PhoneAmbientLightConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhoneAmbientLightConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhoneAmbientLightConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhoneAmbientLightConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PhonePressureDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhonePressureData)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -32517,25 +33777,25 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     float getHpa();
   }
   /**
-   * Protobuf type {@code PhonePressure}
+   * Protobuf type {@code PhonePressureData}
    */
-  public static final class PhonePressure extends
+  public static final class PhonePressureData extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhonePressure)
-      PhonePressureOrBuilder {
+      // @@protoc_insertion_point(message_implements:PhonePressureData)
+      PhonePressureDataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PhonePressure.newBuilder() to construct.
-    private PhonePressure(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PhonePressureData.newBuilder() to construct.
+    private PhonePressureData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PhonePressure() {
+    private PhonePressureData() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PhonePressure();
+      return new PhonePressureData();
     }
 
     @java.lang.Override
@@ -32543,7 +33803,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PhonePressure(
+    private PhonePressureData(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -32589,15 +33849,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressure_descriptor;
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureData_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressure_fieldAccessorTable
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder.class);
+              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.Builder.class);
     }
 
     public static final int HPA_FIELD_NUMBER = 1;
@@ -32651,10 +33911,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure)) {
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData)) {
         return super.equals(obj);
       }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure) obj;
+      ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData) obj;
 
       if (java.lang.Float.floatToIntBits(getHpa())
           != java.lang.Float.floatToIntBits(
@@ -32678,69 +33938,69 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return hash;
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(byte[] data)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseDelimitedFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseDelimitedFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -32753,7 +34013,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure prototype) {
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -32769,26 +34029,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return builder;
     }
     /**
-     * Protobuf type {@code PhonePressure}
+     * Protobuf type {@code PhonePressureData}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhonePressure)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PhonePressureData)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressure_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureData_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressure_fieldAccessorTable
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder.class);
+                ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.Builder.class);
       }
 
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.newBuilder()
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -32814,17 +34074,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressure_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureData_descriptor;
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.getDefaultInstance();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure result = buildPartial();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -32832,8 +34092,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure(this);
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData(this);
         result.hpa_ = hpa_;
         onBuilt();
         return result;
@@ -32873,16 +34133,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure)other);
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.getDefaultInstance()) return this;
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData.getDefaultInstance()) return this;
         if (other.getHpa() != 0F) {
           setHpa(other.getHpa());
         }
@@ -32901,11 +34161,11 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure parsedMessage = null;
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure) e.getUnfinishedMessage();
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -32958,130 +34218,70 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PhonePressure)
+      // @@protoc_insertion_point(builder_scope:PhonePressureData)
     }
 
-    // @@protoc_insertion_point(class_scope:PhonePressure)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PhonePressureData)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure();
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData();
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getDefaultInstance() {
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PhonePressure>
-        PARSER = new com.google.protobuf.AbstractParser<PhonePressure>() {
+    private static final com.google.protobuf.Parser<PhonePressureData>
+        PARSER = new com.google.protobuf.AbstractParser<PhonePressureData>() {
       @java.lang.Override
-      public PhonePressure parsePartialFrom(
+      public PhonePressureData parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhonePressure(input, extensionRegistry);
+        return new PhonePressureData(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PhonePressure> parser() {
+    public static com.google.protobuf.Parser<PhonePressureData> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhonePressure> getParserForType() {
+    public com.google.protobuf.Parser<PhonePressureData> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getDefaultInstanceForType() {
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureData getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PhoneModuleDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhoneModuleData)
+  public interface PhonePressureConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhonePressureConfig)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     * @return Whether the position field is set.
-     */
-    boolean hasPosition();
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     * @return The position.
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getPosition();
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder getPositionOrBuilder();
-
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     * @return Whether the acceleration field is set.
-     */
-    boolean hasAcceleration();
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     * @return The acceleration.
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getAcceleration();
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder getAccelerationOrBuilder();
-
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     * @return Whether the light field is set.
-     */
-    boolean hasLight();
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     * @return The light.
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getLight();
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder getLightOrBuilder();
-
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     * @return Whether the pressure field is set.
-     */
-    boolean hasPressure();
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     * @return The pressure.
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getPressure();
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     */
-    ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder getPressureOrBuilder();
   }
   /**
-   * Protobuf type {@code PhoneModuleData}
+   * Protobuf type {@code PhonePressureConfig}
    */
-  public static final class PhoneModuleData extends
+  public static final class PhonePressureConfig extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhoneModuleData)
-      PhoneModuleDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:PhonePressureConfig)
+      PhonePressureConfigOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PhoneModuleData.newBuilder() to construct.
-    private PhoneModuleData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PhonePressureConfig.newBuilder() to construct.
+    private PhonePressureConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PhoneModuleData() {
+    private PhonePressureConfig() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new PhoneModuleData();
+      return new PhonePressureConfig();
     }
 
     @java.lang.Override
@@ -33089,7 +34289,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PhoneModuleData(
+    private PhonePressureConfig(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -33107,58 +34307,6 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
             case 0:
               done = true;
               break;
-            case 10: {
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder subBuilder = null;
-              if (position_ != null) {
-                subBuilder = position_.toBuilder();
-              }
-              position_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(position_);
-                position_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder subBuilder = null;
-              if (acceleration_ != null) {
-                subBuilder = acceleration_.toBuilder();
-              }
-              acceleration_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(acceleration_);
-                acceleration_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder subBuilder = null;
-              if (light_ != null) {
-                subBuilder = light_.toBuilder();
-              }
-              light_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(light_);
-                light_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder subBuilder = null;
-              if (pressure_ != null) {
-                subBuilder = pressure_.toBuilder();
-              }
-              pressure_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pressure_);
-                pressure_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -33182,119 +34330,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleData_descriptor;
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureConfig_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleData_fieldAccessorTable
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureConfig_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.Builder.class);
-    }
-
-    public static final int POSITION_FIELD_NUMBER = 1;
-    private ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition position_;
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     * @return Whether the position field is set.
-     */
-    @java.lang.Override
-    public boolean hasPosition() {
-      return position_ != null;
-    }
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     * @return The position.
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getPosition() {
-      return position_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.getDefaultInstance() : position_;
-    }
-    /**
-     * <code>.PhonePosition position = 1;</code>
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder getPositionOrBuilder() {
-      return getPosition();
-    }
-
-    public static final int ACCELERATION_FIELD_NUMBER = 2;
-    private ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration acceleration_;
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     * @return Whether the acceleration field is set.
-     */
-    @java.lang.Override
-    public boolean hasAcceleration() {
-      return acceleration_ != null;
-    }
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     * @return The acceleration.
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getAcceleration() {
-      return acceleration_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.getDefaultInstance() : acceleration_;
-    }
-    /**
-     * <code>.PhoneAcceleration acceleration = 2;</code>
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder getAccelerationOrBuilder() {
-      return getAcceleration();
-    }
-
-    public static final int LIGHT_FIELD_NUMBER = 3;
-    private ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight light_;
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     * @return Whether the light field is set.
-     */
-    @java.lang.Override
-    public boolean hasLight() {
-      return light_ != null;
-    }
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     * @return The light.
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getLight() {
-      return light_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.getDefaultInstance() : light_;
-    }
-    /**
-     * <code>.PhoneAmbientLight light = 3;</code>
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder getLightOrBuilder() {
-      return getLight();
-    }
-
-    public static final int PRESSURE_FIELD_NUMBER = 5;
-    private ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure pressure_;
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     * @return Whether the pressure field is set.
-     */
-    @java.lang.Override
-    public boolean hasPressure() {
-      return pressure_ != null;
-    }
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     * @return The pressure.
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getPressure() {
-      return pressure_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.getDefaultInstance() : pressure_;
-    }
-    /**
-     * <code>.PhonePressure pressure = 5;</code>
-     */
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder getPressureOrBuilder() {
-      return getPressure();
+              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -33311,18 +34355,6 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (position_ != null) {
-        output.writeMessage(1, getPosition());
-      }
-      if (acceleration_ != null) {
-        output.writeMessage(2, getAcceleration());
-      }
-      if (light_ != null) {
-        output.writeMessage(3, getLight());
-      }
-      if (pressure_ != null) {
-        output.writeMessage(5, getPressure());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -33332,22 +34364,6 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (position_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPosition());
-      }
-      if (acceleration_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getAcceleration());
-      }
-      if (light_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getLight());
-      }
-      if (pressure_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getPressure());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -33358,31 +34374,11 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData)) {
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig)) {
         return super.equals(obj);
       }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData) obj;
+      ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig) obj;
 
-      if (hasPosition() != other.hasPosition()) return false;
-      if (hasPosition()) {
-        if (!getPosition()
-            .equals(other.getPosition())) return false;
-      }
-      if (hasAcceleration() != other.hasAcceleration()) return false;
-      if (hasAcceleration()) {
-        if (!getAcceleration()
-            .equals(other.getAcceleration())) return false;
-      }
-      if (hasLight() != other.hasLight()) return false;
-      if (hasLight()) {
-        if (!getLight()
-            .equals(other.getLight())) return false;
-      }
-      if (hasPressure() != other.hasPressure()) return false;
-      if (hasPressure()) {
-        if (!getPressure()
-            .equals(other.getPressure())) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -33394,90 +34390,74 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPosition()) {
-        hash = (37 * hash) + POSITION_FIELD_NUMBER;
-        hash = (53 * hash) + getPosition().hashCode();
-      }
-      if (hasAcceleration()) {
-        hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
-        hash = (53 * hash) + getAcceleration().hashCode();
-      }
-      if (hasLight()) {
-        hash = (37 * hash) + LIGHT_FIELD_NUMBER;
-        hash = (53 * hash) + getLight().hashCode();
-      }
-      if (hasPressure()) {
-        hash = (37 * hash) + PRESSURE_FIELD_NUMBER;
-        hash = (53 * hash) + getPressure().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(byte[] data)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseDelimitedFrom(java.io.InputStream input)
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseDelimitedFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parseFrom(
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33490,7 +34470,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData prototype) {
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -33506,26 +34486,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return builder;
     }
     /**
-     * Protobuf type {@code PhoneModuleData}
+     * Protobuf type {@code PhonePressureConfig}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhoneModuleData)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:PhonePressureConfig)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfigOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleData_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureConfig_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleData_fieldAccessorTable
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureConfig_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.Builder.class);
+                ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.Builder.class);
       }
 
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.newBuilder()
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -33543,47 +34523,23 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (positionBuilder_ == null) {
-          position_ = null;
-        } else {
-          position_ = null;
-          positionBuilder_ = null;
-        }
-        if (accelerationBuilder_ == null) {
-          acceleration_ = null;
-        } else {
-          acceleration_ = null;
-          accelerationBuilder_ = null;
-        }
-        if (lightBuilder_ == null) {
-          light_ = null;
-        } else {
-          light_ = null;
-          lightBuilder_ = null;
-        }
-        if (pressureBuilder_ == null) {
-          pressure_ = null;
-        } else {
-          pressure_ = null;
-          pressureBuilder_ = null;
-        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleData_descriptor;
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhonePressureConfig_descriptor;
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.getDefaultInstance();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData result = buildPartial();
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -33591,28 +34547,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
       @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData(this);
-        if (positionBuilder_ == null) {
-          result.position_ = position_;
-        } else {
-          result.position_ = positionBuilder_.build();
-        }
-        if (accelerationBuilder_ == null) {
-          result.acceleration_ = acceleration_;
-        } else {
-          result.acceleration_ = accelerationBuilder_.build();
-        }
-        if (lightBuilder_ == null) {
-          result.light_ = light_;
-        } else {
-          result.light_ = lightBuilder_.build();
-        }
-        if (pressureBuilder_ == null) {
-          result.pressure_ = pressure_;
-        } else {
-          result.pressure_ = pressureBuilder_.build();
-        }
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig(this);
         onBuilt();
         return result;
       }
@@ -33651,28 +34587,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData)other);
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData.getDefaultInstance()) return this;
-        if (other.hasPosition()) {
-          mergePosition(other.getPosition());
-        }
-        if (other.hasAcceleration()) {
-          mergeAcceleration(other.getAcceleration());
-        }
-        if (other.hasLight()) {
-          mergeLight(other.getLight());
-        }
-        if (other.hasPressure()) {
-          mergePressure(other.getPressure());
-        }
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -33688,1197 +34612,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData parsedMessage = null;
+        ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData) e.getUnfinishedMessage();
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition position_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition, ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder> positionBuilder_;
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       * @return Whether the position field is set.
-       */
-      public boolean hasPosition() {
-        return positionBuilder_ != null || position_ != null;
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       * @return The position.
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition getPosition() {
-        if (positionBuilder_ == null) {
-          return position_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.getDefaultInstance() : position_;
-        } else {
-          return positionBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public Builder setPosition(ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition value) {
-        if (positionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          position_ = value;
-          onChanged();
-        } else {
-          positionBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public Builder setPosition(
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder builderForValue) {
-        if (positionBuilder_ == null) {
-          position_ = builderForValue.build();
-          onChanged();
-        } else {
-          positionBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public Builder mergePosition(ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition value) {
-        if (positionBuilder_ == null) {
-          if (position_ != null) {
-            position_ =
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.newBuilder(position_).mergeFrom(value).buildPartial();
-          } else {
-            position_ = value;
-          }
-          onChanged();
-        } else {
-          positionBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public Builder clearPosition() {
-        if (positionBuilder_ == null) {
-          position_ = null;
-          onChanged();
-        } else {
-          position_ = null;
-          positionBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder getPositionBuilder() {
-        
-        onChanged();
-        return getPositionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder getPositionOrBuilder() {
-        if (positionBuilder_ != null) {
-          return positionBuilder_.getMessageOrBuilder();
-        } else {
-          return position_ == null ?
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.getDefaultInstance() : position_;
-        }
-      }
-      /**
-       * <code>.PhonePosition position = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition, ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder> 
-          getPositionFieldBuilder() {
-        if (positionBuilder_ == null) {
-          positionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition, ca.berlingoqc.growbe_android_module.proto.Module.PhonePosition.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionOrBuilder>(
-                  getPosition(),
-                  getParentForChildren(),
-                  isClean());
-          position_ = null;
-        }
-        return positionBuilder_;
-      }
-
-      private ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration acceleration_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder> accelerationBuilder_;
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       * @return Whether the acceleration field is set.
-       */
-      public boolean hasAcceleration() {
-        return accelerationBuilder_ != null || acceleration_ != null;
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       * @return The acceleration.
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration getAcceleration() {
-        if (accelerationBuilder_ == null) {
-          return acceleration_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.getDefaultInstance() : acceleration_;
-        } else {
-          return accelerationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public Builder setAcceleration(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration value) {
-        if (accelerationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          acceleration_ = value;
-          onChanged();
-        } else {
-          accelerationBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public Builder setAcceleration(
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder builderForValue) {
-        if (accelerationBuilder_ == null) {
-          acceleration_ = builderForValue.build();
-          onChanged();
-        } else {
-          accelerationBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public Builder mergeAcceleration(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration value) {
-        if (accelerationBuilder_ == null) {
-          if (acceleration_ != null) {
-            acceleration_ =
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.newBuilder(acceleration_).mergeFrom(value).buildPartial();
-          } else {
-            acceleration_ = value;
-          }
-          onChanged();
-        } else {
-          accelerationBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public Builder clearAcceleration() {
-        if (accelerationBuilder_ == null) {
-          acceleration_ = null;
-          onChanged();
-        } else {
-          acceleration_ = null;
-          accelerationBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder getAccelerationBuilder() {
-        
-        onChanged();
-        return getAccelerationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder getAccelerationOrBuilder() {
-        if (accelerationBuilder_ != null) {
-          return accelerationBuilder_.getMessageOrBuilder();
-        } else {
-          return acceleration_ == null ?
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.getDefaultInstance() : acceleration_;
-        }
-      }
-      /**
-       * <code>.PhoneAcceleration acceleration = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder> 
-          getAccelerationFieldBuilder() {
-        if (accelerationBuilder_ == null) {
-          accelerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAcceleration.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAccelerationOrBuilder>(
-                  getAcceleration(),
-                  getParentForChildren(),
-                  isClean());
-          acceleration_ = null;
-        }
-        return accelerationBuilder_;
-      }
-
-      private ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight light_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder> lightBuilder_;
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       * @return Whether the light field is set.
-       */
-      public boolean hasLight() {
-        return lightBuilder_ != null || light_ != null;
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       * @return The light.
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight getLight() {
-        if (lightBuilder_ == null) {
-          return light_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.getDefaultInstance() : light_;
-        } else {
-          return lightBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public Builder setLight(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight value) {
-        if (lightBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          light_ = value;
-          onChanged();
-        } else {
-          lightBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public Builder setLight(
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder builderForValue) {
-        if (lightBuilder_ == null) {
-          light_ = builderForValue.build();
-          onChanged();
-        } else {
-          lightBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public Builder mergeLight(ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight value) {
-        if (lightBuilder_ == null) {
-          if (light_ != null) {
-            light_ =
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.newBuilder(light_).mergeFrom(value).buildPartial();
-          } else {
-            light_ = value;
-          }
-          onChanged();
-        } else {
-          lightBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public Builder clearLight() {
-        if (lightBuilder_ == null) {
-          light_ = null;
-          onChanged();
-        } else {
-          light_ = null;
-          lightBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder getLightBuilder() {
-        
-        onChanged();
-        return getLightFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder getLightOrBuilder() {
-        if (lightBuilder_ != null) {
-          return lightBuilder_.getMessageOrBuilder();
-        } else {
-          return light_ == null ?
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.getDefaultInstance() : light_;
-        }
-      }
-      /**
-       * <code>.PhoneAmbientLight light = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder> 
-          getLightFieldBuilder() {
-        if (lightBuilder_ == null) {
-          lightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLight.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhoneAmbientLightOrBuilder>(
-                  getLight(),
-                  getParentForChildren(),
-                  isClean());
-          light_ = null;
-        }
-        return lightBuilder_;
-      }
-
-      private ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure pressure_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder> pressureBuilder_;
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       * @return Whether the pressure field is set.
-       */
-      public boolean hasPressure() {
-        return pressureBuilder_ != null || pressure_ != null;
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       * @return The pressure.
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure getPressure() {
-        if (pressureBuilder_ == null) {
-          return pressure_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.getDefaultInstance() : pressure_;
-        } else {
-          return pressureBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public Builder setPressure(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure value) {
-        if (pressureBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pressure_ = value;
-          onChanged();
-        } else {
-          pressureBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public Builder setPressure(
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder builderForValue) {
-        if (pressureBuilder_ == null) {
-          pressure_ = builderForValue.build();
-          onChanged();
-        } else {
-          pressureBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public Builder mergePressure(ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure value) {
-        if (pressureBuilder_ == null) {
-          if (pressure_ != null) {
-            pressure_ =
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.newBuilder(pressure_).mergeFrom(value).buildPartial();
-          } else {
-            pressure_ = value;
-          }
-          onChanged();
-        } else {
-          pressureBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public Builder clearPressure() {
-        if (pressureBuilder_ == null) {
-          pressure_ = null;
-          onChanged();
-        } else {
-          pressure_ = null;
-          pressureBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder getPressureBuilder() {
-        
-        onChanged();
-        return getPressureFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder getPressureOrBuilder() {
-        if (pressureBuilder_ != null) {
-          return pressureBuilder_.getMessageOrBuilder();
-        } else {
-          return pressure_ == null ?
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.getDefaultInstance() : pressure_;
-        }
-      }
-      /**
-       * <code>.PhonePressure pressure = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder> 
-          getPressureFieldBuilder() {
-        if (pressureBuilder_ == null) {
-          pressureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressure.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureOrBuilder>(
-                  getPressure(),
-                  getParentForChildren(),
-                  isClean());
-          pressure_ = null;
-        }
-        return pressureBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:PhoneModuleData)
-    }
-
-    // @@protoc_insertion_point(class_scope:PhoneModuleData)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData();
-    }
-
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PhoneModuleData>
-        PARSER = new com.google.protobuf.AbstractParser<PhoneModuleData>() {
-      @java.lang.Override
-      public PhoneModuleData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhoneModuleData(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PhoneModuleData> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PhoneModuleData> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleData getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PhoneModuleConfigOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:PhoneModuleConfig)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bool sensor_position = 1;</code>
-     * @return The sensorPosition.
-     */
-    boolean getSensorPosition();
-
-    /**
-     * <code>bool sensor_accel = 2;</code>
-     * @return The sensorAccel.
-     */
-    boolean getSensorAccel();
-
-    /**
-     * <code>bool sensor_light = 3;</code>
-     * @return The sensorLight.
-     */
-    boolean getSensorLight();
-
-    /**
-     * <code>bool sensor_pressure = 4;</code>
-     * @return The sensorPressure.
-     */
-    boolean getSensorPressure();
-  }
-  /**
-   * Protobuf type {@code PhoneModuleConfig}
-   */
-  public static final class PhoneModuleConfig extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:PhoneModuleConfig)
-      PhoneModuleConfigOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PhoneModuleConfig.newBuilder() to construct.
-    private PhoneModuleConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PhoneModuleConfig() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PhoneModuleConfig();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PhoneModuleConfig(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              sensorPosition_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              sensorAccel_ = input.readBool();
-              break;
-            }
-            case 24: {
-
-              sensorLight_ = input.readBool();
-              break;
-            }
-            case 32: {
-
-              sensorPressure_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleConfig_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleConfig_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.Builder.class);
-    }
-
-    public static final int SENSOR_POSITION_FIELD_NUMBER = 1;
-    private boolean sensorPosition_;
-    /**
-     * <code>bool sensor_position = 1;</code>
-     * @return The sensorPosition.
-     */
-    @java.lang.Override
-    public boolean getSensorPosition() {
-      return sensorPosition_;
-    }
-
-    public static final int SENSOR_ACCEL_FIELD_NUMBER = 2;
-    private boolean sensorAccel_;
-    /**
-     * <code>bool sensor_accel = 2;</code>
-     * @return The sensorAccel.
-     */
-    @java.lang.Override
-    public boolean getSensorAccel() {
-      return sensorAccel_;
-    }
-
-    public static final int SENSOR_LIGHT_FIELD_NUMBER = 3;
-    private boolean sensorLight_;
-    /**
-     * <code>bool sensor_light = 3;</code>
-     * @return The sensorLight.
-     */
-    @java.lang.Override
-    public boolean getSensorLight() {
-      return sensorLight_;
-    }
-
-    public static final int SENSOR_PRESSURE_FIELD_NUMBER = 4;
-    private boolean sensorPressure_;
-    /**
-     * <code>bool sensor_pressure = 4;</code>
-     * @return The sensorPressure.
-     */
-    @java.lang.Override
-    public boolean getSensorPressure() {
-      return sensorPressure_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (sensorPosition_ != false) {
-        output.writeBool(1, sensorPosition_);
-      }
-      if (sensorAccel_ != false) {
-        output.writeBool(2, sensorAccel_);
-      }
-      if (sensorLight_ != false) {
-        output.writeBool(3, sensorLight_);
-      }
-      if (sensorPressure_ != false) {
-        output.writeBool(4, sensorPressure_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (sensorPosition_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, sensorPosition_);
-      }
-      if (sensorAccel_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, sensorAccel_);
-      }
-      if (sensorLight_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, sensorLight_);
-      }
-      if (sensorPressure_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, sensorPressure_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig)) {
-        return super.equals(obj);
-      }
-      ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig) obj;
-
-      if (getSensorPosition()
-          != other.getSensorPosition()) return false;
-      if (getSensorAccel()
-          != other.getSensorAccel()) return false;
-      if (getSensorLight()
-          != other.getSensorLight()) return false;
-      if (getSensorPressure()
-          != other.getSensorPressure()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SENSOR_POSITION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSensorPosition());
-      hash = (37 * hash) + SENSOR_ACCEL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSensorAccel());
-      hash = (37 * hash) + SENSOR_LIGHT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSensorLight());
-      hash = (37 * hash) + SENSOR_PRESSURE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSensorPressure());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code PhoneModuleConfig}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:PhoneModuleConfig)
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfigOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleConfig_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleConfig_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.Builder.class);
-      }
-
-      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        sensorPosition_ = false;
-
-        sensorAccel_ = false;
-
-        sensorLight_ = false;
-
-        sensorPressure_ = false;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneModuleConfig_descriptor;
-      }
-
-      @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig getDefaultInstanceForType() {
-        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig build() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig buildPartial() {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig(this);
-        result.sensorPosition_ = sensorPosition_;
-        result.sensorAccel_ = sensorAccel_;
-        result.sensorLight_ = sensorLight_;
-        result.sensorPressure_ = sensorPressure_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig) {
-          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig other) {
-        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig.getDefaultInstance()) return this;
-        if (other.getSensorPosition() != false) {
-          setSensorPosition(other.getSensorPosition());
-        }
-        if (other.getSensorAccel() != false) {
-          setSensorAccel(other.getSensorAccel());
-        }
-        if (other.getSensorLight() != false) {
-          setSensorLight(other.getSensorLight());
-        }
-        if (other.getSensorPressure() != false) {
-          setSensorPressure(other.getSensorPressure());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private boolean sensorPosition_ ;
-      /**
-       * <code>bool sensor_position = 1;</code>
-       * @return The sensorPosition.
-       */
-      @java.lang.Override
-      public boolean getSensorPosition() {
-        return sensorPosition_;
-      }
-      /**
-       * <code>bool sensor_position = 1;</code>
-       * @param value The sensorPosition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSensorPosition(boolean value) {
-        
-        sensorPosition_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool sensor_position = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSensorPosition() {
-        
-        sensorPosition_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean sensorAccel_ ;
-      /**
-       * <code>bool sensor_accel = 2;</code>
-       * @return The sensorAccel.
-       */
-      @java.lang.Override
-      public boolean getSensorAccel() {
-        return sensorAccel_;
-      }
-      /**
-       * <code>bool sensor_accel = 2;</code>
-       * @param value The sensorAccel to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSensorAccel(boolean value) {
-        
-        sensorAccel_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool sensor_accel = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSensorAccel() {
-        
-        sensorAccel_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean sensorLight_ ;
-      /**
-       * <code>bool sensor_light = 3;</code>
-       * @return The sensorLight.
-       */
-      @java.lang.Override
-      public boolean getSensorLight() {
-        return sensorLight_;
-      }
-      /**
-       * <code>bool sensor_light = 3;</code>
-       * @param value The sensorLight to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSensorLight(boolean value) {
-        
-        sensorLight_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool sensor_light = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSensorLight() {
-        
-        sensorLight_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean sensorPressure_ ;
-      /**
-       * <code>bool sensor_pressure = 4;</code>
-       * @return The sensorPressure.
-       */
-      @java.lang.Override
-      public boolean getSensorPressure() {
-        return sensorPressure_;
-      }
-      /**
-       * <code>bool sensor_pressure = 4;</code>
-       * @param value The sensorPressure to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSensorPressure(boolean value) {
-        
-        sensorPressure_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool sensor_pressure = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSensorPressure() {
-        
-        sensorPressure_ = false;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -34894,41 +34638,41 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:PhoneModuleConfig)
+      // @@protoc_insertion_point(builder_scope:PhonePressureConfig)
     }
 
-    // @@protoc_insertion_point(class_scope:PhoneModuleConfig)
-    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PhonePressureConfig)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig();
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig();
     }
 
-    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig getDefaultInstance() {
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PhoneModuleConfig>
-        PARSER = new com.google.protobuf.AbstractParser<PhoneModuleConfig>() {
+    private static final com.google.protobuf.Parser<PhonePressureConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PhonePressureConfig>() {
       @java.lang.Override
-      public PhoneModuleConfig parsePartialFrom(
+      public PhonePressureConfig parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PhoneModuleConfig(input, extensionRegistry);
+        return new PhonePressureConfig(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PhoneModuleConfig> parser() {
+    public static com.google.protobuf.Parser<PhonePressureConfig> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PhoneModuleConfig> getParserForType() {
+    public com.google.protobuf.Parser<PhonePressureConfig> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneModuleConfig getDefaultInstanceForType() {
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhonePressureConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -35085,35 +34829,45 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_WCModuleConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhonePosition_descriptor;
+    internal_static_PhonePositionData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhonePosition_fieldAccessorTable;
+      internal_static_PhonePositionData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhoneAcceleration_descriptor;
+    internal_static_PhonePositionConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhoneAcceleration_fieldAccessorTable;
+      internal_static_PhonePositionConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhoneAmbientLight_descriptor;
+    internal_static_PhoneAccelerationData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhoneAmbientLight_fieldAccessorTable;
+      internal_static_PhoneAccelerationData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhonePressure_descriptor;
+    internal_static_PhoneAccelerationConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhonePressure_fieldAccessorTable;
+      internal_static_PhoneAccelerationConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhoneModuleData_descriptor;
+    internal_static_PhoneAmbientLightData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhoneModuleData_fieldAccessorTable;
+      internal_static_PhoneAmbientLightData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PhoneModuleConfig_descriptor;
+    internal_static_PhoneAmbientLightConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PhoneModuleConfig_fieldAccessorTable;
+      internal_static_PhoneAmbientLightConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PhonePressureData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PhonePressureData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PhonePressureConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PhonePressureConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35209,33 +34963,29 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       "ig\022!\n\005pump0\030\005 \001(\0132\022.RelayOutletConfig\022!\n" +
       "\005pump1\030\006 \001(\0132\022.RelayOutletConfig\022!\n\005pump" +
       "2\030\007 \001(\0132\022.RelayOutletConfig\022!\n\005pump3\030\010 \001" +
-      "(\0132\022.RelayOutletConfig\")\n\rPhonePosition\022" +
-      "\013\n\003lat\030\001 \001(\002\022\013\n\003log\030\002 \001(\002\"7\n\021PhoneAccele" +
-      "ration\022\n\n\002gx\030\001 \001(\002\022\n\n\002gy\030\002 \001(\002\022\n\n\002gz\030\003 \001" +
-      "(\002\"#\n\021PhoneAmbientLight\022\016\n\006si_lux\030\001 \001(\002\"" +
-      "\034\n\rPhonePressure\022\013\n\003hpa\030\001 \001(\002\"\242\001\n\017PhoneM" +
-      "oduleData\022 \n\010position\030\001 \001(\0132\016.PhonePosit" +
-      "ion\022(\n\014acceleration\030\002 \001(\0132\022.PhoneAcceler" +
-      "ation\022!\n\005light\030\003 \001(\0132\022.PhoneAmbientLight" +
-      "\022 \n\010pressure\030\005 \001(\0132\016.PhonePressure\"q\n\021Ph" +
-      "oneModuleConfig\022\027\n\017sensor_position\030\001 \001(\010" +
-      "\022\024\n\014sensor_accel\030\002 \001(\010\022\024\n\014sensor_light\030\003" +
-      " \001(\010\022\027\n\017sensor_pressure\030\004 \001(\010*Z\n\tActorTy" +
-      "pe\022\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DURATION_AC" +
-      "TOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTUAL_ACTOR\020" +
-      "\003*\220\001\n\017CalibrationStep\022\025\n\021READY_CALIBRATI" +
-      "ON\020\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HIGH_CALIBR" +
-      "ATION\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022$\n WAITIN" +
-      "G_CONFIRMATION_CALIBRATION\020\004*y\n\025Calibrat" +
-      "ionStepStatus\022\033\n\027INSUFFISANT_DATA_STATUS" +
-      "\020\000\022\027\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014ERROR_STA" +
-      "TUS\020\002\022\030\n\024AWAITING_STEP_STATUS\020\003*r\n\020Calib" +
-      "rationError\022\016\n\nNONE_ERROR\020\000\022\031\n\025ALREADY_S" +
-      "TARTED_ERROR\020\001\022\027\n\023INSTABLE_DATA_ERROR\020\002\022" +
-      "\032\n\026NOT_ENOUGHT_DATA_ERROR\020\003*@\n\017RelayOutl" +
-      "etMode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013\n\007VIRTUAL" +
-      "\020\002\022\t\n\005CYCLE\020\003B+\n)ca.berlingoqc.growbe_an" +
-      "droid_module.protob\006proto3"
+      "(\0132\022.RelayOutletConfig\"-\n\021PhonePositionD" +
+      "ata\022\013\n\003lat\030\001 \001(\002\022\013\n\003log\030\002 \001(\002\"\025\n\023PhonePo" +
+      "sitionConfig\";\n\025PhoneAccelerationData\022\n\n" +
+      "\002gx\030\001 \001(\002\022\n\n\002gy\030\002 \001(\002\022\n\n\002gz\030\003 \001(\002\"\031\n\027Pho" +
+      "neAccelerationConfig\"\'\n\025PhoneAmbientLigh" +
+      "tData\022\016\n\006si_lux\030\001 \001(\002\"\031\n\027PhoneAmbientLig" +
+      "htConfig\" \n\021PhonePressureData\022\013\n\003hpa\030\001 \001" +
+      "(\002\"\025\n\023PhonePressureConfig*Z\n\tActorType\022\025" +
+      "\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DURATION_ACTOR\020" +
+      "\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTUAL_ACTOR\020\003*\220\001" +
+      "\n\017CalibrationStep\022\025\n\021READY_CALIBRATION\020\000" +
+      "\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HIGH_CALIBRATIO" +
+      "N\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022$\n WAITING_CO" +
+      "NFIRMATION_CALIBRATION\020\004*y\n\025CalibrationS" +
+      "tepStatus\022\033\n\027INSUFFISANT_DATA_STATUS\020\000\022\027" +
+      "\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014ERROR_STATUS\020" +
+      "\002\022\030\n\024AWAITING_STEP_STATUS\020\003*r\n\020Calibrati" +
+      "onError\022\016\n\nNONE_ERROR\020\000\022\031\n\025ALREADY_START" +
+      "ED_ERROR\020\001\022\027\n\023INSTABLE_DATA_ERROR\020\002\022\032\n\026N" +
+      "OT_ENOUGHT_DATA_ERROR\020\003*@\n\017RelayOutletMo" +
+      "de\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013\n\007VIRTUAL\020\002\022\t" +
+      "\n\005CYCLE\020\003B+\n)ca.berlingoqc.growbe_androi" +
+      "d_module.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35421,42 +35171,54 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WCModuleConfig_descriptor,
         new java.lang.String[] { "P0", "P1", "P2", "Drain", "Pump0", "Pump1", "Pump2", "Pump3", });
-    internal_static_PhonePosition_descriptor =
+    internal_static_PhonePositionData_descriptor =
       getDescriptor().getMessageTypes().get(29);
-    internal_static_PhonePosition_fieldAccessorTable = new
+    internal_static_PhonePositionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhonePosition_descriptor,
+        internal_static_PhonePositionData_descriptor,
         new java.lang.String[] { "Lat", "Log", });
-    internal_static_PhoneAcceleration_descriptor =
+    internal_static_PhonePositionConfig_descriptor =
       getDescriptor().getMessageTypes().get(30);
-    internal_static_PhoneAcceleration_fieldAccessorTable = new
+    internal_static_PhonePositionConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhoneAcceleration_descriptor,
-        new java.lang.String[] { "Gx", "Gy", "Gz", });
-    internal_static_PhoneAmbientLight_descriptor =
+        internal_static_PhonePositionConfig_descriptor,
+        new java.lang.String[] { });
+    internal_static_PhoneAccelerationData_descriptor =
       getDescriptor().getMessageTypes().get(31);
-    internal_static_PhoneAmbientLight_fieldAccessorTable = new
+    internal_static_PhoneAccelerationData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhoneAmbientLight_descriptor,
-        new java.lang.String[] { "SiLux", });
-    internal_static_PhonePressure_descriptor =
+        internal_static_PhoneAccelerationData_descriptor,
+        new java.lang.String[] { "Gx", "Gy", "Gz", });
+    internal_static_PhoneAccelerationConfig_descriptor =
       getDescriptor().getMessageTypes().get(32);
-    internal_static_PhonePressure_fieldAccessorTable = new
+    internal_static_PhoneAccelerationConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhonePressure_descriptor,
-        new java.lang.String[] { "Hpa", });
-    internal_static_PhoneModuleData_descriptor =
+        internal_static_PhoneAccelerationConfig_descriptor,
+        new java.lang.String[] { });
+    internal_static_PhoneAmbientLightData_descriptor =
       getDescriptor().getMessageTypes().get(33);
-    internal_static_PhoneModuleData_fieldAccessorTable = new
+    internal_static_PhoneAmbientLightData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhoneModuleData_descriptor,
-        new java.lang.String[] { "Position", "Acceleration", "Light", "Pressure", });
-    internal_static_PhoneModuleConfig_descriptor =
+        internal_static_PhoneAmbientLightData_descriptor,
+        new java.lang.String[] { "SiLux", });
+    internal_static_PhoneAmbientLightConfig_descriptor =
       getDescriptor().getMessageTypes().get(34);
-    internal_static_PhoneModuleConfig_fieldAccessorTable = new
+    internal_static_PhoneAmbientLightConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PhoneModuleConfig_descriptor,
-        new java.lang.String[] { "SensorPosition", "SensorAccel", "SensorLight", "SensorPressure", });
+        internal_static_PhoneAmbientLightConfig_descriptor,
+        new java.lang.String[] { });
+    internal_static_PhonePressureData_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_PhonePressureData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PhonePressureData_descriptor,
+        new java.lang.String[] { "Hpa", });
+    internal_static_PhonePressureConfig_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_PhonePressureConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PhonePressureConfig_descriptor,
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -9,7 +9,6 @@ import android.os.Looper
 import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.proto.Module
-import ca.berlingoqc.growbe_android_module.proto.PhonePositionKt
 import com.google.android.gms.location.*
 
 
@@ -31,7 +30,7 @@ class PositionService : Service() {
 
                 val lastLocation = p0.lastLocation ?: return
 
-                dataStore.position = Module.PhonePosition.newBuilder()
+                dataStore.position = Module.PhonePositionData.newBuilder()
                     .setLat(lastLocation.latitude.toFloat())
                     .setLog(lastLocation.longitude.toFloat())
                     .build()

@@ -55,19 +55,19 @@ class SensorService : Service() , SensorEventListener {
     override fun onSensorChanged(p0: SensorEvent?) {
         when {
             p0?.sensor?.type == Sensor.TYPE_ACCELEROMETER -> {
-                dataStore.acceleration = Module.PhoneAcceleration.newBuilder()
+                dataStore.acceleration = Module.PhoneAccelerationData.newBuilder()
                     .setGx(p0.values[0])
                     .setGy(p0.values[1])
                     .setGz(p0.values[2])
                     .build()
             }
             p0?.sensor?.type == Sensor.TYPE_LIGHT -> {
-                dataStore.light = Module.PhoneAmbientLight.newBuilder()
+                dataStore.light = Module.PhoneAmbientLightData.newBuilder()
                     .setSiLux(p0.values[0])
                     .build()
             }
             p0?.sensor?.type == Sensor.TYPE_PRESSURE -> {
-                dataStore.pressure = Module.PhonePressure.newBuilder()
+                dataStore.pressure = Module.PhonePressureData.newBuilder()
                     .setHpa(p0.values[0])
                     .build()
             }
