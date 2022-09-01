@@ -14,7 +14,7 @@ import androidx.preference.PreferenceManager
 
 object GrowbeModuleProfile {
 
-    val GROWBE_MODULE_SERVICE: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000001")
+    val GROWBE_MODULE_SERVICE: UUID = UUID.fromString("00000000-0000-0000-000f-eedc0de00002")
 
     val MODULES_SUPPORTED_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000000")
 

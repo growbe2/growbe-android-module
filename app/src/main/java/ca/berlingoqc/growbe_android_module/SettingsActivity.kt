@@ -14,6 +14,7 @@ import ca.berlingoqc.growbe_android_module.proto.Module
 import ca.berlingoqc.growbe_android_module.services.PositionService
 import ca.berlingoqc.growbe_android_module.services.SensorService
 import ca.berlingoqc.growbe_android_module.services.gatt.GattServerService
+import ca.berlingoqc.growbe_android_module.services.ws.WebSocketService
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -31,7 +32,10 @@ class SettingsActivity : AppCompatActivity() {
 
         validatePermissions()
 
-        var intent = Intent(this, GattServerService::class.java)
+        //var intent = Intent(this, GattServerService::class.java)
+        //startService(intent);
+
+        intent = Intent(this, WebSocketService::class.java)
         startService(intent)
 
         intent = Intent(this, SensorService::class.java)
@@ -47,6 +51,8 @@ class SettingsActivity : AppCompatActivity() {
         validatePermission(Manifest.permission.ACCESS_FINE_LOCATION)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             validatePermissionS()
+        } else {
+            validatePermission(Manifest.permission.ACCESS_COARSE_LOCATION)
         }
     }
 

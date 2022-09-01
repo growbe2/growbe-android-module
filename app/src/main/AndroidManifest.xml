@@ -16,23 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Growbeandroidmodule">
         <service
-            android:name="ca.berlingoqc.growbe_android_module.services.gatt.GattServerService"
+            android:name=".services.ws.WebSocketService"
             android:enabled="true"
             android:process=".process"
             android:exported="true" />
-
         <service
-            android:name="ca.berlingoqc.growbe_android_module.services.SensorService"
+            android:name=".services.gatt.GattServerService"
             android:enabled="true"
-            android:process=".process"
-            android:exported="true" />
-
+            android:exported="true"
+            android:process=".process" />
         <service
-            android:name="ca.berlingoqc.growbe_android_module.services.PositionService"
+            android:name=".services.SensorService"
             android:enabled="true"
-            android:process=".process"
+            android:exported="true"
+            android:process=".process" />
+        <service
+            android:name=".services.PositionService"
+            android:enabled="true"
+            android:exported="true"
             android:foregroundServiceType="location"
-            android:exported="true" />
+            android:process=".process" />
 
         <activity
             android:name=".SettingsActivity"

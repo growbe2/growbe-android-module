@@ -39,6 +39,10 @@ dependencies {
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'com.google.android.gms:play-services-location:20.0.0'
 
+    implementation 'com.balsikandar.android:crashreporter:1.0.1'
+
+    implementation 'com.koushikdutta.async:androidasync:2.+'
+
     implementation 'com.google.protobuf:protobuf-kotlin:3.21.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

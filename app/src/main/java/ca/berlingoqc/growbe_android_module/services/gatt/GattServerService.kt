@@ -17,7 +17,7 @@ import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
 
-private const val TAG = "GattServerActivity"
+private const val TAG = "GattServerService"
 
 class GattServerService : Service() {
 
@@ -52,6 +52,11 @@ class GattServerService : Service() {
         }
 
         unregisterReceiver(bluetoothReceiver)
+    }
+
+    override fun onCreate() {
+        Log.i(TAG, "Creating gatt server")
+        super.onCreate()
     }
 
     /**
