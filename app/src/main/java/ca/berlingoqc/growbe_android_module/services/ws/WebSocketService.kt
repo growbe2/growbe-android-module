@@ -7,6 +7,7 @@ import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
 import com.google.gson.Gson
+import com.google.protobuf.ByteString
 import com.koushikdutta.async.AsyncServer
 import com.koushikdutta.async.http.server.AsyncHttpServer
 import com.koushikdutta.async.callback.CompletedCallback
@@ -14,15 +15,13 @@ import com.koushikdutta.async.http.WebSocket
 import com.koushikdutta.async.http.server.AsyncHttpServer.WebSocketRequestCallback
 
 import com.koushikdutta.async.http.server.AsyncHttpServerRequest
+import kotlin.experimental.and
 
 private const val TAG = "WebSocketService"
 
 const val MSG_READ_SUPPORTED_MODULES = "READ_SUPPORTED_MODULES";
 const val MSG_READ_MODULE_ID = "READ_MODULE_ID";
-const val MSG_READ_LIGHT = "READ_LIGHT";
-const val MSG_READ_POSITION = "READ_POSITION";
-const val MSG_READ_ACCELERATION = "READ_ACCELERATION";
-const val MSG_READ_PRESSURE = "READ_PRESSURE";
+const val MSG_READ_DATA = "DATA";
 
 data class WebSocketMessage(val topic: String, val payload: String) {
     fun toJSONString(): String {
@@ -30,7 +29,6 @@ data class WebSocketMessage(val topic: String, val payload: String) {
         return gson.toJson(this);
     }
 };
-
 
 fun parseWebSocketMessage(msg: String): WebSocketMessage? {
     val gson = Gson();
@@ -42,8 +40,10 @@ fun WebSocket.sendMessage(topic: String, data: String) {
     this.send(msg.toJSONString());
 }
 
-fun WebSocket.sendMessage(topic: String, data: ByteArray) {
-    return this.sendMessage(topic, String(data));
+fun WebSocket.sendMessage(module: Byte, data: ByteArray) {
+    val prepend = ByteArray(1)
+    prepend[0] = module;
+    this.send(prepend + data);
 }
 
 class WebSocketService : Service() {
@@ -71,6 +71,23 @@ class WebSocketService : Service() {
             }
             socket = webSocket;
 
+            dataStore.pressureChanged = {
+                webSocket.sendMessage(2, dataStore.pressure?.toByteArray()!!);
+                0
+            };
+            dataStore.lightChanged = {
+                webSocket.sendMessage(3, dataStore.light?.toByteArray()!!);
+                0
+            };
+            dataStore.accelerationChanged = {
+                webSocket.sendMessage(1, dataStore.acceleration?.toByteArray()!!);
+                0
+            };
+            dataStore.positionChanged = {
+                webSocket.sendMessage(0, dataStore.position?.toByteArray()!!);
+                0
+            }
+
             //Use this to clean up any references to your websocket
             webSocket.closedCallback = CompletedCallback { ex ->
                 try {
@@ -90,18 +107,6 @@ class WebSocketService : Service() {
                         }
                         MSG_READ_SUPPORTED_MODULES -> {
                             webSocket.sendMessage(MSG_READ_SUPPORTED_MODULES, GrowbeModuleProfile.getSupportedModule().joinToString(";"));
-                        }
-                        MSG_READ_ACCELERATION -> {
-                            webSocket.sendMessage(MSG_READ_ACCELERATION, dataStore.acceleration?.toByteArray()!!)
-                        }
-                        MSG_READ_LIGHT -> {
-                            webSocket.sendMessage(MSG_READ_LIGHT, dataStore.light?.toByteArray()!!);
-                        }
-                        MSG_READ_POSITION -> {
-                            webSocket.sendMessage(MSG_READ_POSITION, dataStore.position?.toByteArray()!!);
-                        }
-                        MSG_READ_PRESSURE -> {
-                            webSocket.sendMessage(MSG_READ_PRESSURE, dataStore.pressure?.toByteArray()!!);
                         }
                         else -> {
                             Log.w(TAG, "failed to get topic ${msg.topic}");

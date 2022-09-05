@@ -38,6 +38,7 @@ class PositionService : Service() {
         }
 
         val request = LocationRequest.create();
+        request.interval = 3000;
         fusedLocationClient.requestLocationUpdates(request, locationCallback, Looper.myLooper())
 
 
