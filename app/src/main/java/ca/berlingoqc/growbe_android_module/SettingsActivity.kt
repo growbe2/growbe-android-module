@@ -32,8 +32,8 @@ class SettingsActivity : AppCompatActivity() {
 
         validatePermissions()
 
-        //var intent = Intent(this, GattServerService::class.java)
-        //startService(intent);
+        var intent = Intent(this, GattServerService::class.java)
+        startService(intent);
 
         intent = Intent(this, WebSocketService::class.java)
         startService(intent)

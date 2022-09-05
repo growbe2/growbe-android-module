@@ -9,6 +9,7 @@ import android.content.SharedPreferences
 import java.util.*
 import android.provider.Settings.Secure
 import android.provider.Settings.Secure.ANDROID_ID
+import android.util.Log
 import androidx.preference.PreferenceManager
 
 
@@ -45,6 +46,8 @@ object GrowbeModuleProfile {
             context.contentResolver,
             ANDROID_ID
         ).substring(0, 9).uppercase()
+
+        Log.e("GrowbeModuleProfile", "$androidId")
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 

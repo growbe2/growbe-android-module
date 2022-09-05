@@ -6,6 +6,7 @@ import android.os.IBinder
 import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
+import com.google.gson.Gson
 import com.koushikdutta.async.AsyncServer
 import com.koushikdutta.async.http.server.AsyncHttpServer
 import com.koushikdutta.async.callback.CompletedCallback
@@ -23,48 +24,26 @@ const val MSG_READ_POSITION = "READ_POSITION";
 const val MSG_READ_ACCELERATION = "READ_ACCELERATION";
 const val MSG_READ_PRESSURE = "READ_PRESSURE";
 
-data class WebSocketMessage(val topic: String, val payload: ByteArray) {
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as WebSocketMessage
-
-        if (topic != other.topic) return false
-        if (!payload.contentEquals(other.payload)) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = topic.hashCode()
-        result = 31 * result + payload.contentHashCode()
-        return result
-    }
-
+data class WebSocketMessage(val topic: String, val payload: String) {
     fun toJSONString(): String {
-        return """{"topic": "$topic", "payload": "${String(payload)}"}"""
+        val gson = Gson();
+        return gson.toJson(this);
     }
 };
 
 
-val regexMessage = Regex("""\{\"topic\": \"(.*)\", \"payload\": \"(.*)\"\}""")
-
 fun parseWebSocketMessage(msg: String): WebSocketMessage? {
-    val matches = regexMessage.find(msg);
-    if (matches != null && matches.groupValues.size == 3) {
-       return WebSocketMessage(matches.groupValues[1], matches.groupValues[2].toByteArray());
-    }
-    return null;
+    val gson = Gson();
+    return gson.fromJson(msg, WebSocketMessage::class.java);
 }
 
 fun WebSocket.sendMessage(topic: String, data: String) {
-    return this.sendMessage(topic, data.toByteArray());
+    val msg = WebSocketMessage(topic, data);
+    this.send(msg.toJSONString());
 }
 
 fun WebSocket.sendMessage(topic: String, data: ByteArray) {
-    val msg = WebSocketMessage(topic, data);
-    this.send(msg.toJSONString());
+    return this.sendMessage(topic, String(data));
 }
 
 class WebSocketService : Service() {
