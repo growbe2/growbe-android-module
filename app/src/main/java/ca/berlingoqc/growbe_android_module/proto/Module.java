@@ -34678,6 +34678,1431 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
   }
 
+  public interface PhoneStreamingDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneStreamingData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string status = 1;</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 1;</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>float fps = 2;</code>
+     * @return The fps.
+     */
+    float getFps();
+
+    /**
+     * <code>float bitrate = 3;</code>
+     * @return The bitrate.
+     */
+    float getBitrate();
+  }
+  /**
+   * Protobuf type {@code PhoneStreamingData}
+   */
+  public static final class PhoneStreamingData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PhoneStreamingData)
+      PhoneStreamingDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhoneStreamingData.newBuilder() to construct.
+    private PhoneStreamingData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhoneStreamingData() {
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhoneStreamingData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhoneStreamingData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
+              break;
+            }
+            case 21: {
+
+              fps_ = input.readFloat();
+              break;
+            }
+            case 29: {
+
+              bitrate_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object status_;
+    /**
+     * <code>string status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 1;</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FPS_FIELD_NUMBER = 2;
+    private float fps_;
+    /**
+     * <code>float fps = 2;</code>
+     * @return The fps.
+     */
+    @java.lang.Override
+    public float getFps() {
+      return fps_;
+    }
+
+    public static final int BITRATE_FIELD_NUMBER = 3;
+    private float bitrate_;
+    /**
+     * <code>float bitrate = 3;</code>
+     * @return The bitrate.
+     */
+    @java.lang.Override
+    public float getBitrate() {
+      return bitrate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, status_);
+      }
+      if (java.lang.Float.floatToRawIntBits(fps_) != 0) {
+        output.writeFloat(2, fps_);
+      }
+      if (java.lang.Float.floatToRawIntBits(bitrate_) != 0) {
+        output.writeFloat(3, bitrate_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, status_);
+      }
+      if (java.lang.Float.floatToRawIntBits(fps_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, fps_);
+      }
+      if (java.lang.Float.floatToRawIntBits(bitrate_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, bitrate_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData) obj;
+
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (java.lang.Float.floatToIntBits(getFps())
+          != java.lang.Float.floatToIntBits(
+              other.getFps())) return false;
+      if (java.lang.Float.floatToIntBits(getBitrate())
+          != java.lang.Float.floatToIntBits(
+              other.getBitrate())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      hash = (37 * hash) + FPS_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getFps());
+      hash = (37 * hash) + BITRATE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getBitrate());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PhoneStreamingData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PhoneStreamingData)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = "";
+
+        fps_ = 0F;
+
+        bitrate_ = 0F;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingData_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData(this);
+        result.status_ = status_;
+        result.fps_ = fps_;
+        result.bitrate_ = bitrate_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.getDefaultInstance()) return this;
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        if (other.getFps() != 0F) {
+          setFps(other.getFps());
+        }
+        if (other.getBitrate() != 0F) {
+          setBitrate(other.getBitrate());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 1;</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 1;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 1;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float fps_ ;
+      /**
+       * <code>float fps = 2;</code>
+       * @return The fps.
+       */
+      @java.lang.Override
+      public float getFps() {
+        return fps_;
+      }
+      /**
+       * <code>float fps = 2;</code>
+       * @param value The fps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFps(float value) {
+        
+        fps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float fps = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFps() {
+        
+        fps_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float bitrate_ ;
+      /**
+       * <code>float bitrate = 3;</code>
+       * @return The bitrate.
+       */
+      @java.lang.Override
+      public float getBitrate() {
+        return bitrate_;
+      }
+      /**
+       * <code>float bitrate = 3;</code>
+       * @param value The bitrate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBitrate(float value) {
+        
+        bitrate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float bitrate = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBitrate() {
+        
+        bitrate_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PhoneStreamingData)
+    }
+
+    // @@protoc_insertion_point(class_scope:PhoneStreamingData)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhoneStreamingData>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneStreamingData>() {
+      @java.lang.Override
+      public PhoneStreamingData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhoneStreamingData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhoneStreamingData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhoneStreamingData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PhoneStreamingConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PhoneStreamingConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool activated = 1;</code>
+     * @return The activated.
+     */
+    boolean getActivated();
+
+    /**
+     * <code>string url = 2;</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>string url = 2;</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <code>int32 camera = 3;</code>
+     * @return The camera.
+     */
+    int getCamera();
+  }
+  /**
+   * Protobuf type {@code PhoneStreamingConfig}
+   */
+  public static final class PhoneStreamingConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PhoneStreamingConfig)
+      PhoneStreamingConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhoneStreamingConfig.newBuilder() to construct.
+    private PhoneStreamingConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhoneStreamingConfig() {
+      url_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhoneStreamingConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhoneStreamingConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              activated_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              url_ = s;
+              break;
+            }
+            case 24: {
+
+              camera_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.Builder.class);
+    }
+
+    public static final int ACTIVATED_FIELD_NUMBER = 1;
+    private boolean activated_;
+    /**
+     * <code>bool activated = 1;</code>
+     * @return The activated.
+     */
+    @java.lang.Override
+    public boolean getActivated() {
+      return activated_;
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object url_;
+    /**
+     * <code>string url = 2;</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string url = 2;</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CAMERA_FIELD_NUMBER = 3;
+    private int camera_;
+    /**
+     * <code>int32 camera = 3;</code>
+     * @return The camera.
+     */
+    @java.lang.Override
+    public int getCamera() {
+      return camera_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (activated_ != false) {
+        output.writeBool(1, activated_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
+      }
+      if (camera_ != 0) {
+        output.writeInt32(3, camera_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (activated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, activated_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
+      }
+      if (camera_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, camera_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig) obj;
+
+      if (getActivated()
+          != other.getActivated()) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (getCamera()
+          != other.getCamera()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTIVATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getActivated());
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + CAMERA_FIELD_NUMBER;
+      hash = (53 * hash) + getCamera();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PhoneStreamingConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PhoneStreamingConfig)
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.class, ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        activated_ = false;
+
+        url_ = "";
+
+        camera_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_PhoneStreamingConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig(this);
+        result.activated_ = activated_;
+        result.url_ = url_;
+        result.camera_ = camera_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.getDefaultInstance()) return this;
+        if (other.getActivated() != false) {
+          setActivated(other.getActivated());
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          onChanged();
+        }
+        if (other.getCamera() != 0) {
+          setCamera(other.getCamera());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean activated_ ;
+      /**
+       * <code>bool activated = 1;</code>
+       * @return The activated.
+       */
+      @java.lang.Override
+      public boolean getActivated() {
+        return activated_;
+      }
+      /**
+       * <code>bool activated = 1;</code>
+       * @param value The activated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActivated(boolean value) {
+        
+        activated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool activated = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActivated() {
+        
+        activated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <code>string url = 2;</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string url = 2;</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string url = 2;</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string url = 2;</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        url_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int camera_ ;
+      /**
+       * <code>int32 camera = 3;</code>
+       * @return The camera.
+       */
+      @java.lang.Override
+      public int getCamera() {
+        return camera_;
+      }
+      /**
+       * <code>int32 camera = 3;</code>
+       * @param value The camera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCamera(int value) {
+        
+        camera_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 camera = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCamera() {
+        
+        camera_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PhoneStreamingConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:PhoneStreamingConfig)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhoneStreamingConfig>
+        PARSER = new com.google.protobuf.AbstractParser<PhoneStreamingConfig>() {
+      @java.lang.Override
+      public PhoneStreamingConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhoneStreamingConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhoneStreamingConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhoneStreamingConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Actor_descriptor;
   private static final 
@@ -34868,6 +36293,16 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PhonePressureConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PhoneStreamingData_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PhoneStreamingData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PhoneStreamingConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PhoneStreamingConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34970,22 +36405,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       "neAccelerationConfig\"\'\n\025PhoneAmbientLigh" +
       "tData\022\016\n\006si_lux\030\001 \001(\002\"\031\n\027PhoneAmbientLig" +
       "htConfig\" \n\021PhonePressureData\022\013\n\003hpa\030\001 \001" +
-      "(\002\"\025\n\023PhonePressureConfig*Z\n\tActorType\022\025" +
-      "\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DURATION_ACTOR\020" +
-      "\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTUAL_ACTOR\020\003*\220\001" +
-      "\n\017CalibrationStep\022\025\n\021READY_CALIBRATION\020\000" +
-      "\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HIGH_CALIBRATIO" +
-      "N\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022$\n WAITING_CO" +
-      "NFIRMATION_CALIBRATION\020\004*y\n\025CalibrationS" +
-      "tepStatus\022\033\n\027INSUFFISANT_DATA_STATUS\020\000\022\027" +
-      "\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014ERROR_STATUS\020" +
-      "\002\022\030\n\024AWAITING_STEP_STATUS\020\003*r\n\020Calibrati" +
-      "onError\022\016\n\nNONE_ERROR\020\000\022\031\n\025ALREADY_START" +
-      "ED_ERROR\020\001\022\027\n\023INSTABLE_DATA_ERROR\020\002\022\032\n\026N" +
-      "OT_ENOUGHT_DATA_ERROR\020\003*@\n\017RelayOutletMo" +
-      "de\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013\n\007VIRTUAL\020\002\022\t" +
-      "\n\005CYCLE\020\003B+\n)ca.berlingoqc.growbe_androi" +
-      "d_module.protob\006proto3"
+      "(\002\"\025\n\023PhonePressureConfig\"B\n\022PhoneStream" +
+      "ingData\022\016\n\006status\030\001 \001(\t\022\013\n\003fps\030\002 \001(\002\022\017\n\007" +
+      "bitrate\030\003 \001(\002\"F\n\024PhoneStreamingConfig\022\021\n" +
+      "\tactivated\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\016\n\006camera\030" +
+      "\003 \001(\005*Z\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020" +
+      "\000\022\022\n\016DURATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021" +
+      "\n\rVIRTUAL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n" +
+      "\021READY_CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020" +
+      "\001\022\024\n\020HIGH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRA" +
+      "TION\020\003\022$\n WAITING_CONFIRMATION_CALIBRATI" +
+      "ON\020\004*y\n\025CalibrationStepStatus\022\033\n\027INSUFFI" +
+      "SANT_DATA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATU" +
+      "S\020\001\022\020\n\014ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_S" +
+      "TATUS\020\003*r\n\020CalibrationError\022\016\n\nNONE_ERRO" +
+      "R\020\000\022\031\n\025ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTAB" +
+      "LE_DATA_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERRO" +
+      "R\020\003*@\n\017RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005AL" +
+      "ARM\020\001\022\013\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003B+\n)ca.berl" +
+      "ingoqc.growbe_android_module.protob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35219,6 +36658,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhonePressureConfig_descriptor,
         new java.lang.String[] { });
+    internal_static_PhoneStreamingData_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_PhoneStreamingData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PhoneStreamingData_descriptor,
+        new java.lang.String[] { "Status", "Fps", "Bitrate", });
+    internal_static_PhoneStreamingConfig_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_PhoneStreamingConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PhoneStreamingConfig_descriptor,
+        new java.lang.String[] { "Activated", "Url", "Camera", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

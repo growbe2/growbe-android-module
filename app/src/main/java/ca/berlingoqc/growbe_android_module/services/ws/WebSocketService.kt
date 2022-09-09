@@ -5,12 +5,15 @@ import android.content.Intent
 import android.os.IBinder
 import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
+import ca.berlingoqc.growbe_android_module.proto.Module
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
+import ca.berlingoqc.growbe_android_module.services.streamingService
 import com.google.gson.Gson
 import com.google.protobuf.ByteString
 import com.koushikdutta.async.AsyncServer
 import com.koushikdutta.async.http.server.AsyncHttpServer
 import com.koushikdutta.async.callback.CompletedCallback
+import com.koushikdutta.async.callback.DataCallback
 import com.koushikdutta.async.http.WebSocket
 import com.koushikdutta.async.http.server.AsyncHttpServer.WebSocketRequestCallback
 
@@ -22,6 +25,8 @@ private const val TAG = "WebSocketService"
 const val MSG_READ_SUPPORTED_MODULES = "READ_SUPPORTED_MODULES";
 const val MSG_READ_MODULE_ID = "READ_MODULE_ID";
 const val MSG_READ_DATA = "DATA";
+
+const val CODE_PCS: Byte = 4;
 
 data class WebSocketMessage(val topic: String, val payload: String) {
     fun toJSONString(): String {
@@ -88,6 +93,11 @@ class WebSocketService : Service() {
                 0
             }
 
+            dataStore.streamingChanged = {
+                webSocket.sendMessage(4, dataStore.streaming?.toByteArray()!!);
+                0
+            }
+
             //Use this to clean up any references to your websocket
             webSocket.closedCallback = CompletedCallback { ex ->
                 try {
@@ -96,6 +106,16 @@ class WebSocketService : Service() {
                     socket = null;
                 }
             }
+
+            webSocket.dataCallback = DataCallback { emitter, bb ->
+                val data = bb.allByteArray!!;
+                when (data[0]) {
+                    CODE_PCS -> {
+                        dataStore.streamingConfig = Module.PhoneStreamingConfig.parseFrom(data.drop(1).toByteArray());
+                        streamingService.streamingConfigChanged();
+                    }
+                }
+            };
 
             webSocket.setStringCallback { ex ->
                 val msg = parseWebSocketMessage(ex);

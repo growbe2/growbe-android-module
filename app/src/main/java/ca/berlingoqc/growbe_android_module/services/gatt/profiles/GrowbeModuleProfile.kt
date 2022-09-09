@@ -116,7 +116,7 @@ object GrowbeModuleProfile {
     }
 
     fun getSupportedModule(): Array<String> {
-        return arrayOf("PPO", "PAC", "PPR", "PAL")
+        return arrayOf("PPO", "PAC", "PPR", "PAL", "PCS")
     }
 
     fun getLinkMainboardId(): String {

@@ -26,8 +26,6 @@ class PositionService : Service() {
 
         locationCallback = object: LocationCallback() {
             override fun onLocationResult(p0: LocationResult) {
-                Log.i(TAG, "Updating position $p0")
-
                 val lastLocation = p0.lastLocation ?: return
 
                 dataStore.position = Module.PhonePositionData.newBuilder()

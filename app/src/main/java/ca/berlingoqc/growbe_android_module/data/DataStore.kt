@@ -8,6 +8,9 @@ class DataStore {
     var accelerationChanged: () -> Int = { 0 };
     var lightChanged: () -> Int = { 0 };
     var pressureChanged: () -> Int = { 0 };
+    var streamingChanged: () -> Int = { 0 };
+
+    var streamingConfigChanged: () -> Int = { 0 };
 
     var position: Module.PhonePositionData? = null
         set(value) { field = value; positionChanged() }
@@ -17,6 +20,11 @@ class DataStore {
         set(value) { field = value; lightChanged() }
     var pressure: Module.PhonePressureData? = null
         set(value) { field = value; pressureChanged() }
+    var streaming: Module.PhoneStreamingData? = null
+        set(value) { field = value; streamingChanged() }
+
+    var streamingConfig: Module.PhoneStreamingConfig? = null
+        set(value) { field = value; streamingConfigChanged()}
 }
 
 public val dataStore = DataStore()
