@@ -34,7 +34,9 @@ import java.lang.IllegalStateException
 import java.net.SocketException
 
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : AppCompatActivity(), RtmpHandler.RtmpListener, SrsRecordHandler.SrsRecordListener, SrsEncodeHandler.SrsEncodeListener {
+    var width = 640;
+    var height = 480;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,12 +49,12 @@ class SettingsActivity : AppCompatActivity() {
                     .commit()
         }
         */
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         validatePermissions()
 
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        streamingService.initialize(findViewById(R.id.glsurfaceview_camera));
+        //streamingService.initialize(findViewById(R.id.glsurfaceview_camera));
 
         var intent = Intent(this, GattServerService::class.java)
         startService(intent);
@@ -66,6 +68,23 @@ class SettingsActivity : AppCompatActivity() {
         intent = Intent(this, PositionService::class.java)
         startService(intent)
 
+
+
+        var cameraView: SrsCameraView = findViewById(R.id.glsurfaceview_camera);
+        cameraView.cameraId = android.hardware.Camera.CameraInfo.CAMERA_FACING_FRONT;
+
+        val publisher = SrsPublisher(cameraView)
+        publisher.setEncodeHandler(SrsEncodeHandler(this))
+        publisher.setRtmpHandler(RtmpHandler(this))
+        publisher.setRecordHandler(SrsRecordHandler(this))
+        publisher.setPreviewResolution(width, height)
+        publisher.setOutputResolution(width, height)
+        publisher.setVideoHDMode()
+        publisher.setVideoSmoothMode()
+        //publisher.startAudio();
+        publisher.startCamera();
+
+        publisher.startPublish("rtmp://stream.dev.growbe.ca/live/56837D-lol?sign=1665339381292-7d52f25a14a55eeed047948566c214dd");
 
 
     }
@@ -98,5 +117,71 @@ class SettingsActivity : AppCompatActivity() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
         }
+    }
+
+    override fun onRtmpConnecting(msg: String?) {
+    }
+
+    override fun onRtmpConnected(msg: String?) {
+    }
+
+    override fun onRtmpVideoStreaming() {
+    }
+
+    override fun onRtmpAudioStreaming() {
+    }
+
+    override fun onRtmpStopped() {
+    }
+
+    override fun onRtmpDisconnected() {
+    }
+
+    override fun onRtmpVideoFpsChanged(fps: Double) {
+    }
+
+    override fun onRtmpVideoBitrateChanged(bitrate: Double) {
+    }
+
+    override fun onRtmpAudioBitrateChanged(bitrate: Double) {
+    }
+
+    override fun onRtmpSocketException(e: SocketException?) {
+    }
+
+    override fun onRtmpIOException(e: IOException?) {
+    }
+
+    override fun onRtmpIllegalArgumentException(e: IllegalArgumentException?) {
+    }
+
+    override fun onRtmpIllegalStateException(e: IllegalStateException?) {
+    }
+
+    override fun onNetworkWeak() {
+    }
+
+    override fun onNetworkResume() {
+    }
+
+    override fun onEncodeIllegalArgumentException(e: IllegalArgumentException?) {
+    }
+
+    override fun onRecordPause() {
+    }
+
+    override fun onRecordResume() {
+    }
+
+    override fun onRecordStarted(msg: String?) {
+    }
+
+    override fun onRecordFinished(msg: String?) {
+    }
+
+    override fun onRecordIllegalArgumentException(e: IllegalArgumentException?) {
+    }
+
+    override fun onRecordIOException(e: IOException?) {
     }
 }
