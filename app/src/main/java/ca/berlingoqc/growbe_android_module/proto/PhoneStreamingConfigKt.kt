@@ -57,9 +57,9 @@ object PhoneStreamingConfigKt {
     }
 
     /**
-     * <code>int32 camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 3;</code>
      */
-    var camera: kotlin.Int
+     var camera: ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera
       @JvmName("getCamera")
       get() = _builder.getCamera()
       @JvmName("setCamera")
@@ -67,10 +67,112 @@ object PhoneStreamingConfigKt {
         _builder.setCamera(value)
       }
     /**
-     * <code>int32 camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 3;</code>
      */
     fun clearCamera() {
       _builder.clearCamera()
+    }
+
+    /**
+     * <code>bool light = 4;</code>
+     */
+    var light: kotlin.Boolean
+      @JvmName("getLight")
+      get() = _builder.getLight()
+      @JvmName("setLight")
+      set(value) {
+        _builder.setLight(value)
+      }
+    /**
+     * <code>bool light = 4;</code>
+     */
+    fun clearLight() {
+      _builder.clearLight()
+    }
+
+    /**
+     * <code>bool audio = 5;</code>
+     */
+    var audio: kotlin.Boolean
+      @JvmName("getAudio")
+      get() = _builder.getAudio()
+      @JvmName("setAudio")
+      set(value) {
+        _builder.setAudio(value)
+      }
+    /**
+     * <code>bool audio = 5;</code>
+     */
+    fun clearAudio() {
+      _builder.clearAudio()
+    }
+
+    /**
+     * <code>bool autoFocus = 6;</code>
+     */
+    var autoFocus: kotlin.Boolean
+      @JvmName("getAutoFocus")
+      get() = _builder.getAutoFocus()
+      @JvmName("setAutoFocus")
+      set(value) {
+        _builder.setAutoFocus(value)
+      }
+    /**
+     * <code>bool autoFocus = 6;</code>
+     */
+    fun clearAutoFocus() {
+      _builder.clearAutoFocus()
+    }
+
+    /**
+     * <code>bool stabilization = 7;</code>
+     */
+    var stabilization: kotlin.Boolean
+      @JvmName("getStabilization")
+      get() = _builder.getStabilization()
+      @JvmName("setStabilization")
+      set(value) {
+        _builder.setStabilization(value)
+      }
+    /**
+     * <code>bool stabilization = 7;</code>
+     */
+    fun clearStabilization() {
+      _builder.clearStabilization()
+    }
+
+    /**
+     * <code>bool faceDetection = 8;</code>
+     */
+    var faceDetection: kotlin.Boolean
+      @JvmName("getFaceDetection")
+      get() = _builder.getFaceDetection()
+      @JvmName("setFaceDetection")
+      set(value) {
+        _builder.setFaceDetection(value)
+      }
+    /**
+     * <code>bool faceDetection = 8;</code>
+     */
+    fun clearFaceDetection() {
+      _builder.clearFaceDetection()
+    }
+
+    /**
+     * <code>int32 zoom = 9;</code>
+     */
+    var zoom: kotlin.Int
+      @JvmName("getZoom")
+      get() = _builder.getZoom()
+      @JvmName("setZoom")
+      set(value) {
+        _builder.setZoom(value)
+      }
+    /**
+     * <code>int32 zoom = 9;</code>
+     */
+    fun clearZoom() {
+      _builder.clearZoom()
     }
   }
 }

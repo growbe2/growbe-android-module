@@ -2,29 +2,26 @@ package ca.berlingoqc.growbe_android_module.services.ws
 
 import android.app.Service
 import android.content.Intent
+import android.os.Binder
 import android.os.IBinder
 import android.util.Log
+import android.widget.Toast
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.proto.Module
+import ca.berlingoqc.growbe_android_module.services.StreamingService
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
-import ca.berlingoqc.growbe_android_module.services.streamingService
 import com.google.gson.Gson
-import com.google.protobuf.ByteString
 import com.koushikdutta.async.AsyncServer
 import com.koushikdutta.async.http.server.AsyncHttpServer
 import com.koushikdutta.async.callback.CompletedCallback
 import com.koushikdutta.async.callback.DataCallback
 import com.koushikdutta.async.http.WebSocket
-import com.koushikdutta.async.http.server.AsyncHttpServer.WebSocketRequestCallback
-
-import com.koushikdutta.async.http.server.AsyncHttpServerRequest
-import kotlin.experimental.and
 
 private const val TAG = "WebSocketService"
 
 const val MSG_READ_SUPPORTED_MODULES = "READ_SUPPORTED_MODULES";
 const val MSG_READ_MODULE_ID = "READ_MODULE_ID";
-const val MSG_READ_DATA = "DATA";
+const val MSG_MAINBOARD_ID = "MAINBOARD_ID";
 
 const val CODE_PCS: Byte = 4;
 
@@ -53,12 +50,21 @@ fun WebSocket.sendMessage(module: Byte, data: ByteArray) {
 
 class WebSocketService : Service() {
 
+    private val streamService = StreamingService();
 
     override fun onBind(intent: Intent): IBinder {
-        TODO("Return the communication channel to the service.")
+        TODO("prout");
+    }
+
+    override fun onCreate() {
+        Log.e(TAG, "create");
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+
+        streamService.initialize(this);
+        dataStore.initialize(this);
+
         val httpServer = AsyncHttpServer();
         var socket: WebSocket? = null;
 
@@ -70,9 +76,9 @@ class WebSocketService : Service() {
             "/live"
         ) { webSocket, request ->
             if (socket == null) {
-                print("Sending for first time");
-                webSocket.sendMessage(MSG_READ_MODULE_ID, GrowbeModuleProfile.getId());
-                webSocket.sendMessage(MSG_READ_SUPPORTED_MODULES, GrowbeModuleProfile.getSupportedModule().joinToString(";"));
+                Log.e(TAG,"Sending for first time ${dataStore.moduleId}");
+                webSocket.sendMessage(MSG_READ_MODULE_ID, dataStore.moduleId!!);
+                webSocket.sendMessage(MSG_READ_SUPPORTED_MODULES, dataStore.supportedModules.joinToString(";"));
             }
             socket = webSocket;
 
@@ -112,7 +118,7 @@ class WebSocketService : Service() {
                 when (data[0]) {
                     CODE_PCS -> {
                         dataStore.streamingConfig = Module.PhoneStreamingConfig.parseFrom(data.drop(1).toByteArray());
-                        streamingService.streamingConfigChanged();
+                        streamService.streamingConfigChanged();
                     }
                 }
             };
@@ -122,6 +128,10 @@ class WebSocketService : Service() {
                 Log.e(TAG, "$msg");
                 if (msg != null) {
                     when(msg.topic) {
+                        MSG_MAINBOARD_ID -> {
+                            dataStore.mainboardId = msg.payload;
+                            Log.w(TAG, "Set mainboard id ${dataStore.mainboardId}");
+                        }
                         MSG_READ_MODULE_ID -> {
                             webSocket.sendMessage(MSG_READ_MODULE_ID, GrowbeModuleProfile.getId());
                         }

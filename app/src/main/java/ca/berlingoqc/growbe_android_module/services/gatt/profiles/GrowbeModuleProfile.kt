@@ -11,6 +11,7 @@ import android.provider.Settings.Secure
 import android.provider.Settings.Secure.ANDROID_ID
 import android.util.Log
 import androidx.preference.PreferenceManager
+import ca.berlingoqc.growbe_android_module.data.dataStore
 
 
 object GrowbeModuleProfile {
@@ -31,27 +32,7 @@ object GrowbeModuleProfile {
 
     val PRESSURE_ID: UUID = UUID.fromString("00000000-0000-0000-0000-ffff00000006")
 
-    val MAINBOARD_ID_KEY_PREFERENCE: String = "ca.berlingoqc.growbe_android_module.mainboardId"
-
-    var sharedPreferences: SharedPreferences? = null
-
-    var androidId: String = ""
-
-    var mainboardId: String = ""
-
-    @SuppressLint("HardwareIds")
-    fun createGrowbeModuleService(context: Context): BluetoothGattService {
-
-        androidId = Secure.getString(
-            context.contentResolver,
-            ANDROID_ID
-        ).substring(0, 9).uppercase()
-
-        Log.e("GrowbeModuleProfile", "$androidId")
-
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
-        mainboardId = sharedPreferences?.getString(MAINBOARD_ID_KEY_PREFERENCE, "").toString()
+    fun createGrowbeModuleService(): BluetoothGattService {
 
         val service = BluetoothGattService(
             GROWBE_MODULE_SERVICE,
@@ -112,23 +93,14 @@ object GrowbeModuleProfile {
     }
 
     fun getId(): String {
-        return "$androidId"
+        return dataStore.moduleId!!;
     }
 
     fun getSupportedModule(): Array<String> {
-        return arrayOf("PPO", "PAC", "PPR", "PAL", "PCS")
+        return dataStore.supportedModules;
     }
 
     fun getLinkMainboardId(): String {
-       return mainboardId
+       return dataStore.mainboardId!!;
     }
-
-    fun setLinkMainboardId(mainboardId: String) {
-        sharedPreferences?.edit().let {
-            it?.putString(MAINBOARD_ID_KEY_PREFERENCE, mainboardId)
-            this.mainboardId = mainboardId
-            it?.commit()
-        }
-    }
-
 }

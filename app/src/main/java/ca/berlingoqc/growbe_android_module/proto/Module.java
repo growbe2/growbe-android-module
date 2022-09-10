@@ -653,6 +653,222 @@ public final class Module {
     // @@protoc_insertion_point(enum_scope:RelayOutletMode)
   }
 
+  /**
+   * Protobuf enum {@code PhoneStreamingStatus}
+   */
+  public enum PhoneStreamingStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>STOPPED = 0;</code>
+     */
+    STOPPED(0),
+    /**
+     * <code>RUNNING = 1;</code>
+     */
+    RUNNING(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>STOPPED = 0;</code>
+     */
+    public static final int STOPPED_VALUE = 0;
+    /**
+     * <code>RUNNING = 1;</code>
+     */
+    public static final int RUNNING_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PhoneStreamingStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PhoneStreamingStatus forNumber(int value) {
+      switch (value) {
+        case 0: return STOPPED;
+        case 1: return RUNNING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PhoneStreamingStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingStatus>() {
+            public PhoneStreamingStatus findValueByNumber(int number) {
+              return PhoneStreamingStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final PhoneStreamingStatus[] VALUES = values();
+
+    public static PhoneStreamingStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PhoneStreamingStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:PhoneStreamingStatus)
+  }
+
+  /**
+   * Protobuf enum {@code PhoneStreamingCamera}
+   */
+  public enum PhoneStreamingCamera
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>BACK = 0;</code>
+     */
+    BACK(0),
+    /**
+     * <code>FRONT = 1;</code>
+     */
+    FRONT(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>BACK = 0;</code>
+     */
+    public static final int BACK_VALUE = 0;
+    /**
+     * <code>FRONT = 1;</code>
+     */
+    public static final int FRONT_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PhoneStreamingCamera valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PhoneStreamingCamera forNumber(int value) {
+      switch (value) {
+        case 0: return BACK;
+        case 1: return FRONT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingCamera>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PhoneStreamingCamera> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingCamera>() {
+            public PhoneStreamingCamera findValueByNumber(int number) {
+              return PhoneStreamingCamera.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.getDescriptor().getEnumTypes().get(6);
+    }
+
+    private static final PhoneStreamingCamera[] VALUES = values();
+
+    public static PhoneStreamingCamera valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PhoneStreamingCamera(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:PhoneStreamingCamera)
+  }
+
   public interface ActorOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Actor)
       com.google.protobuf.MessageOrBuilder {
@@ -34683,16 +34899,15 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string status = 1;</code>
+     * <code>.PhoneStreamingStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.PhoneStreamingStatus status = 1;</code>
      * @return The status.
      */
-    java.lang.String getStatus();
-    /**
-     * <code>string status = 1;</code>
-     * @return The bytes for status.
-     */
-    com.google.protobuf.ByteString
-        getStatusBytes();
+    ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus getStatus();
 
     /**
      * <code>float fps = 2;</code>
@@ -34719,7 +34934,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       super(builder);
     }
     private PhoneStreamingData() {
-      status_ = "";
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -34752,10 +34967,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 8: {
+              int rawValue = input.readEnum();
 
-              status_ = s;
+              status_ = rawValue;
               break;
             }
             case 21: {
@@ -34803,41 +35018,22 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
 
     public static final int STATUS_FIELD_NUMBER = 1;
-    private volatile java.lang.Object status_;
+    private int status_;
     /**
-     * <code>string status = 1;</code>
-     * @return The status.
+     * <code>.PhoneStreamingStatus status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    @java.lang.Override
-    public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
+    @java.lang.Override public int getStatusValue() {
+      return status_;
     }
     /**
-     * <code>string status = 1;</code>
-     * @return The bytes for status.
+     * <code>.PhoneStreamingStatus status = 1;</code>
+     * @return The status.
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    @java.lang.Override public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.valueOf(status_);
+      return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.UNRECOGNIZED : result;
     }
 
     public static final int FPS_FIELD_NUMBER = 2;
@@ -34876,8 +35072,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, status_);
+      if (status_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.STOPPED.getNumber()) {
+        output.writeEnum(1, status_);
       }
       if (java.lang.Float.floatToRawIntBits(fps_) != 0) {
         output.writeFloat(2, fps_);
@@ -34894,8 +35090,9 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, status_);
+      if (status_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.STOPPED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
       }
       if (java.lang.Float.floatToRawIntBits(fps_) != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -34920,8 +35117,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
       ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData other = (ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData) obj;
 
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
+      if (status_ != other.status_) return false;
       if (java.lang.Float.floatToIntBits(getFps())
           != java.lang.Float.floatToIntBits(
               other.getFps())) return false;
@@ -34940,7 +35136,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
+      hash = (53 * hash) + status_;
       hash = (37 * hash) + FPS_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getFps());
@@ -35080,7 +35276,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        status_ = "";
+        status_ = 0;
 
         fps_ = 0F;
 
@@ -35163,9 +35359,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData other) {
         if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData.getDefaultInstance()) return this;
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          onChanged();
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
         }
         if (other.getFps() != 0F) {
           setFps(other.getFps());
@@ -35202,78 +35397,56 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
 
-      private java.lang.Object status_ = "";
+      private int status_ = 0;
       /**
-       * <code>string status = 1;</code>
-       * @return The status.
+       * <code>.PhoneStreamingStatus status = 1;</code>
+       * @return The enum numeric value on the wire for status.
        */
-      public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override public int getStatusValue() {
+        return status_;
       }
       /**
-       * <code>string status = 1;</code>
-       * @return The bytes for status.
-       */
-      public com.google.protobuf.ByteString
-          getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string status = 1;</code>
-       * @param value The status to set.
+       * <code>.PhoneStreamingStatus status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setStatusValue(int value) {
+        
         status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string status = 1;</code>
+       * <code>.PhoneStreamingStatus status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.valueOf(status_);
+        return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.PhoneStreamingStatus status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.PhoneStreamingStatus status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
         
-        status_ = getDefaultInstance().getStatus();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string status = 1;</code>
-       * @param value The bytes for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        status_ = value;
+        status_ = 0;
         onChanged();
         return this;
       }
@@ -35415,10 +35588,51 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         getUrlBytes();
 
     /**
-     * <code>int32 camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * @return The enum numeric value on the wire for camera.
+     */
+    int getCameraValue();
+    /**
+     * <code>.PhoneStreamingCamera camera = 3;</code>
      * @return The camera.
      */
-    int getCamera();
+    ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera getCamera();
+
+    /**
+     * <code>bool light = 4;</code>
+     * @return The light.
+     */
+    boolean getLight();
+
+    /**
+     * <code>bool audio = 5;</code>
+     * @return The audio.
+     */
+    boolean getAudio();
+
+    /**
+     * <code>bool autoFocus = 6;</code>
+     * @return The autoFocus.
+     */
+    boolean getAutoFocus();
+
+    /**
+     * <code>bool stabilization = 7;</code>
+     * @return The stabilization.
+     */
+    boolean getStabilization();
+
+    /**
+     * <code>bool faceDetection = 8;</code>
+     * @return The faceDetection.
+     */
+    boolean getFaceDetection();
+
+    /**
+     * <code>int32 zoom = 9;</code>
+     * @return The zoom.
+     */
+    int getZoom();
   }
   /**
    * Protobuf type {@code PhoneStreamingConfig}
@@ -35434,6 +35648,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     private PhoneStreamingConfig() {
       url_ = "";
+      camera_ = 0;
     }
 
     @java.lang.Override
@@ -35478,8 +35693,39 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
               break;
             }
             case 24: {
+              int rawValue = input.readEnum();
 
-              camera_ = input.readInt32();
+              camera_ = rawValue;
+              break;
+            }
+            case 32: {
+
+              light_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              audio_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              autoFocus_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              stabilization_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              faceDetection_ = input.readBool();
+              break;
+            }
+            case 72: {
+
+              zoom_ = input.readInt32();
               break;
             }
             default: {
@@ -35568,12 +35814,86 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     public static final int CAMERA_FIELD_NUMBER = 3;
     private int camera_;
     /**
-     * <code>int32 camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * @return The enum numeric value on the wire for camera.
+     */
+    @java.lang.Override public int getCameraValue() {
+      return camera_;
+    }
+    /**
+     * <code>.PhoneStreamingCamera camera = 3;</code>
      * @return The camera.
      */
+    @java.lang.Override public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera getCamera() {
+      @SuppressWarnings("deprecation")
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.valueOf(camera_);
+      return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.UNRECOGNIZED : result;
+    }
+
+    public static final int LIGHT_FIELD_NUMBER = 4;
+    private boolean light_;
+    /**
+     * <code>bool light = 4;</code>
+     * @return The light.
+     */
     @java.lang.Override
-    public int getCamera() {
-      return camera_;
+    public boolean getLight() {
+      return light_;
+    }
+
+    public static final int AUDIO_FIELD_NUMBER = 5;
+    private boolean audio_;
+    /**
+     * <code>bool audio = 5;</code>
+     * @return The audio.
+     */
+    @java.lang.Override
+    public boolean getAudio() {
+      return audio_;
+    }
+
+    public static final int AUTOFOCUS_FIELD_NUMBER = 6;
+    private boolean autoFocus_;
+    /**
+     * <code>bool autoFocus = 6;</code>
+     * @return The autoFocus.
+     */
+    @java.lang.Override
+    public boolean getAutoFocus() {
+      return autoFocus_;
+    }
+
+    public static final int STABILIZATION_FIELD_NUMBER = 7;
+    private boolean stabilization_;
+    /**
+     * <code>bool stabilization = 7;</code>
+     * @return The stabilization.
+     */
+    @java.lang.Override
+    public boolean getStabilization() {
+      return stabilization_;
+    }
+
+    public static final int FACEDETECTION_FIELD_NUMBER = 8;
+    private boolean faceDetection_;
+    /**
+     * <code>bool faceDetection = 8;</code>
+     * @return The faceDetection.
+     */
+    @java.lang.Override
+    public boolean getFaceDetection() {
+      return faceDetection_;
+    }
+
+    public static final int ZOOM_FIELD_NUMBER = 9;
+    private int zoom_;
+    /**
+     * <code>int32 zoom = 9;</code>
+     * @return The zoom.
+     */
+    @java.lang.Override
+    public int getZoom() {
+      return zoom_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -35596,8 +35916,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
-      if (camera_ != 0) {
-        output.writeInt32(3, camera_);
+      if (camera_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.BACK.getNumber()) {
+        output.writeEnum(3, camera_);
+      }
+      if (light_ != false) {
+        output.writeBool(4, light_);
+      }
+      if (audio_ != false) {
+        output.writeBool(5, audio_);
+      }
+      if (autoFocus_ != false) {
+        output.writeBool(6, autoFocus_);
+      }
+      if (stabilization_ != false) {
+        output.writeBool(7, stabilization_);
+      }
+      if (faceDetection_ != false) {
+        output.writeBool(8, faceDetection_);
+      }
+      if (zoom_ != 0) {
+        output.writeInt32(9, zoom_);
       }
       unknownFields.writeTo(output);
     }
@@ -35615,9 +35953,33 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
-      if (camera_ != 0) {
+      if (camera_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.BACK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, camera_);
+          .computeEnumSize(3, camera_);
+      }
+      if (light_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, light_);
+      }
+      if (audio_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, audio_);
+      }
+      if (autoFocus_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, autoFocus_);
+      }
+      if (stabilization_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, stabilization_);
+      }
+      if (faceDetection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, faceDetection_);
+      }
+      if (zoom_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, zoom_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35638,8 +36000,19 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           != other.getActivated()) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
-      if (getCamera()
-          != other.getCamera()) return false;
+      if (camera_ != other.camera_) return false;
+      if (getLight()
+          != other.getLight()) return false;
+      if (getAudio()
+          != other.getAudio()) return false;
+      if (getAutoFocus()
+          != other.getAutoFocus()) return false;
+      if (getStabilization()
+          != other.getStabilization()) return false;
+      if (getFaceDetection()
+          != other.getFaceDetection()) return false;
+      if (getZoom()
+          != other.getZoom()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -35657,7 +36030,24 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + CAMERA_FIELD_NUMBER;
-      hash = (53 * hash) + getCamera();
+      hash = (53 * hash) + camera_;
+      hash = (37 * hash) + LIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLight());
+      hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAudio());
+      hash = (37 * hash) + AUTOFOCUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAutoFocus());
+      hash = (37 * hash) + STABILIZATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStabilization());
+      hash = (37 * hash) + FACEDETECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFaceDetection());
+      hash = (37 * hash) + ZOOM_FIELD_NUMBER;
+      hash = (53 * hash) + getZoom();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35797,6 +36187,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
         camera_ = 0;
 
+        light_ = false;
+
+        audio_ = false;
+
+        autoFocus_ = false;
+
+        stabilization_ = false;
+
+        faceDetection_ = false;
+
+        zoom_ = 0;
+
         return this;
       }
 
@@ -35826,6 +36228,12 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         result.activated_ = activated_;
         result.url_ = url_;
         result.camera_ = camera_;
+        result.light_ = light_;
+        result.audio_ = audio_;
+        result.autoFocus_ = autoFocus_;
+        result.stabilization_ = stabilization_;
+        result.faceDetection_ = faceDetection_;
+        result.zoom_ = zoom_;
         onBuilt();
         return result;
       }
@@ -35881,8 +36289,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
           url_ = other.url_;
           onChanged();
         }
-        if (other.getCamera() != 0) {
-          setCamera(other.getCamera());
+        if (other.camera_ != 0) {
+          setCameraValue(other.getCameraValue());
+        }
+        if (other.getLight() != false) {
+          setLight(other.getLight());
+        }
+        if (other.getAudio() != false) {
+          setAudio(other.getAudio());
+        }
+        if (other.getAutoFocus() != false) {
+          setAutoFocus(other.getAutoFocus());
+        }
+        if (other.getStabilization() != false) {
+          setStabilization(other.getStabilization());
+        }
+        if (other.getFaceDetection() != false) {
+          setFaceDetection(other.getFaceDetection());
+        }
+        if (other.getZoom() != 0) {
+          setZoom(other.getZoom());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -36020,33 +36446,242 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
 
-      private int camera_ ;
+      private int camera_ = 0;
       /**
-       * <code>int32 camera = 3;</code>
-       * @return The camera.
+       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * @return The enum numeric value on the wire for camera.
        */
-      @java.lang.Override
-      public int getCamera() {
+      @java.lang.Override public int getCameraValue() {
         return camera_;
       }
       /**
-       * <code>int32 camera = 3;</code>
-       * @param value The camera to set.
+       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * @param value The enum numeric value on the wire for camera to set.
        * @return This builder for chaining.
        */
-      public Builder setCamera(int value) {
+      public Builder setCameraValue(int value) {
         
         camera_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * @return The camera.
+       */
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera getCamera() {
+        @SuppressWarnings("deprecation")
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.valueOf(camera_);
+        return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * @param value The camera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCamera(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        camera_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.PhoneStreamingCamera camera = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearCamera() {
         
         camera_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean light_ ;
+      /**
+       * <code>bool light = 4;</code>
+       * @return The light.
+       */
+      @java.lang.Override
+      public boolean getLight() {
+        return light_;
+      }
+      /**
+       * <code>bool light = 4;</code>
+       * @param value The light to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLight(boolean value) {
+        
+        light_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool light = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLight() {
+        
+        light_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean audio_ ;
+      /**
+       * <code>bool audio = 5;</code>
+       * @return The audio.
+       */
+      @java.lang.Override
+      public boolean getAudio() {
+        return audio_;
+      }
+      /**
+       * <code>bool audio = 5;</code>
+       * @param value The audio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAudio(boolean value) {
+        
+        audio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool audio = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAudio() {
+        
+        audio_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean autoFocus_ ;
+      /**
+       * <code>bool autoFocus = 6;</code>
+       * @return The autoFocus.
+       */
+      @java.lang.Override
+      public boolean getAutoFocus() {
+        return autoFocus_;
+      }
+      /**
+       * <code>bool autoFocus = 6;</code>
+       * @param value The autoFocus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoFocus(boolean value) {
+        
+        autoFocus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool autoFocus = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutoFocus() {
+        
+        autoFocus_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean stabilization_ ;
+      /**
+       * <code>bool stabilization = 7;</code>
+       * @return The stabilization.
+       */
+      @java.lang.Override
+      public boolean getStabilization() {
+        return stabilization_;
+      }
+      /**
+       * <code>bool stabilization = 7;</code>
+       * @param value The stabilization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStabilization(boolean value) {
+        
+        stabilization_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool stabilization = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStabilization() {
+        
+        stabilization_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean faceDetection_ ;
+      /**
+       * <code>bool faceDetection = 8;</code>
+       * @return The faceDetection.
+       */
+      @java.lang.Override
+      public boolean getFaceDetection() {
+        return faceDetection_;
+      }
+      /**
+       * <code>bool faceDetection = 8;</code>
+       * @param value The faceDetection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFaceDetection(boolean value) {
+        
+        faceDetection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool faceDetection = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFaceDetection() {
+        
+        faceDetection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int zoom_ ;
+      /**
+       * <code>int32 zoom = 9;</code>
+       * @return The zoom.
+       */
+      @java.lang.Override
+      public int getZoom() {
+        return zoom_;
+      }
+      /**
+       * <code>int32 zoom = 9;</code>
+       * @param value The zoom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoom(int value) {
+        
+        zoom_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 zoom = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoom() {
+        
+        zoom_ = 0;
         onChanged();
         return this;
       }
@@ -36405,26 +37040,32 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       "neAccelerationConfig\"\'\n\025PhoneAmbientLigh" +
       "tData\022\016\n\006si_lux\030\001 \001(\002\"\031\n\027PhoneAmbientLig" +
       "htConfig\" \n\021PhonePressureData\022\013\n\003hpa\030\001 \001" +
-      "(\002\"\025\n\023PhonePressureConfig\"B\n\022PhoneStream" +
-      "ingData\022\016\n\006status\030\001 \001(\t\022\013\n\003fps\030\002 \001(\002\022\017\n\007" +
-      "bitrate\030\003 \001(\002\"F\n\024PhoneStreamingConfig\022\021\n" +
-      "\tactivated\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\016\n\006camera\030" +
-      "\003 \001(\005*Z\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020" +
-      "\000\022\022\n\016DURATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021" +
-      "\n\rVIRTUAL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n" +
-      "\021READY_CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020" +
-      "\001\022\024\n\020HIGH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRA" +
-      "TION\020\003\022$\n WAITING_CONFIRMATION_CALIBRATI" +
-      "ON\020\004*y\n\025CalibrationStepStatus\022\033\n\027INSUFFI" +
-      "SANT_DATA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATU" +
-      "S\020\001\022\020\n\014ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_S" +
-      "TATUS\020\003*r\n\020CalibrationError\022\016\n\nNONE_ERRO" +
-      "R\020\000\022\031\n\025ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTAB" +
-      "LE_DATA_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERRO" +
-      "R\020\003*@\n\017RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005AL" +
-      "ARM\020\001\022\013\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003B+\n)ca.berl" +
-      "ingoqc.growbe_android_module.protob\006prot" +
-      "o3"
+      "(\002\"\025\n\023PhonePressureConfig\"Y\n\022PhoneStream" +
+      "ingData\022%\n\006status\030\001 \001(\0162\025.PhoneStreaming" +
+      "Status\022\013\n\003fps\030\002 \001(\002\022\017\n\007bitrate\030\003 \001(\002\"\312\001\n" +
+      "\024PhoneStreamingConfig\022\021\n\tactivated\030\001 \001(\010" +
+      "\022\013\n\003url\030\002 \001(\t\022%\n\006camera\030\003 \001(\0162\025.PhoneStr" +
+      "eamingCamera\022\r\n\005light\030\004 \001(\010\022\r\n\005audio\030\005 \001" +
+      "(\010\022\021\n\tautoFocus\030\006 \001(\010\022\025\n\rstabilization\030\007" +
+      " \001(\010\022\025\n\rfaceDetection\030\010 \001(\010\022\014\n\004zoom\030\t \001(" +
+      "\005*Z\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n" +
+      "\016DURATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVI" +
+      "RTUAL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n\021REA" +
+      "DY_CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n" +
+      "\020HIGH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRATION" +
+      "\020\003\022$\n WAITING_CONFIRMATION_CALIBRATION\020\004" +
+      "*y\n\025CalibrationStepStatus\022\033\n\027INSUFFISANT" +
+      "_DATA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATUS\020\001\022" +
+      "\020\n\014ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_STATU" +
+      "S\020\003*r\n\020CalibrationError\022\016\n\nNONE_ERROR\020\000\022" +
+      "\031\n\025ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTABLE_D" +
+      "ATA_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERROR\020\003*" +
+      "@\n\017RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020" +
+      "\001\022\013\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003*0\n\024PhoneStream" +
+      "ingStatus\022\013\n\007STOPPED\020\000\022\013\n\007RUNNING\020\001*+\n\024P" +
+      "honeStreamingCamera\022\010\n\004BACK\020\000\022\t\n\005FRONT\020\001" +
+      "B+\n)ca.berlingoqc.growbe_android_module." +
+      "protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36669,7 +37310,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     internal_static_PhoneStreamingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhoneStreamingConfig_descriptor,
-        new java.lang.String[] { "Activated", "Url", "Camera", });
+        new java.lang.String[] { "Activated", "Url", "Camera", "Light", "Audio", "AutoFocus", "Stabilization", "FaceDetection", "Zoom", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

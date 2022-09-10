@@ -23,9 +23,9 @@ object PhoneStreamingDataKt {
     internal fun _build(): ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData = _builder.build()
 
     /**
-     * <code>string status = 1;</code>
+     * <code>.PhoneStreamingStatus status = 1;</code>
      */
-    var status: kotlin.String
+     var status: ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingStatus
       @JvmName("getStatus")
       get() = _builder.getStatus()
       @JvmName("setStatus")
@@ -33,7 +33,7 @@ object PhoneStreamingDataKt {
         _builder.setStatus(value)
       }
     /**
-     * <code>string status = 1;</code>
+     * <code>.PhoneStreamingStatus status = 1;</code>
      */
     fun clearStatus() {
       _builder.clearStatus()
