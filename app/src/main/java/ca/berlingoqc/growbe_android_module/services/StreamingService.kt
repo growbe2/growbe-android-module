@@ -71,8 +71,8 @@ class StreamingService: ConnectCheckerRtmp {
                         rtmpCamera1?.enableAutoFocus();
                     }
 
-                    if (config.audio) {
-                        rtmpCamera1?.enableAudio();
+                    if (!config.audio) {
+                        rtmpCamera1?.disableAudio();
                     }
 
                     if (config.stabilization) {
