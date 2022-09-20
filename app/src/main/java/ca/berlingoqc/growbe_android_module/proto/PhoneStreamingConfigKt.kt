@@ -40,7 +40,24 @@ object PhoneStreamingConfigKt {
     }
 
     /**
-     * <code>string url = 2;</code>
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     */
+     var output: ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput
+      @JvmName("getOutput")
+      get() = _builder.getOutput()
+      @JvmName("setOutput")
+      set(value) {
+        _builder.setOutput(value)
+      }
+    /**
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     */
+    fun clearOutput() {
+      _builder.clearOutput()
+    }
+
+    /**
+     * <code>string url = 3;</code>
      */
     var url: kotlin.String
       @JvmName("getUrl")
@@ -50,14 +67,14 @@ object PhoneStreamingConfigKt {
         _builder.setUrl(value)
       }
     /**
-     * <code>string url = 2;</code>
+     * <code>string url = 3;</code>
      */
     fun clearUrl() {
       _builder.clearUrl()
     }
 
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      */
      var camera: ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera
       @JvmName("getCamera")
@@ -67,14 +84,14 @@ object PhoneStreamingConfigKt {
         _builder.setCamera(value)
       }
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      */
     fun clearCamera() {
       _builder.clearCamera()
     }
 
     /**
-     * <code>bool light = 4;</code>
+     * <code>bool light = 5;</code>
      */
     var light: kotlin.Boolean
       @JvmName("getLight")
@@ -84,14 +101,14 @@ object PhoneStreamingConfigKt {
         _builder.setLight(value)
       }
     /**
-     * <code>bool light = 4;</code>
+     * <code>bool light = 5;</code>
      */
     fun clearLight() {
       _builder.clearLight()
     }
 
     /**
-     * <code>bool audio = 5;</code>
+     * <code>bool audio = 6;</code>
      */
     var audio: kotlin.Boolean
       @JvmName("getAudio")
@@ -101,14 +118,14 @@ object PhoneStreamingConfigKt {
         _builder.setAudio(value)
       }
     /**
-     * <code>bool audio = 5;</code>
+     * <code>bool audio = 6;</code>
      */
     fun clearAudio() {
       _builder.clearAudio()
     }
 
     /**
-     * <code>bool autoFocus = 6;</code>
+     * <code>bool autoFocus = 7;</code>
      */
     var autoFocus: kotlin.Boolean
       @JvmName("getAutoFocus")
@@ -118,14 +135,14 @@ object PhoneStreamingConfigKt {
         _builder.setAutoFocus(value)
       }
     /**
-     * <code>bool autoFocus = 6;</code>
+     * <code>bool autoFocus = 7;</code>
      */
     fun clearAutoFocus() {
       _builder.clearAutoFocus()
     }
 
     /**
-     * <code>bool stabilization = 7;</code>
+     * <code>bool stabilization = 8;</code>
      */
     var stabilization: kotlin.Boolean
       @JvmName("getStabilization")
@@ -135,14 +152,14 @@ object PhoneStreamingConfigKt {
         _builder.setStabilization(value)
       }
     /**
-     * <code>bool stabilization = 7;</code>
+     * <code>bool stabilization = 8;</code>
      */
     fun clearStabilization() {
       _builder.clearStabilization()
     }
 
     /**
-     * <code>bool faceDetection = 8;</code>
+     * <code>bool faceDetection = 9;</code>
      */
     var faceDetection: kotlin.Boolean
       @JvmName("getFaceDetection")
@@ -152,14 +169,14 @@ object PhoneStreamingConfigKt {
         _builder.setFaceDetection(value)
       }
     /**
-     * <code>bool faceDetection = 8;</code>
+     * <code>bool faceDetection = 9;</code>
      */
     fun clearFaceDetection() {
       _builder.clearFaceDetection()
     }
 
     /**
-     * <code>int32 zoom = 9;</code>
+     * <code>int32 zoom = 10;</code>
      */
     var zoom: kotlin.Int
       @JvmName("getZoom")
@@ -169,7 +186,7 @@ object PhoneStreamingConfigKt {
         _builder.setZoom(value)
       }
     /**
-     * <code>int32 zoom = 9;</code>
+     * <code>int32 zoom = 10;</code>
      */
     fun clearZoom() {
       _builder.clearZoom()

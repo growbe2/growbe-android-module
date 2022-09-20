@@ -666,6 +666,10 @@ public final class Module {
      * <code>RUNNING = 1;</code>
      */
     RUNNING(1),
+    /**
+     * <code>ERROR = 2;</code>
+     */
+    ERROR(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -677,6 +681,10 @@ public final class Module {
      * <code>RUNNING = 1;</code>
      */
     public static final int RUNNING_VALUE = 1;
+    /**
+     * <code>ERROR = 2;</code>
+     */
+    public static final int ERROR_VALUE = 2;
 
 
     public final int getNumber() {
@@ -705,6 +713,7 @@ public final class Module {
       switch (value) {
         case 0: return STOPPED;
         case 1: return RUNNING;
+        case 2: return ERROR;
         default: return null;
       }
     }
@@ -867,6 +876,123 @@ public final class Module {
     }
 
     // @@protoc_insertion_point(enum_scope:PhoneStreamingCamera)
+  }
+
+  /**
+   * Protobuf enum {@code PhoneStreamingOutput}
+   */
+  public enum PhoneStreamingOutput
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>STREAM = 0;</code>
+     */
+    STREAM(0),
+    /**
+     * <code>RECORD = 1;</code>
+     */
+    RECORD(1),
+    /**
+     * <code>STREAM_N_RECORD = 2;</code>
+     */
+    STREAM_N_RECORD(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>STREAM = 0;</code>
+     */
+    public static final int STREAM_VALUE = 0;
+    /**
+     * <code>RECORD = 1;</code>
+     */
+    public static final int RECORD_VALUE = 1;
+    /**
+     * <code>STREAM_N_RECORD = 2;</code>
+     */
+    public static final int STREAM_N_RECORD_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PhoneStreamingOutput valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PhoneStreamingOutput forNumber(int value) {
+      switch (value) {
+        case 0: return STREAM;
+        case 1: return RECORD;
+        case 2: return STREAM_N_RECORD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingOutput>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PhoneStreamingOutput> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PhoneStreamingOutput>() {
+            public PhoneStreamingOutput findValueByNumber(int number) {
+              return PhoneStreamingOutput.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.getDescriptor().getEnumTypes().get(7);
+    }
+
+    private static final PhoneStreamingOutput[] VALUES = values();
+
+    public static PhoneStreamingOutput valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PhoneStreamingOutput(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:PhoneStreamingOutput)
   }
 
   public interface ActorOrBuilder extends
@@ -34894,6 +35020,2638 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
   }
 
+  public interface PointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Point)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 x = 1;</code>
+     * @return The x.
+     */
+    int getX();
+
+    /**
+     * <code>int32 y = 2;</code>
+     * @return The y.
+     */
+    int getY();
+  }
+  /**
+   * Protobuf type {@code Point}
+   */
+  public static final class Point extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Point)
+      PointOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Point.newBuilder() to construct.
+    private Point(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Point() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Point();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Point(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              x_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              y_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Point_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Point_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.class, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder.class);
+    }
+
+    public static final int X_FIELD_NUMBER = 1;
+    private int x_;
+    /**
+     * <code>int32 x = 1;</code>
+     * @return The x.
+     */
+    @java.lang.Override
+    public int getX() {
+      return x_;
+    }
+
+    public static final int Y_FIELD_NUMBER = 2;
+    private int y_;
+    /**
+     * <code>int32 y = 2;</code>
+     * @return The y.
+     */
+    @java.lang.Override
+    public int getY() {
+      return y_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (x_ != 0) {
+        output.writeInt32(1, x_);
+      }
+      if (y_ != 0) {
+        output.writeInt32(2, y_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (x_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, x_);
+      }
+      if (y_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, y_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.Point)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.Point other = (ca.berlingoqc.growbe_android_module.proto.Module.Point) obj;
+
+      if (getX()
+          != other.getX()) return false;
+      if (getY()
+          != other.getY()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + X_FIELD_NUMBER;
+      hash = (53 * hash) + getX();
+      hash = (37 * hash) + Y_FIELD_NUMBER;
+      hash = (53 * hash) + getY();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.Point prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Point}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Point)
+        ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Point_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Point_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.Point.class, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.Point.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        x_ = 0;
+
+        y_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Point_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.Point result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.Point result = new ca.berlingoqc.growbe_android_module.proto.Module.Point(this);
+        result.x_ = x_;
+        result.y_ = y_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.Point) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.Point)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.Point other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance()) return this;
+        if (other.getX() != 0) {
+          setX(other.getX());
+        }
+        if (other.getY() != 0) {
+          setY(other.getY());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.Point parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.Point) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int x_ ;
+      /**
+       * <code>int32 x = 1;</code>
+       * @return The x.
+       */
+      @java.lang.Override
+      public int getX() {
+        return x_;
+      }
+      /**
+       * <code>int32 x = 1;</code>
+       * @param value The x to set.
+       * @return This builder for chaining.
+       */
+      public Builder setX(int value) {
+        
+        x_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 x = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearX() {
+        
+        x_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int y_ ;
+      /**
+       * <code>int32 y = 2;</code>
+       * @return The y.
+       */
+      @java.lang.Override
+      public int getY() {
+        return y_;
+      }
+      /**
+       * <code>int32 y = 2;</code>
+       * @param value The y to set.
+       * @return This builder for chaining.
+       */
+      public Builder setY(int value) {
+        
+        y_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 y = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearY() {
+        
+        y_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Point)
+    }
+
+    // @@protoc_insertion_point(class_scope:Point)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.Point DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.Point();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Point getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Point>
+        PARSER = new com.google.protobuf.AbstractParser<Point>() {
+      @java.lang.Override
+      public Point parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Point(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Point> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Point> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Point getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Rect)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 top = 1;</code>
+     * @return The top.
+     */
+    int getTop();
+
+    /**
+     * <code>int32 right = 2;</code>
+     * @return The right.
+     */
+    int getRight();
+
+    /**
+     * <code>int32 bottom = 3;</code>
+     * @return The bottom.
+     */
+    int getBottom();
+
+    /**
+     * <code>int32 left = 4;</code>
+     * @return The left.
+     */
+    int getLeft();
+  }
+  /**
+   * Protobuf type {@code Rect}
+   */
+  public static final class Rect extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Rect)
+      RectOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Rect.newBuilder() to construct.
+    private Rect(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Rect() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Rect();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Rect(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              top_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              right_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              bottom_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              left_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Rect_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Rect_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.Rect.class, ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder.class);
+    }
+
+    public static final int TOP_FIELD_NUMBER = 1;
+    private int top_;
+    /**
+     * <code>int32 top = 1;</code>
+     * @return The top.
+     */
+    @java.lang.Override
+    public int getTop() {
+      return top_;
+    }
+
+    public static final int RIGHT_FIELD_NUMBER = 2;
+    private int right_;
+    /**
+     * <code>int32 right = 2;</code>
+     * @return The right.
+     */
+    @java.lang.Override
+    public int getRight() {
+      return right_;
+    }
+
+    public static final int BOTTOM_FIELD_NUMBER = 3;
+    private int bottom_;
+    /**
+     * <code>int32 bottom = 3;</code>
+     * @return The bottom.
+     */
+    @java.lang.Override
+    public int getBottom() {
+      return bottom_;
+    }
+
+    public static final int LEFT_FIELD_NUMBER = 4;
+    private int left_;
+    /**
+     * <code>int32 left = 4;</code>
+     * @return The left.
+     */
+    @java.lang.Override
+    public int getLeft() {
+      return left_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (top_ != 0) {
+        output.writeInt32(1, top_);
+      }
+      if (right_ != 0) {
+        output.writeInt32(2, right_);
+      }
+      if (bottom_ != 0) {
+        output.writeInt32(3, bottom_);
+      }
+      if (left_ != 0) {
+        output.writeInt32(4, left_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (top_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, top_);
+      }
+      if (right_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, right_);
+      }
+      if (bottom_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, bottom_);
+      }
+      if (left_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, left_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.Rect)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.Rect other = (ca.berlingoqc.growbe_android_module.proto.Module.Rect) obj;
+
+      if (getTop()
+          != other.getTop()) return false;
+      if (getRight()
+          != other.getRight()) return false;
+      if (getBottom()
+          != other.getBottom()) return false;
+      if (getLeft()
+          != other.getLeft()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOP_FIELD_NUMBER;
+      hash = (53 * hash) + getTop();
+      hash = (37 * hash) + RIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getRight();
+      hash = (37 * hash) + BOTTOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBottom();
+      hash = (37 * hash) + LEFT_FIELD_NUMBER;
+      hash = (53 * hash) + getLeft();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.Rect prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Rect}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Rect)
+        ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Rect_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Rect_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.Rect.class, ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.Rect.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        top_ = 0;
+
+        right_ = 0;
+
+        bottom_ = 0;
+
+        left_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_Rect_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Rect getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.Rect.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Rect build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.Rect result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.Rect buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.Rect result = new ca.berlingoqc.growbe_android_module.proto.Module.Rect(this);
+        result.top_ = top_;
+        result.right_ = right_;
+        result.bottom_ = bottom_;
+        result.left_ = left_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.Rect) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.Rect)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.Rect other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.Rect.getDefaultInstance()) return this;
+        if (other.getTop() != 0) {
+          setTop(other.getTop());
+        }
+        if (other.getRight() != 0) {
+          setRight(other.getRight());
+        }
+        if (other.getBottom() != 0) {
+          setBottom(other.getBottom());
+        }
+        if (other.getLeft() != 0) {
+          setLeft(other.getLeft());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.Rect parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.Rect) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int top_ ;
+      /**
+       * <code>int32 top = 1;</code>
+       * @return The top.
+       */
+      @java.lang.Override
+      public int getTop() {
+        return top_;
+      }
+      /**
+       * <code>int32 top = 1;</code>
+       * @param value The top to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTop(int value) {
+        
+        top_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 top = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTop() {
+        
+        top_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int right_ ;
+      /**
+       * <code>int32 right = 2;</code>
+       * @return The right.
+       */
+      @java.lang.Override
+      public int getRight() {
+        return right_;
+      }
+      /**
+       * <code>int32 right = 2;</code>
+       * @param value The right to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRight(int value) {
+        
+        right_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 right = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRight() {
+        
+        right_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int bottom_ ;
+      /**
+       * <code>int32 bottom = 3;</code>
+       * @return The bottom.
+       */
+      @java.lang.Override
+      public int getBottom() {
+        return bottom_;
+      }
+      /**
+       * <code>int32 bottom = 3;</code>
+       * @param value The bottom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBottom(int value) {
+        
+        bottom_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 bottom = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBottom() {
+        
+        bottom_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int left_ ;
+      /**
+       * <code>int32 left = 4;</code>
+       * @return The left.
+       */
+      @java.lang.Override
+      public int getLeft() {
+        return left_;
+      }
+      /**
+       * <code>int32 left = 4;</code>
+       * @param value The left to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLeft(int value) {
+        
+        left_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 left = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLeft() {
+        
+        left_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Rect)
+    }
+
+    // @@protoc_insertion_point(class_scope:Rect)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.Rect DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.Rect();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.Rect getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Rect>
+        PARSER = new com.google.protobuf.AbstractParser<Rect>() {
+      @java.lang.Override
+      public Rect parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Rect(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Rect> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Rect> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Rect getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CameraFaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CameraFace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 id = 1;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <code>int32 score = 2;</code>
+     * @return The score.
+     */
+    int getScore();
+
+    /**
+     * <code>.Rect rect = 3;</code>
+     * @return Whether the rect field is set.
+     */
+    boolean hasRect();
+    /**
+     * <code>.Rect rect = 3;</code>
+     * @return The rect.
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.Rect getRect();
+    /**
+     * <code>.Rect rect = 3;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder getRectOrBuilder();
+
+    /**
+     * <code>.Point mouth = 4;</code>
+     * @return Whether the mouth field is set.
+     */
+    boolean hasMouth();
+    /**
+     * <code>.Point mouth = 4;</code>
+     * @return The mouth.
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.Point getMouth();
+    /**
+     * <code>.Point mouth = 4;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getMouthOrBuilder();
+
+    /**
+     * <code>.Point leftEye = 5;</code>
+     * @return Whether the leftEye field is set.
+     */
+    boolean hasLeftEye();
+    /**
+     * <code>.Point leftEye = 5;</code>
+     * @return The leftEye.
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.Point getLeftEye();
+    /**
+     * <code>.Point leftEye = 5;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getLeftEyeOrBuilder();
+
+    /**
+     * <code>.Point rightEye = 6;</code>
+     * @return Whether the rightEye field is set.
+     */
+    boolean hasRightEye();
+    /**
+     * <code>.Point rightEye = 6;</code>
+     * @return The rightEye.
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.Point getRightEye();
+    /**
+     * <code>.Point rightEye = 6;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getRightEyeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CameraFace}
+   */
+  public static final class CameraFace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CameraFace)
+      CameraFaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CameraFace.newBuilder() to construct.
+    private CameraFace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CameraFace() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CameraFace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CameraFace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              score_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder subBuilder = null;
+              if (rect_ != null) {
+                subBuilder = rect_.toBuilder();
+              }
+              rect_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.Rect.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rect_);
+                rect_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder subBuilder = null;
+              if (mouth_ != null) {
+                subBuilder = mouth_.toBuilder();
+              }
+              mouth_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.Point.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mouth_);
+                mouth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder subBuilder = null;
+              if (leftEye_ != null) {
+                subBuilder = leftEye_.toBuilder();
+              }
+              leftEye_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.Point.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(leftEye_);
+                leftEye_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder subBuilder = null;
+              if (rightEye_ != null) {
+                subBuilder = rightEye_.toBuilder();
+              }
+              rightEye_ = input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.Point.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rightEye_);
+                rightEye_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_CameraFace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_CameraFace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.class, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>int32 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int SCORE_FIELD_NUMBER = 2;
+    private int score_;
+    /**
+     * <code>int32 score = 2;</code>
+     * @return The score.
+     */
+    @java.lang.Override
+    public int getScore() {
+      return score_;
+    }
+
+    public static final int RECT_FIELD_NUMBER = 3;
+    private ca.berlingoqc.growbe_android_module.proto.Module.Rect rect_;
+    /**
+     * <code>.Rect rect = 3;</code>
+     * @return Whether the rect field is set.
+     */
+    @java.lang.Override
+    public boolean hasRect() {
+      return rect_ != null;
+    }
+    /**
+     * <code>.Rect rect = 3;</code>
+     * @return The rect.
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Rect getRect() {
+      return rect_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Rect.getDefaultInstance() : rect_;
+    }
+    /**
+     * <code>.Rect rect = 3;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder getRectOrBuilder() {
+      return getRect();
+    }
+
+    public static final int MOUTH_FIELD_NUMBER = 4;
+    private ca.berlingoqc.growbe_android_module.proto.Module.Point mouth_;
+    /**
+     * <code>.Point mouth = 4;</code>
+     * @return Whether the mouth field is set.
+     */
+    @java.lang.Override
+    public boolean hasMouth() {
+      return mouth_ != null;
+    }
+    /**
+     * <code>.Point mouth = 4;</code>
+     * @return The mouth.
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Point getMouth() {
+      return mouth_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : mouth_;
+    }
+    /**
+     * <code>.Point mouth = 4;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getMouthOrBuilder() {
+      return getMouth();
+    }
+
+    public static final int LEFTEYE_FIELD_NUMBER = 5;
+    private ca.berlingoqc.growbe_android_module.proto.Module.Point leftEye_;
+    /**
+     * <code>.Point leftEye = 5;</code>
+     * @return Whether the leftEye field is set.
+     */
+    @java.lang.Override
+    public boolean hasLeftEye() {
+      return leftEye_ != null;
+    }
+    /**
+     * <code>.Point leftEye = 5;</code>
+     * @return The leftEye.
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Point getLeftEye() {
+      return leftEye_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : leftEye_;
+    }
+    /**
+     * <code>.Point leftEye = 5;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getLeftEyeOrBuilder() {
+      return getLeftEye();
+    }
+
+    public static final int RIGHTEYE_FIELD_NUMBER = 6;
+    private ca.berlingoqc.growbe_android_module.proto.Module.Point rightEye_;
+    /**
+     * <code>.Point rightEye = 6;</code>
+     * @return Whether the rightEye field is set.
+     */
+    @java.lang.Override
+    public boolean hasRightEye() {
+      return rightEye_ != null;
+    }
+    /**
+     * <code>.Point rightEye = 6;</code>
+     * @return The rightEye.
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.Point getRightEye() {
+      return rightEye_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : rightEye_;
+    }
+    /**
+     * <code>.Point rightEye = 6;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getRightEyeOrBuilder() {
+      return getRightEye();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeInt32(1, id_);
+      }
+      if (score_ != 0) {
+        output.writeInt32(2, score_);
+      }
+      if (rect_ != null) {
+        output.writeMessage(3, getRect());
+      }
+      if (mouth_ != null) {
+        output.writeMessage(4, getMouth());
+      }
+      if (leftEye_ != null) {
+        output.writeMessage(5, getLeftEye());
+      }
+      if (rightEye_ != null) {
+        output.writeMessage(6, getRightEye());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (score_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, score_);
+      }
+      if (rect_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRect());
+      }
+      if (mouth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMouth());
+      }
+      if (leftEye_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLeftEye());
+      }
+      if (rightEye_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getRightEye());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ca.berlingoqc.growbe_android_module.proto.Module.CameraFace)) {
+        return super.equals(obj);
+      }
+      ca.berlingoqc.growbe_android_module.proto.Module.CameraFace other = (ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getScore()
+          != other.getScore()) return false;
+      if (hasRect() != other.hasRect()) return false;
+      if (hasRect()) {
+        if (!getRect()
+            .equals(other.getRect())) return false;
+      }
+      if (hasMouth() != other.hasMouth()) return false;
+      if (hasMouth()) {
+        if (!getMouth()
+            .equals(other.getMouth())) return false;
+      }
+      if (hasLeftEye() != other.hasLeftEye()) return false;
+      if (hasLeftEye()) {
+        if (!getLeftEye()
+            .equals(other.getLeftEye())) return false;
+      }
+      if (hasRightEye() != other.hasRightEye()) return false;
+      if (hasRightEye()) {
+        if (!getRightEye()
+            .equals(other.getRightEye())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      hash = (37 * hash) + SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getScore();
+      if (hasRect()) {
+        hash = (37 * hash) + RECT_FIELD_NUMBER;
+        hash = (53 * hash) + getRect().hashCode();
+      }
+      if (hasMouth()) {
+        hash = (37 * hash) + MOUTH_FIELD_NUMBER;
+        hash = (53 * hash) + getMouth().hashCode();
+      }
+      if (hasLeftEye()) {
+        hash = (37 * hash) + LEFTEYE_FIELD_NUMBER;
+        hash = (53 * hash) + getLeftEye().hashCode();
+      }
+      if (hasRightEye()) {
+        hash = (37 * hash) + RIGHTEYE_FIELD_NUMBER;
+        hash = (53 * hash) + getRightEye().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ca.berlingoqc.growbe_android_module.proto.Module.CameraFace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CameraFace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CameraFace)
+        ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_CameraFace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_CameraFace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.class, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder.class);
+      }
+
+      // Construct using ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+
+        score_ = 0;
+
+        if (rectBuilder_ == null) {
+          rect_ = null;
+        } else {
+          rect_ = null;
+          rectBuilder_ = null;
+        }
+        if (mouthBuilder_ == null) {
+          mouth_ = null;
+        } else {
+          mouth_ = null;
+          mouthBuilder_ = null;
+        }
+        if (leftEyeBuilder_ == null) {
+          leftEye_ = null;
+        } else {
+          leftEye_ = null;
+          leftEyeBuilder_ = null;
+        }
+        if (rightEyeBuilder_ == null) {
+          rightEye_ = null;
+        } else {
+          rightEye_ = null;
+          rightEyeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.internal_static_CameraFace_descriptor;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getDefaultInstanceForType() {
+        return ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace build() {
+        ca.berlingoqc.growbe_android_module.proto.Module.CameraFace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace buildPartial() {
+        ca.berlingoqc.growbe_android_module.proto.Module.CameraFace result = new ca.berlingoqc.growbe_android_module.proto.Module.CameraFace(this);
+        result.id_ = id_;
+        result.score_ = score_;
+        if (rectBuilder_ == null) {
+          result.rect_ = rect_;
+        } else {
+          result.rect_ = rectBuilder_.build();
+        }
+        if (mouthBuilder_ == null) {
+          result.mouth_ = mouth_;
+        } else {
+          result.mouth_ = mouthBuilder_.build();
+        }
+        if (leftEyeBuilder_ == null) {
+          result.leftEye_ = leftEye_;
+        } else {
+          result.leftEye_ = leftEyeBuilder_.build();
+        }
+        if (rightEyeBuilder_ == null) {
+          result.rightEye_ = rightEye_;
+        } else {
+          result.rightEye_ = rightEyeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) {
+          return mergeFrom((ca.berlingoqc.growbe_android_module.proto.Module.CameraFace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ca.berlingoqc.growbe_android_module.proto.Module.CameraFace other) {
+        if (other == ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (other.getScore() != 0) {
+          setScore(other.getScore());
+        }
+        if (other.hasRect()) {
+          mergeRect(other.getRect());
+        }
+        if (other.hasMouth()) {
+          mergeMouth(other.getMouth());
+        }
+        if (other.hasLeftEye()) {
+          mergeLeftEye(other.getLeftEye());
+        }
+        if (other.hasRightEye()) {
+          mergeRightEye(other.getRightEye());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ca.berlingoqc.growbe_android_module.proto.Module.CameraFace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>int32 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>int32 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int score_ ;
+      /**
+       * <code>int32 score = 2;</code>
+       * @return The score.
+       */
+      @java.lang.Override
+      public int getScore() {
+        return score_;
+      }
+      /**
+       * <code>int32 score = 2;</code>
+       * @param value The score to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScore(int value) {
+        
+        score_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 score = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScore() {
+        
+        score_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private ca.berlingoqc.growbe_android_module.proto.Module.Rect rect_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Rect, ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder, ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder> rectBuilder_;
+      /**
+       * <code>.Rect rect = 3;</code>
+       * @return Whether the rect field is set.
+       */
+      public boolean hasRect() {
+        return rectBuilder_ != null || rect_ != null;
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       * @return The rect.
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Rect getRect() {
+        if (rectBuilder_ == null) {
+          return rect_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Rect.getDefaultInstance() : rect_;
+        } else {
+          return rectBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public Builder setRect(ca.berlingoqc.growbe_android_module.proto.Module.Rect value) {
+        if (rectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rect_ = value;
+          onChanged();
+        } else {
+          rectBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public Builder setRect(
+          ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder builderForValue) {
+        if (rectBuilder_ == null) {
+          rect_ = builderForValue.build();
+          onChanged();
+        } else {
+          rectBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public Builder mergeRect(ca.berlingoqc.growbe_android_module.proto.Module.Rect value) {
+        if (rectBuilder_ == null) {
+          if (rect_ != null) {
+            rect_ =
+              ca.berlingoqc.growbe_android_module.proto.Module.Rect.newBuilder(rect_).mergeFrom(value).buildPartial();
+          } else {
+            rect_ = value;
+          }
+          onChanged();
+        } else {
+          rectBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public Builder clearRect() {
+        if (rectBuilder_ == null) {
+          rect_ = null;
+          onChanged();
+        } else {
+          rect_ = null;
+          rectBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder getRectBuilder() {
+        
+        onChanged();
+        return getRectFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder getRectOrBuilder() {
+        if (rectBuilder_ != null) {
+          return rectBuilder_.getMessageOrBuilder();
+        } else {
+          return rect_ == null ?
+              ca.berlingoqc.growbe_android_module.proto.Module.Rect.getDefaultInstance() : rect_;
+        }
+      }
+      /**
+       * <code>.Rect rect = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Rect, ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder, ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder> 
+          getRectFieldBuilder() {
+        if (rectBuilder_ == null) {
+          rectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ca.berlingoqc.growbe_android_module.proto.Module.Rect, ca.berlingoqc.growbe_android_module.proto.Module.Rect.Builder, ca.berlingoqc.growbe_android_module.proto.Module.RectOrBuilder>(
+                  getRect(),
+                  getParentForChildren(),
+                  isClean());
+          rect_ = null;
+        }
+        return rectBuilder_;
+      }
+
+      private ca.berlingoqc.growbe_android_module.proto.Module.Point mouth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> mouthBuilder_;
+      /**
+       * <code>.Point mouth = 4;</code>
+       * @return Whether the mouth field is set.
+       */
+      public boolean hasMouth() {
+        return mouthBuilder_ != null || mouth_ != null;
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       * @return The mouth.
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point getMouth() {
+        if (mouthBuilder_ == null) {
+          return mouth_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : mouth_;
+        } else {
+          return mouthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public Builder setMouth(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (mouthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mouth_ = value;
+          onChanged();
+        } else {
+          mouthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public Builder setMouth(
+          ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder builderForValue) {
+        if (mouthBuilder_ == null) {
+          mouth_ = builderForValue.build();
+          onChanged();
+        } else {
+          mouthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public Builder mergeMouth(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (mouthBuilder_ == null) {
+          if (mouth_ != null) {
+            mouth_ =
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.newBuilder(mouth_).mergeFrom(value).buildPartial();
+          } else {
+            mouth_ = value;
+          }
+          onChanged();
+        } else {
+          mouthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public Builder clearMouth() {
+        if (mouthBuilder_ == null) {
+          mouth_ = null;
+          onChanged();
+        } else {
+          mouth_ = null;
+          mouthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder getMouthBuilder() {
+        
+        onChanged();
+        return getMouthFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getMouthOrBuilder() {
+        if (mouthBuilder_ != null) {
+          return mouthBuilder_.getMessageOrBuilder();
+        } else {
+          return mouth_ == null ?
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : mouth_;
+        }
+      }
+      /**
+       * <code>.Point mouth = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> 
+          getMouthFieldBuilder() {
+        if (mouthBuilder_ == null) {
+          mouthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder>(
+                  getMouth(),
+                  getParentForChildren(),
+                  isClean());
+          mouth_ = null;
+        }
+        return mouthBuilder_;
+      }
+
+      private ca.berlingoqc.growbe_android_module.proto.Module.Point leftEye_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> leftEyeBuilder_;
+      /**
+       * <code>.Point leftEye = 5;</code>
+       * @return Whether the leftEye field is set.
+       */
+      public boolean hasLeftEye() {
+        return leftEyeBuilder_ != null || leftEye_ != null;
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       * @return The leftEye.
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point getLeftEye() {
+        if (leftEyeBuilder_ == null) {
+          return leftEye_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : leftEye_;
+        } else {
+          return leftEyeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public Builder setLeftEye(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (leftEyeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          leftEye_ = value;
+          onChanged();
+        } else {
+          leftEyeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public Builder setLeftEye(
+          ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder builderForValue) {
+        if (leftEyeBuilder_ == null) {
+          leftEye_ = builderForValue.build();
+          onChanged();
+        } else {
+          leftEyeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public Builder mergeLeftEye(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (leftEyeBuilder_ == null) {
+          if (leftEye_ != null) {
+            leftEye_ =
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.newBuilder(leftEye_).mergeFrom(value).buildPartial();
+          } else {
+            leftEye_ = value;
+          }
+          onChanged();
+        } else {
+          leftEyeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public Builder clearLeftEye() {
+        if (leftEyeBuilder_ == null) {
+          leftEye_ = null;
+          onChanged();
+        } else {
+          leftEye_ = null;
+          leftEyeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder getLeftEyeBuilder() {
+        
+        onChanged();
+        return getLeftEyeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getLeftEyeOrBuilder() {
+        if (leftEyeBuilder_ != null) {
+          return leftEyeBuilder_.getMessageOrBuilder();
+        } else {
+          return leftEye_ == null ?
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : leftEye_;
+        }
+      }
+      /**
+       * <code>.Point leftEye = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> 
+          getLeftEyeFieldBuilder() {
+        if (leftEyeBuilder_ == null) {
+          leftEyeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder>(
+                  getLeftEye(),
+                  getParentForChildren(),
+                  isClean());
+          leftEye_ = null;
+        }
+        return leftEyeBuilder_;
+      }
+
+      private ca.berlingoqc.growbe_android_module.proto.Module.Point rightEye_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> rightEyeBuilder_;
+      /**
+       * <code>.Point rightEye = 6;</code>
+       * @return Whether the rightEye field is set.
+       */
+      public boolean hasRightEye() {
+        return rightEyeBuilder_ != null || rightEye_ != null;
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       * @return The rightEye.
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point getRightEye() {
+        if (rightEyeBuilder_ == null) {
+          return rightEye_ == null ? ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : rightEye_;
+        } else {
+          return rightEyeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public Builder setRightEye(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (rightEyeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rightEye_ = value;
+          onChanged();
+        } else {
+          rightEyeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public Builder setRightEye(
+          ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder builderForValue) {
+        if (rightEyeBuilder_ == null) {
+          rightEye_ = builderForValue.build();
+          onChanged();
+        } else {
+          rightEyeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public Builder mergeRightEye(ca.berlingoqc.growbe_android_module.proto.Module.Point value) {
+        if (rightEyeBuilder_ == null) {
+          if (rightEye_ != null) {
+            rightEye_ =
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.newBuilder(rightEye_).mergeFrom(value).buildPartial();
+          } else {
+            rightEye_ = value;
+          }
+          onChanged();
+        } else {
+          rightEyeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public Builder clearRightEye() {
+        if (rightEyeBuilder_ == null) {
+          rightEye_ = null;
+          onChanged();
+        } else {
+          rightEye_ = null;
+          rightEyeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder getRightEyeBuilder() {
+        
+        onChanged();
+        return getRightEyeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder getRightEyeOrBuilder() {
+        if (rightEyeBuilder_ != null) {
+          return rightEyeBuilder_.getMessageOrBuilder();
+        } else {
+          return rightEye_ == null ?
+              ca.berlingoqc.growbe_android_module.proto.Module.Point.getDefaultInstance() : rightEye_;
+        }
+      }
+      /**
+       * <code>.Point rightEye = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder> 
+          getRightEyeFieldBuilder() {
+        if (rightEyeBuilder_ == null) {
+          rightEyeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ca.berlingoqc.growbe_android_module.proto.Module.Point, ca.berlingoqc.growbe_android_module.proto.Module.Point.Builder, ca.berlingoqc.growbe_android_module.proto.Module.PointOrBuilder>(
+                  getRightEye(),
+                  getParentForChildren(),
+                  isClean());
+          rightEye_ = null;
+        }
+        return rightEyeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CameraFace)
+    }
+
+    // @@protoc_insertion_point(class_scope:CameraFace)
+    private static final ca.berlingoqc.growbe_android_module.proto.Module.CameraFace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ca.berlingoqc.growbe_android_module.proto.Module.CameraFace();
+    }
+
+    public static ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CameraFace>
+        PARSER = new com.google.protobuf.AbstractParser<CameraFace>() {
+      @java.lang.Override
+      public CameraFace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CameraFace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CameraFace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CameraFace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PhoneStreamingDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:PhoneStreamingData)
       com.google.protobuf.MessageOrBuilder {
@@ -34920,6 +37678,42 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
      * @return The bitrate.
      */
     float getBitrate();
+
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> 
+        getFacesList();
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getFaces(int index);
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    int getFacesCount();
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    java.util.List<? extends ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder> 
+        getFacesOrBuilderList();
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder getFacesOrBuilder(
+        int index);
+
+    /**
+     * <code>string error = 5;</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 5;</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
   }
   /**
    * Protobuf type {@code PhoneStreamingData}
@@ -34935,6 +37729,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     }
     private PhoneStreamingData() {
       status_ = 0;
+      faces_ = java.util.Collections.emptyList();
+      error_ = "";
     }
 
     @java.lang.Override
@@ -34957,6 +37753,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -34983,6 +37780,21 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
               bitrate_ = input.readFloat();
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                faces_ = new java.util.ArrayList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              faces_.add(
+                  input.readMessage(ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              error_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -35000,6 +37812,9 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          faces_ = java.util.Collections.unmodifiableList(faces_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -35058,6 +37873,84 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return bitrate_;
     }
 
+    public static final int FACES_FIELD_NUMBER = 4;
+    private java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> faces_;
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> getFacesList() {
+      return faces_;
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder> 
+        getFacesOrBuilderList() {
+      return faces_;
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @java.lang.Override
+    public int getFacesCount() {
+      return faces_.size();
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getFaces(int index) {
+      return faces_.get(index);
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @java.lang.Override
+    public ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder getFacesOrBuilder(
+        int index) {
+      return faces_.get(index);
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 5;
+    private volatile java.lang.Object error_;
+    /**
+     * <code>string error = 5;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 5;</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -35081,6 +37974,12 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToRawIntBits(bitrate_) != 0) {
         output.writeFloat(3, bitrate_);
       }
+      for (int i = 0; i < faces_.size(); i++) {
+        output.writeMessage(4, faces_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, error_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -35101,6 +38000,13 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToRawIntBits(bitrate_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, bitrate_);
+      }
+      for (int i = 0; i < faces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, faces_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, error_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35124,6 +38030,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToIntBits(getBitrate())
           != java.lang.Float.floatToIntBits(
               other.getBitrate())) return false;
+      if (!getFacesList()
+          .equals(other.getFacesList())) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -35143,6 +38053,12 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       hash = (37 * hash) + BITRATE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getBitrate());
+      if (getFacesCount() > 0) {
+        hash = (37 * hash) + FACES_FIELD_NUMBER;
+        hash = (53 * hash) + getFacesList().hashCode();
+      }
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35271,6 +38187,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getFacesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -35281,6 +38198,14 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         fps_ = 0F;
 
         bitrate_ = 0F;
+
+        if (facesBuilder_ == null) {
+          faces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          facesBuilder_.clear();
+        }
+        error_ = "";
 
         return this;
       }
@@ -35308,9 +38233,20 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       @java.lang.Override
       public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData buildPartial() {
         ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingData(this);
+        int from_bitField0_ = bitField0_;
         result.status_ = status_;
         result.fps_ = fps_;
         result.bitrate_ = bitrate_;
+        if (facesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            faces_ = java.util.Collections.unmodifiableList(faces_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.faces_ = faces_;
+        } else {
+          result.faces_ = facesBuilder_.build();
+        }
+        result.error_ = error_;
         onBuilt();
         return result;
       }
@@ -35368,6 +38304,36 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         if (other.getBitrate() != 0F) {
           setBitrate(other.getBitrate());
         }
+        if (facesBuilder_ == null) {
+          if (!other.faces_.isEmpty()) {
+            if (faces_.isEmpty()) {
+              faces_ = other.faces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFacesIsMutable();
+              faces_.addAll(other.faces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.faces_.isEmpty()) {
+            if (facesBuilder_.isEmpty()) {
+              facesBuilder_.dispose();
+              facesBuilder_ = null;
+              faces_ = other.faces_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              facesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFacesFieldBuilder() : null;
+            } else {
+              facesBuilder_.addAllMessages(other.faces_);
+            }
+          }
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -35396,6 +38362,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         }
         return this;
       }
+      private int bitField0_;
 
       private int status_ = 0;
       /**
@@ -35512,6 +38479,322 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         onChanged();
         return this;
       }
+
+      private java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> faces_ =
+        java.util.Collections.emptyList();
+      private void ensureFacesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          faces_ = new java.util.ArrayList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace>(faces_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder, ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder> facesBuilder_;
+
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> getFacesList() {
+        if (facesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(faces_);
+        } else {
+          return facesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public int getFacesCount() {
+        if (facesBuilder_ == null) {
+          return faces_.size();
+        } else {
+          return facesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace getFaces(int index) {
+        if (facesBuilder_ == null) {
+          return faces_.get(index);
+        } else {
+          return facesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder setFaces(
+          int index, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace value) {
+        if (facesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacesIsMutable();
+          faces_.set(index, value);
+          onChanged();
+        } else {
+          facesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder setFaces(
+          int index, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder builderForValue) {
+        if (facesBuilder_ == null) {
+          ensureFacesIsMutable();
+          faces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          facesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder addFaces(ca.berlingoqc.growbe_android_module.proto.Module.CameraFace value) {
+        if (facesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacesIsMutable();
+          faces_.add(value);
+          onChanged();
+        } else {
+          facesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder addFaces(
+          int index, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace value) {
+        if (facesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFacesIsMutable();
+          faces_.add(index, value);
+          onChanged();
+        } else {
+          facesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder addFaces(
+          ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder builderForValue) {
+        if (facesBuilder_ == null) {
+          ensureFacesIsMutable();
+          faces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          facesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder addFaces(
+          int index, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder builderForValue) {
+        if (facesBuilder_ == null) {
+          ensureFacesIsMutable();
+          faces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          facesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder addAllFaces(
+          java.lang.Iterable<? extends ca.berlingoqc.growbe_android_module.proto.Module.CameraFace> values) {
+        if (facesBuilder_ == null) {
+          ensureFacesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, faces_);
+          onChanged();
+        } else {
+          facesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder clearFaces() {
+        if (facesBuilder_ == null) {
+          faces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          facesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public Builder removeFaces(int index) {
+        if (facesBuilder_ == null) {
+          ensureFacesIsMutable();
+          faces_.remove(index);
+          onChanged();
+        } else {
+          facesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder getFacesBuilder(
+          int index) {
+        return getFacesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder getFacesOrBuilder(
+          int index) {
+        if (facesBuilder_ == null) {
+          return faces_.get(index);  } else {
+          return facesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public java.util.List<? extends ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder> 
+           getFacesOrBuilderList() {
+        if (facesBuilder_ != null) {
+          return facesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(faces_);
+        }
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder addFacesBuilder() {
+        return getFacesFieldBuilder().addBuilder(
+            ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder addFacesBuilder(
+          int index) {
+        return getFacesFieldBuilder().addBuilder(
+            index, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CameraFace faces = 4;</code>
+       */
+      public java.util.List<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder> 
+           getFacesBuilderList() {
+        return getFacesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder, ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder> 
+          getFacesFieldBuilder() {
+        if (facesBuilder_ == null) {
+          facesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, ca.berlingoqc.growbe_android_module.proto.Module.CameraFace.Builder, ca.berlingoqc.growbe_android_module.proto.Module.CameraFaceOrBuilder>(
+                  faces_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          faces_ = null;
+        }
+        return facesBuilder_;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 5;</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 5;</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 5;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        
+        error_ = getDefaultInstance().getError();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 5;</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        error_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -35576,60 +38859,71 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     boolean getActivated();
 
     /**
-     * <code>string url = 2;</code>
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     * @return The enum numeric value on the wire for output.
+     */
+    int getOutputValue();
+    /**
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     * @return The output.
+     */
+    ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput getOutput();
+
+    /**
+     * <code>string url = 3;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 2;</code>
+     * <code>string url = 3;</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
         getUrlBytes();
 
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      * @return The enum numeric value on the wire for camera.
      */
     int getCameraValue();
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      * @return The camera.
      */
     ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera getCamera();
 
     /**
-     * <code>bool light = 4;</code>
+     * <code>bool light = 5;</code>
      * @return The light.
      */
     boolean getLight();
 
     /**
-     * <code>bool audio = 5;</code>
+     * <code>bool audio = 6;</code>
      * @return The audio.
      */
     boolean getAudio();
 
     /**
-     * <code>bool autoFocus = 6;</code>
+     * <code>bool autoFocus = 7;</code>
      * @return The autoFocus.
      */
     boolean getAutoFocus();
 
     /**
-     * <code>bool stabilization = 7;</code>
+     * <code>bool stabilization = 8;</code>
      * @return The stabilization.
      */
     boolean getStabilization();
 
     /**
-     * <code>bool faceDetection = 8;</code>
+     * <code>bool faceDetection = 9;</code>
      * @return The faceDetection.
      */
     boolean getFaceDetection();
 
     /**
-     * <code>int32 zoom = 9;</code>
+     * <code>int32 zoom = 10;</code>
      * @return The zoom.
      */
     int getZoom();
@@ -35647,6 +38941,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       super(builder);
     }
     private PhoneStreamingConfig() {
+      output_ = 0;
       url_ = "";
       camera_ = 0;
     }
@@ -35686,44 +38981,50 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
               activated_ = input.readBool();
               break;
             }
-            case 18: {
+            case 16: {
+              int rawValue = input.readEnum();
+
+              output_ = rawValue;
+              break;
+            }
+            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
               break;
             }
-            case 24: {
+            case 32: {
               int rawValue = input.readEnum();
 
               camera_ = rawValue;
               break;
             }
-            case 32: {
+            case 40: {
 
               light_ = input.readBool();
               break;
             }
-            case 40: {
+            case 48: {
 
               audio_ = input.readBool();
               break;
             }
-            case 48: {
+            case 56: {
 
               autoFocus_ = input.readBool();
               break;
             }
-            case 56: {
+            case 64: {
 
               stabilization_ = input.readBool();
               break;
             }
-            case 64: {
+            case 72: {
 
               faceDetection_ = input.readBool();
               break;
             }
-            case 72: {
+            case 80: {
 
               zoom_ = input.readInt32();
               break;
@@ -35773,10 +39074,29 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return activated_;
     }
 
-    public static final int URL_FIELD_NUMBER = 2;
+    public static final int OUTPUT_FIELD_NUMBER = 2;
+    private int output_;
+    /**
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     * @return The enum numeric value on the wire for output.
+     */
+    @java.lang.Override public int getOutputValue() {
+      return output_;
+    }
+    /**
+     * <code>.PhoneStreamingOutput output = 2;</code>
+     * @return The output.
+     */
+    @java.lang.Override public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput getOutput() {
+      @SuppressWarnings("deprecation")
+      ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.valueOf(output_);
+      return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.UNRECOGNIZED : result;
+    }
+
+    public static final int URL_FIELD_NUMBER = 3;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 2;</code>
+     * <code>string url = 3;</code>
      * @return The url.
      */
     @java.lang.Override
@@ -35793,7 +39113,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
     }
     /**
-     * <code>string url = 2;</code>
+     * <code>string url = 3;</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -35811,17 +39131,17 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       }
     }
 
-    public static final int CAMERA_FIELD_NUMBER = 3;
+    public static final int CAMERA_FIELD_NUMBER = 4;
     private int camera_;
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      * @return The enum numeric value on the wire for camera.
      */
     @java.lang.Override public int getCameraValue() {
       return camera_;
     }
     /**
-     * <code>.PhoneStreamingCamera camera = 3;</code>
+     * <code>.PhoneStreamingCamera camera = 4;</code>
      * @return The camera.
      */
     @java.lang.Override public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera getCamera() {
@@ -35830,10 +39150,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.UNRECOGNIZED : result;
     }
 
-    public static final int LIGHT_FIELD_NUMBER = 4;
+    public static final int LIGHT_FIELD_NUMBER = 5;
     private boolean light_;
     /**
-     * <code>bool light = 4;</code>
+     * <code>bool light = 5;</code>
      * @return The light.
      */
     @java.lang.Override
@@ -35841,10 +39161,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return light_;
     }
 
-    public static final int AUDIO_FIELD_NUMBER = 5;
+    public static final int AUDIO_FIELD_NUMBER = 6;
     private boolean audio_;
     /**
-     * <code>bool audio = 5;</code>
+     * <code>bool audio = 6;</code>
      * @return The audio.
      */
     @java.lang.Override
@@ -35852,10 +39172,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return audio_;
     }
 
-    public static final int AUTOFOCUS_FIELD_NUMBER = 6;
+    public static final int AUTOFOCUS_FIELD_NUMBER = 7;
     private boolean autoFocus_;
     /**
-     * <code>bool autoFocus = 6;</code>
+     * <code>bool autoFocus = 7;</code>
      * @return The autoFocus.
      */
     @java.lang.Override
@@ -35863,10 +39183,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return autoFocus_;
     }
 
-    public static final int STABILIZATION_FIELD_NUMBER = 7;
+    public static final int STABILIZATION_FIELD_NUMBER = 8;
     private boolean stabilization_;
     /**
-     * <code>bool stabilization = 7;</code>
+     * <code>bool stabilization = 8;</code>
      * @return The stabilization.
      */
     @java.lang.Override
@@ -35874,10 +39194,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return stabilization_;
     }
 
-    public static final int FACEDETECTION_FIELD_NUMBER = 8;
+    public static final int FACEDETECTION_FIELD_NUMBER = 9;
     private boolean faceDetection_;
     /**
-     * <code>bool faceDetection = 8;</code>
+     * <code>bool faceDetection = 9;</code>
      * @return The faceDetection.
      */
     @java.lang.Override
@@ -35885,10 +39205,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return faceDetection_;
     }
 
-    public static final int ZOOM_FIELD_NUMBER = 9;
+    public static final int ZOOM_FIELD_NUMBER = 10;
     private int zoom_;
     /**
-     * <code>int32 zoom = 9;</code>
+     * <code>int32 zoom = 10;</code>
      * @return The zoom.
      */
     @java.lang.Override
@@ -35913,29 +39233,32 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (activated_ != false) {
         output.writeBool(1, activated_);
       }
+      if (output_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.STREAM.getNumber()) {
+        output.writeEnum(2, output_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, url_);
       }
       if (camera_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.BACK.getNumber()) {
-        output.writeEnum(3, camera_);
+        output.writeEnum(4, camera_);
       }
       if (light_ != false) {
-        output.writeBool(4, light_);
+        output.writeBool(5, light_);
       }
       if (audio_ != false) {
-        output.writeBool(5, audio_);
+        output.writeBool(6, audio_);
       }
       if (autoFocus_ != false) {
-        output.writeBool(6, autoFocus_);
+        output.writeBool(7, autoFocus_);
       }
       if (stabilization_ != false) {
-        output.writeBool(7, stabilization_);
+        output.writeBool(8, stabilization_);
       }
       if (faceDetection_ != false) {
-        output.writeBool(8, faceDetection_);
+        output.writeBool(9, faceDetection_);
       }
       if (zoom_ != 0) {
-        output.writeInt32(9, zoom_);
+        output.writeInt32(10, zoom_);
       }
       unknownFields.writeTo(output);
     }
@@ -35950,36 +39273,40 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, activated_);
       }
+      if (output_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.STREAM.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, output_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, url_);
       }
       if (camera_ != ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.BACK.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, camera_);
+          .computeEnumSize(4, camera_);
       }
       if (light_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, light_);
+          .computeBoolSize(5, light_);
       }
       if (audio_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, audio_);
+          .computeBoolSize(6, audio_);
       }
       if (autoFocus_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, autoFocus_);
+          .computeBoolSize(7, autoFocus_);
       }
       if (stabilization_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, stabilization_);
+          .computeBoolSize(8, stabilization_);
       }
       if (faceDetection_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, faceDetection_);
+          .computeBoolSize(9, faceDetection_);
       }
       if (zoom_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(9, zoom_);
+          .computeInt32Size(10, zoom_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35998,6 +39325,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       if (getActivated()
           != other.getActivated()) return false;
+      if (output_ != other.output_) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (camera_ != other.camera_) return false;
@@ -36027,6 +39355,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       hash = (37 * hash) + ACTIVATED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getActivated());
+      hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+      hash = (53 * hash) + output_;
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + CAMERA_FIELD_NUMBER;
@@ -36183,6 +39513,8 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         super.clear();
         activated_ = false;
 
+        output_ = 0;
+
         url_ = "";
 
         camera_ = 0;
@@ -36226,6 +39558,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig buildPartial() {
         ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig result = new ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig(this);
         result.activated_ = activated_;
+        result.output_ = output_;
         result.url_ = url_;
         result.camera_ = camera_;
         result.light_ = light_;
@@ -36284,6 +39617,9 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         if (other == ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingConfig.getDefaultInstance()) return this;
         if (other.getActivated() != false) {
           setActivated(other.getActivated());
+        }
+        if (other.output_ != 0) {
+          setOutputValue(other.getOutputValue());
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
@@ -36370,9 +39706,63 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
 
+      private int output_ = 0;
+      /**
+       * <code>.PhoneStreamingOutput output = 2;</code>
+       * @return The enum numeric value on the wire for output.
+       */
+      @java.lang.Override public int getOutputValue() {
+        return output_;
+      }
+      /**
+       * <code>.PhoneStreamingOutput output = 2;</code>
+       * @param value The enum numeric value on the wire for output to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputValue(int value) {
+        
+        output_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.PhoneStreamingOutput output = 2;</code>
+       * @return The output.
+       */
+      @java.lang.Override
+      public ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput getOutput() {
+        @SuppressWarnings("deprecation")
+        ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput result = ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.valueOf(output_);
+        return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.PhoneStreamingOutput output = 2;</code>
+       * @param value The output to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutput(ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingOutput value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        output_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.PhoneStreamingOutput output = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutput() {
+        
+        output_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 2;</code>
+       * <code>string url = 3;</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -36388,7 +39778,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         }
       }
       /**
-       * <code>string url = 2;</code>
+       * <code>string url = 3;</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -36405,7 +39795,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         }
       }
       /**
-       * <code>string url = 2;</code>
+       * <code>string url = 3;</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -36420,7 +39810,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>string url = 2;</code>
+       * <code>string url = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -36430,7 +39820,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>string url = 2;</code>
+       * <code>string url = 3;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -36448,14 +39838,14 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private int camera_ = 0;
       /**
-       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 4;</code>
        * @return The enum numeric value on the wire for camera.
        */
       @java.lang.Override public int getCameraValue() {
         return camera_;
       }
       /**
-       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 4;</code>
        * @param value The enum numeric value on the wire for camera to set.
        * @return This builder for chaining.
        */
@@ -36466,7 +39856,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 4;</code>
        * @return The camera.
        */
       @java.lang.Override
@@ -36476,7 +39866,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return result == null ? ca.berlingoqc.growbe_android_module.proto.Module.PhoneStreamingCamera.UNRECOGNIZED : result;
       }
       /**
-       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 4;</code>
        * @param value The camera to set.
        * @return This builder for chaining.
        */
@@ -36490,7 +39880,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>.PhoneStreamingCamera camera = 3;</code>
+       * <code>.PhoneStreamingCamera camera = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearCamera() {
@@ -36502,7 +39892,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private boolean light_ ;
       /**
-       * <code>bool light = 4;</code>
+       * <code>bool light = 5;</code>
        * @return The light.
        */
       @java.lang.Override
@@ -36510,7 +39900,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return light_;
       }
       /**
-       * <code>bool light = 4;</code>
+       * <code>bool light = 5;</code>
        * @param value The light to set.
        * @return This builder for chaining.
        */
@@ -36521,7 +39911,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>bool light = 4;</code>
+       * <code>bool light = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearLight() {
@@ -36533,7 +39923,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private boolean audio_ ;
       /**
-       * <code>bool audio = 5;</code>
+       * <code>bool audio = 6;</code>
        * @return The audio.
        */
       @java.lang.Override
@@ -36541,7 +39931,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return audio_;
       }
       /**
-       * <code>bool audio = 5;</code>
+       * <code>bool audio = 6;</code>
        * @param value The audio to set.
        * @return This builder for chaining.
        */
@@ -36552,7 +39942,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>bool audio = 5;</code>
+       * <code>bool audio = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearAudio() {
@@ -36564,7 +39954,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private boolean autoFocus_ ;
       /**
-       * <code>bool autoFocus = 6;</code>
+       * <code>bool autoFocus = 7;</code>
        * @return The autoFocus.
        */
       @java.lang.Override
@@ -36572,7 +39962,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return autoFocus_;
       }
       /**
-       * <code>bool autoFocus = 6;</code>
+       * <code>bool autoFocus = 7;</code>
        * @param value The autoFocus to set.
        * @return This builder for chaining.
        */
@@ -36583,7 +39973,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>bool autoFocus = 6;</code>
+       * <code>bool autoFocus = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearAutoFocus() {
@@ -36595,7 +39985,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private boolean stabilization_ ;
       /**
-       * <code>bool stabilization = 7;</code>
+       * <code>bool stabilization = 8;</code>
        * @return The stabilization.
        */
       @java.lang.Override
@@ -36603,7 +39993,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return stabilization_;
       }
       /**
-       * <code>bool stabilization = 7;</code>
+       * <code>bool stabilization = 8;</code>
        * @param value The stabilization to set.
        * @return This builder for chaining.
        */
@@ -36614,7 +40004,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>bool stabilization = 7;</code>
+       * <code>bool stabilization = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearStabilization() {
@@ -36626,7 +40016,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private boolean faceDetection_ ;
       /**
-       * <code>bool faceDetection = 8;</code>
+       * <code>bool faceDetection = 9;</code>
        * @return The faceDetection.
        */
       @java.lang.Override
@@ -36634,7 +40024,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return faceDetection_;
       }
       /**
-       * <code>bool faceDetection = 8;</code>
+       * <code>bool faceDetection = 9;</code>
        * @param value The faceDetection to set.
        * @return This builder for chaining.
        */
@@ -36645,7 +40035,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>bool faceDetection = 8;</code>
+       * <code>bool faceDetection = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearFaceDetection() {
@@ -36657,7 +40047,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
       private int zoom_ ;
       /**
-       * <code>int32 zoom = 9;</code>
+       * <code>int32 zoom = 10;</code>
        * @return The zoom.
        */
       @java.lang.Override
@@ -36665,7 +40055,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return zoom_;
       }
       /**
-       * <code>int32 zoom = 9;</code>
+       * <code>int32 zoom = 10;</code>
        * @param value The zoom to set.
        * @return This builder for chaining.
        */
@@ -36676,7 +40066,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         return this;
       }
       /**
-       * <code>int32 zoom = 9;</code>
+       * <code>int32 zoom = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearZoom() {
@@ -36929,6 +40319,21 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PhonePressureConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Point_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Point_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Rect_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Rect_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CameraFace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CameraFace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PhoneStreamingData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37040,32 +40445,42 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       "neAccelerationConfig\"\'\n\025PhoneAmbientLigh" +
       "tData\022\016\n\006si_lux\030\001 \001(\002\"\031\n\027PhoneAmbientLig" +
       "htConfig\" \n\021PhonePressureData\022\013\n\003hpa\030\001 \001" +
-      "(\002\"\025\n\023PhonePressureConfig\"Y\n\022PhoneStream" +
-      "ingData\022%\n\006status\030\001 \001(\0162\025.PhoneStreaming" +
-      "Status\022\013\n\003fps\030\002 \001(\002\022\017\n\007bitrate\030\003 \001(\002\"\312\001\n" +
-      "\024PhoneStreamingConfig\022\021\n\tactivated\030\001 \001(\010" +
-      "\022\013\n\003url\030\002 \001(\t\022%\n\006camera\030\003 \001(\0162\025.PhoneStr" +
-      "eamingCamera\022\r\n\005light\030\004 \001(\010\022\r\n\005audio\030\005 \001" +
-      "(\010\022\021\n\tautoFocus\030\006 \001(\010\022\025\n\rstabilization\030\007" +
-      " \001(\010\022\025\n\rfaceDetection\030\010 \001(\010\022\014\n\004zoom\030\t \001(" +
-      "\005*Z\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n" +
-      "\016DURATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVI" +
-      "RTUAL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n\021REA" +
-      "DY_CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n" +
-      "\020HIGH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRATION" +
-      "\020\003\022$\n WAITING_CONFIRMATION_CALIBRATION\020\004" +
-      "*y\n\025CalibrationStepStatus\022\033\n\027INSUFFISANT" +
-      "_DATA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATUS\020\001\022" +
-      "\020\n\014ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_STATU" +
-      "S\020\003*r\n\020CalibrationError\022\016\n\nNONE_ERROR\020\000\022" +
-      "\031\n\025ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTABLE_D" +
-      "ATA_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERROR\020\003*" +
-      "@\n\017RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020" +
-      "\001\022\013\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003*0\n\024PhoneStream" +
-      "ingStatus\022\013\n\007STOPPED\020\000\022\013\n\007RUNNING\020\001*+\n\024P" +
-      "honeStreamingCamera\022\010\n\004BACK\020\000\022\t\n\005FRONT\020\001" +
-      "B+\n)ca.berlingoqc.growbe_android_module." +
-      "protob\006proto3"
+      "(\002\"\025\n\023PhonePressureConfig\"\035\n\005Point\022\t\n\001x\030" +
+      "\001 \001(\005\022\t\n\001y\030\002 \001(\005\"@\n\004Rect\022\013\n\003top\030\001 \001(\005\022\r\n" +
+      "\005right\030\002 \001(\005\022\016\n\006bottom\030\003 \001(\005\022\014\n\004left\030\004 \001" +
+      "(\005\"\206\001\n\nCameraFace\022\n\n\002id\030\001 \001(\005\022\r\n\005score\030\002" +
+      " \001(\005\022\023\n\004rect\030\003 \001(\0132\005.Rect\022\025\n\005mouth\030\004 \001(\013" +
+      "2\006.Point\022\027\n\007leftEye\030\005 \001(\0132\006.Point\022\030\n\010rig" +
+      "htEye\030\006 \001(\0132\006.Point\"\204\001\n\022PhoneStreamingDa" +
+      "ta\022%\n\006status\030\001 \001(\0162\025.PhoneStreamingStatu" +
+      "s\022\013\n\003fps\030\002 \001(\002\022\017\n\007bitrate\030\003 \001(\002\022\032\n\005faces" +
+      "\030\004 \003(\0132\013.CameraFace\022\r\n\005error\030\005 \001(\t\"\361\001\n\024P" +
+      "honeStreamingConfig\022\021\n\tactivated\030\001 \001(\010\022%" +
+      "\n\006output\030\002 \001(\0162\025.PhoneStreamingOutput\022\013\n" +
+      "\003url\030\003 \001(\t\022%\n\006camera\030\004 \001(\0162\025.PhoneStream" +
+      "ingCamera\022\r\n\005light\030\005 \001(\010\022\r\n\005audio\030\006 \001(\010\022" +
+      "\021\n\tautoFocus\030\007 \001(\010\022\025\n\rstabilization\030\010 \001(" +
+      "\010\022\025\n\rfaceDetection\030\t \001(\010\022\014\n\004zoom\030\n \001(\005*Z" +
+      "\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DU" +
+      "RATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTU" +
+      "AL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n\021READY_" +
+      "CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HI" +
+      "GH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022" +
+      "$\n WAITING_CONFIRMATION_CALIBRATION\020\004*y\n" +
+      "\025CalibrationStepStatus\022\033\n\027INSUFFISANT_DA" +
+      "TA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014" +
+      "ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_STATUS\020\003" +
+      "*r\n\020CalibrationError\022\016\n\nNONE_ERROR\020\000\022\031\n\025" +
+      "ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTABLE_DATA" +
+      "_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERROR\020\003*@\n\017" +
+      "RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013" +
+      "\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003*;\n\024PhoneStreaming" +
+      "Status\022\013\n\007STOPPED\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERRO" +
+      "R\020\002*+\n\024PhoneStreamingCamera\022\010\n\004BACK\020\000\022\t\n" +
+      "\005FRONT\020\001*C\n\024PhoneStreamingOutput\022\n\n\006STRE" +
+      "AM\020\000\022\n\n\006RECORD\020\001\022\023\n\017STREAM_N_RECORD\020\002B+\n" +
+      ")ca.berlingoqc.growbe_android_module.pro" +
+      "tob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37299,18 +40714,36 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhonePressureConfig_descriptor,
         new java.lang.String[] { });
-    internal_static_PhoneStreamingData_descriptor =
+    internal_static_Point_descriptor =
       getDescriptor().getMessageTypes().get(37);
+    internal_static_Point_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Point_descriptor,
+        new java.lang.String[] { "X", "Y", });
+    internal_static_Rect_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_Rect_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Rect_descriptor,
+        new java.lang.String[] { "Top", "Right", "Bottom", "Left", });
+    internal_static_CameraFace_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_CameraFace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CameraFace_descriptor,
+        new java.lang.String[] { "Id", "Score", "Rect", "Mouth", "LeftEye", "RightEye", });
+    internal_static_PhoneStreamingData_descriptor =
+      getDescriptor().getMessageTypes().get(40);
     internal_static_PhoneStreamingData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhoneStreamingData_descriptor,
-        new java.lang.String[] { "Status", "Fps", "Bitrate", });
+        new java.lang.String[] { "Status", "Fps", "Bitrate", "Faces", "Error", });
     internal_static_PhoneStreamingConfig_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_PhoneStreamingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhoneStreamingConfig_descriptor,
-        new java.lang.String[] { "Activated", "Url", "Camera", "Light", "Audio", "AutoFocus", "Stabilization", "FaceDetection", "Zoom", });
+        new java.lang.String[] { "Activated", "Output", "Url", "Camera", "Light", "Audio", "AutoFocus", "Stabilization", "FaceDetection", "Zoom", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

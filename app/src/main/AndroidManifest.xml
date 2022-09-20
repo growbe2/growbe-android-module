@@ -45,6 +45,11 @@
             android:exported="true"
             android:foregroundServiceType="location"
             android:process=".process" />
+        <service
+            android:name=".services.SoundAnalyzeService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=".process" />
 
         <activity
             android:name=".SettingsActivity"

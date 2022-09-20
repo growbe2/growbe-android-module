@@ -72,6 +72,95 @@ object PhoneStreamingDataKt {
     fun clearBitrate() {
       _builder.clearBitrate()
     }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    class FacesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+     val faces: com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.getFacesList()
+      )
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     * @param value The faces to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addFaces")
+    fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.add(value: ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) {
+      _builder.addFaces(value)
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     * @param value The faces to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignFaces")
+    @Suppress("NOTHING_TO_INLINE")
+    inline operator fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.plusAssign(value: ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) {
+      add(value)
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     * @param values The faces to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllFaces")
+    fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.addAll(values: kotlin.collections.Iterable<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace>) {
+      _builder.addAllFaces(values)
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     * @param values The faces to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllFaces")
+    @Suppress("NOTHING_TO_INLINE")
+    inline operator fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.plusAssign(values: kotlin.collections.Iterable<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace>) {
+      addAll(values)
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The faces to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setFaces")
+    operator fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.set(index: kotlin.Int, value: ca.berlingoqc.growbe_android_module.proto.Module.CameraFace) {
+      _builder.setFaces(index, value)
+    }
+    /**
+     * <code>repeated .CameraFace faces = 4;</code>
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearFaces")
+    fun com.google.protobuf.kotlin.DslList<ca.berlingoqc.growbe_android_module.proto.Module.CameraFace, FacesProxy>.clear() {
+      _builder.clearFaces()
+    }
+
+
+    /**
+     * <code>string error = 5;</code>
+     */
+    var error: kotlin.String
+      @JvmName("getError")
+      get() = _builder.getError()
+      @JvmName("setError")
+      set(value) {
+        _builder.setError(value)
+      }
+    /**
+     * <code>string error = 5;</code>
+     */
+    fun clearError() {
+      _builder.clearError()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

@@ -2,28 +2,18 @@ package ca.berlingoqc.growbe_android_module
 
 import android.Manifest
 import android.content.*
-import android.content.pm.ModuleInfo
 import android.content.pm.PackageManager
-import android.graphics.Camera
-import android.hardware.camera2.CameraDevice
 import android.os.Build
 import android.os.Bundle
-import android.os.IBinder
-import android.view.WindowManager
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.core.app.ActivityCompat
-import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.PositionService
 import ca.berlingoqc.growbe_android_module.services.SensorService
 import ca.berlingoqc.growbe_android_module.services.gatt.GattServerService
-import ca.berlingoqc.growbe_android_module.services.streamingService
 import ca.berlingoqc.growbe_android_module.services.ws.WebSocketService
 import android.util.Log
-import android.widget.Button
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import ca.berlingoqc.growbe_android_module.proto.Module
 
 
 class SettingsActivity: AppCompatActivity() {
@@ -44,7 +34,13 @@ class SettingsActivity: AppCompatActivity() {
         startService(intent)
 
         intent = Intent(this, PositionService::class.java)
+        
         startService(intent)
+
+        /*
+        intent = Intent(this, SoundAnalyzeService::class.java)
+        startService(intent);
+        */
     }
 
     override fun onResume() {

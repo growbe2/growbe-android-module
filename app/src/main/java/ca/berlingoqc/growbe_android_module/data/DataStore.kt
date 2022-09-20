@@ -5,7 +5,7 @@ import android.content.Context
 import android.provider.Settings
 import ca.berlingoqc.growbe_android_module.proto.Module
 
-class DataStore {
+object dataStore {
 
     var positionChanged: () -> Int = { 0 };
     var accelerationChanged: () -> Int = { 0 };
@@ -16,10 +16,12 @@ class DataStore {
     var streamingConfigChanged: () -> Int = { 0 };
 
 
-    var moduleId: String? = null
-        set(value) { field = value; }
+    var mainboardIdChanged: () -> Int = { 0 };
+
+
+    var moduleId: String? = null;
     var mainboardId: String? = null
-        set(value) { field = value; }
+        set(value) { field = value; mainboardIdChanged() }
 
     val supportedModules: Array<String> = arrayOf("PPO", "PAC", "PPR", "PAL", "PCS");
 
@@ -45,8 +47,4 @@ class DataStore {
             Settings.Secure.ANDROID_ID
         ).substring(0, 9).uppercase()
     }
-
-
 }
-
-public val dataStore = DataStore()
