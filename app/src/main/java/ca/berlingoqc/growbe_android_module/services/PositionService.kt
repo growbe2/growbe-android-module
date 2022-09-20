@@ -26,8 +26,6 @@ class PositionService : Service() {
 
         locationCallback = object: LocationCallback() {
             override fun onLocationResult(p0: LocationResult) {
-                Log.i(TAG, "Updating position $p0")
-
                 val lastLocation = p0.lastLocation ?: return
 
                 dataStore.position = Module.PhonePositionData.newBuilder()
@@ -38,6 +36,7 @@ class PositionService : Service() {
         }
 
         val request = LocationRequest.create();
+        request.interval = 3000;
         fusedLocationClient.requestLocationUpdates(request, locationCallback, Looper.myLooper())
 
 

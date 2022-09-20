@@ -55,11 +55,17 @@ class SensorService : Service() , SensorEventListener {
     override fun onSensorChanged(p0: SensorEvent?) {
         when {
             p0?.sensor?.type == Sensor.TYPE_ACCELEROMETER -> {
-                dataStore.acceleration = Module.PhoneAccelerationData.newBuilder()
-                    .setGx(p0.values[0])
-                    .setGy(p0.values[1])
-                    .setGz(p0.values[2])
-                    .build()
+                if (
+                   is_different_of(dataStore.acceleration?.gx ?: 0f, p0.values[0], 0.05f) ||
+                   is_different_of(dataStore.acceleration?.gy ?: 0f, p0.values[1], 0.05f) ||
+                   is_different_of(dataStore.acceleration?.gz ?: 0f, p0.values[2], 0.05f)
+                ) {
+                    dataStore.acceleration = Module.PhoneAccelerationData.newBuilder()
+                        .setGx(p0.values[0])
+                        .setGy(p0.values[1])
+                        .setGz(p0.values[2])
+                        .build()
+                }
             }
             p0?.sensor?.type == Sensor.TYPE_LIGHT -> {
                 dataStore.light = Module.PhoneAmbientLightData.newBuilder()
@@ -67,15 +73,20 @@ class SensorService : Service() , SensorEventListener {
                     .build()
             }
             p0?.sensor?.type == Sensor.TYPE_PRESSURE -> {
-                dataStore.pressure = Module.PhonePressureData.newBuilder()
-                    .setHpa(p0.values[0])
-                    .build()
+                if (is_different_of(dataStore.pressure?.hpa ?: 0f, p0.values[0], 0.03f)) {
+                    dataStore.pressure = Module.PhonePressureData.newBuilder()
+                        .setHpa(p0.values[0])
+                        .build()
+                }
             }
         }
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
         Log.i(TAG, "Sensor accuracy changed $p0 $p1")
+    }
 
+    private fun is_different_of(past_value: Float, value: Float, diff: Float): Boolean {
+        return (past_value - diff) >= value || (past_value + diff) <= value
     }
 }

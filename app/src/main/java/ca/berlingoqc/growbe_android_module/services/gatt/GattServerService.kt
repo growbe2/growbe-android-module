@@ -17,7 +17,7 @@ import android.util.Log
 import ca.berlingoqc.growbe_android_module.data.dataStore
 import ca.berlingoqc.growbe_android_module.services.gatt.profiles.GrowbeModuleProfile
 
-private const val TAG = "GattServerActivity"
+private const val TAG = "GattServerService"
 
 class GattServerService : Service() {
 
@@ -52,6 +52,11 @@ class GattServerService : Service() {
         }
 
         unregisterReceiver(bluetoothReceiver)
+    }
+
+    override fun onCreate() {
+        Log.i(TAG, "Creating gatt server")
+        super.onCreate()
     }
 
     /**
@@ -190,13 +195,13 @@ class GattServerService : Service() {
                 GrowbeModuleProfile.REGISTER_MAINBOARD_ID == characteristic?.uuid -> {
                     val v = value?.toString()
                     Log.i(TAG, "Write Module ID $v")
-                    GrowbeModuleProfile.setLinkMainboardId(v!!)
                     if (responseNeeded) {
                         bluetoothGattServer?.sendResponse(device,
                             requestId,
                             BluetoothGatt.GATT_SUCCESS,
                             0, null)
                     }
+                    TODO("save to mainboard id");
                 }
                 else -> {
                     // Invalid characteristic
@@ -245,7 +250,7 @@ class GattServerService : Service() {
     fun startServer() {
         bluetoothGattServer = bluetoothManager.openGattServer(this, gattServerCallback)
 
-        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService(this)) ?: Log.w(
+        bluetoothGattServer?.addService(GrowbeModuleProfile.createGrowbeModuleService()) ?: Log.w(
             TAG, "Unable to create GATT server")
     }
 
