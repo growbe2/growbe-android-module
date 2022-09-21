@@ -55,6 +55,74 @@ object PhonePositionDataKt {
     fun clearLog() {
       _builder.clearLog()
     }
+
+    /**
+     * <code>float accuracy = 3;</code>
+     */
+    var accuracy: kotlin.Float
+      @JvmName("getAccuracy")
+      get() = _builder.getAccuracy()
+      @JvmName("setAccuracy")
+      set(value) {
+        _builder.setAccuracy(value)
+      }
+    /**
+     * <code>float accuracy = 3;</code>
+     */
+    fun clearAccuracy() {
+      _builder.clearAccuracy()
+    }
+
+    /**
+     * <code>double altitude = 4;</code>
+     */
+    var altitude: kotlin.Double
+      @JvmName("getAltitude")
+      get() = _builder.getAltitude()
+      @JvmName("setAltitude")
+      set(value) {
+        _builder.setAltitude(value)
+      }
+    /**
+     * <code>double altitude = 4;</code>
+     */
+    fun clearAltitude() {
+      _builder.clearAltitude()
+    }
+
+    /**
+     * <code>float bearing = 5;</code>
+     */
+    var bearing: kotlin.Float
+      @JvmName("getBearing")
+      get() = _builder.getBearing()
+      @JvmName("setBearing")
+      set(value) {
+        _builder.setBearing(value)
+      }
+    /**
+     * <code>float bearing = 5;</code>
+     */
+    fun clearBearing() {
+      _builder.clearBearing()
+    }
+
+    /**
+     * <code>float speed = 7;</code>
+     */
+    var speed: kotlin.Float
+      @JvmName("getSpeed")
+      get() = _builder.getSpeed()
+      @JvmName("setSpeed")
+      set(value) {
+        _builder.setSpeed(value)
+      }
+    /**
+     * <code>float speed = 7;</code>
+     */
+    fun clearSpeed() {
+      _builder.clearSpeed()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

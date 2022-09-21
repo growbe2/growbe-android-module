@@ -29,6 +29,10 @@ class PositionService : Service() {
                 val lastLocation = p0.lastLocation ?: return
 
                 dataStore.position = Module.PhonePositionData.newBuilder()
+                    .setAccuracy(lastLocation.accuracy)
+                    .setAltitude(lastLocation.altitude)
+                    .setBearing(lastLocation.bearing)
+                    .setSpeed(lastLocation.speed)
                     .setLat(lastLocation.latitude.toFloat())
                     .setLog(lastLocation.longitude.toFloat())
                     .build()
@@ -36,9 +40,8 @@ class PositionService : Service() {
         }
 
         val request = LocationRequest.create();
-        request.interval = 3000;
+        request.interval = 1000;
         fusedLocationClient.requestLocationUpdates(request, locationCallback, Looper.myLooper())
-
 
         return START_STICKY
     }
