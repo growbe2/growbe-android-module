@@ -31171,6 +31171,30 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
      * @return The log.
      */
     float getLog();
+
+    /**
+     * <code>float accuracy = 3;</code>
+     * @return The accuracy.
+     */
+    float getAccuracy();
+
+    /**
+     * <code>double altitude = 4;</code>
+     * @return The altitude.
+     */
+    double getAltitude();
+
+    /**
+     * <code>float bearing = 5;</code>
+     * @return The bearing.
+     */
+    float getBearing();
+
+    /**
+     * <code>float speed = 7;</code>
+     * @return The speed.
+     */
+    float getSpeed();
   }
   /**
    * Protobuf type {@code PhonePositionData}
@@ -31225,6 +31249,26 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
             case 21: {
 
               log_ = input.readFloat();
+              break;
+            }
+            case 29: {
+
+              accuracy_ = input.readFloat();
+              break;
+            }
+            case 33: {
+
+              altitude_ = input.readDouble();
+              break;
+            }
+            case 45: {
+
+              bearing_ = input.readFloat();
+              break;
+            }
+            case 61: {
+
+              speed_ = input.readFloat();
               break;
             }
             default: {
@@ -31283,6 +31327,50 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       return log_;
     }
 
+    public static final int ACCURACY_FIELD_NUMBER = 3;
+    private float accuracy_;
+    /**
+     * <code>float accuracy = 3;</code>
+     * @return The accuracy.
+     */
+    @java.lang.Override
+    public float getAccuracy() {
+      return accuracy_;
+    }
+
+    public static final int ALTITUDE_FIELD_NUMBER = 4;
+    private double altitude_;
+    /**
+     * <code>double altitude = 4;</code>
+     * @return The altitude.
+     */
+    @java.lang.Override
+    public double getAltitude() {
+      return altitude_;
+    }
+
+    public static final int BEARING_FIELD_NUMBER = 5;
+    private float bearing_;
+    /**
+     * <code>float bearing = 5;</code>
+     * @return The bearing.
+     */
+    @java.lang.Override
+    public float getBearing() {
+      return bearing_;
+    }
+
+    public static final int SPEED_FIELD_NUMBER = 7;
+    private float speed_;
+    /**
+     * <code>float speed = 7;</code>
+     * @return The speed.
+     */
+    @java.lang.Override
+    public float getSpeed() {
+      return speed_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31303,6 +31391,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToRawIntBits(log_) != 0) {
         output.writeFloat(2, log_);
       }
+      if (java.lang.Float.floatToRawIntBits(accuracy_) != 0) {
+        output.writeFloat(3, accuracy_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(altitude_) != 0) {
+        output.writeDouble(4, altitude_);
+      }
+      if (java.lang.Float.floatToRawIntBits(bearing_) != 0) {
+        output.writeFloat(5, bearing_);
+      }
+      if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
+        output.writeFloat(7, speed_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -31319,6 +31419,22 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToRawIntBits(log_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, log_);
+      }
+      if (java.lang.Float.floatToRawIntBits(accuracy_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, accuracy_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(altitude_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(4, altitude_);
+      }
+      if (java.lang.Float.floatToRawIntBits(bearing_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, bearing_);
+      }
+      if (java.lang.Float.floatToRawIntBits(speed_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(7, speed_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -31341,6 +31457,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       if (java.lang.Float.floatToIntBits(getLog())
           != java.lang.Float.floatToIntBits(
               other.getLog())) return false;
+      if (java.lang.Float.floatToIntBits(getAccuracy())
+          != java.lang.Float.floatToIntBits(
+              other.getAccuracy())) return false;
+      if (java.lang.Double.doubleToLongBits(getAltitude())
+          != java.lang.Double.doubleToLongBits(
+              other.getAltitude())) return false;
+      if (java.lang.Float.floatToIntBits(getBearing())
+          != java.lang.Float.floatToIntBits(
+              other.getBearing())) return false;
+      if (java.lang.Float.floatToIntBits(getSpeed())
+          != java.lang.Float.floatToIntBits(
+              other.getSpeed())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -31358,6 +31486,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       hash = (37 * hash) + LOG_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getLog());
+      hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAccuracy());
+      hash = (37 * hash) + ALTITUDE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAltitude()));
+      hash = (37 * hash) + BEARING_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getBearing());
+      hash = (37 * hash) + SPEED_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSpeed());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -31495,6 +31635,14 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
 
         log_ = 0F;
 
+        accuracy_ = 0F;
+
+        altitude_ = 0D;
+
+        bearing_ = 0F;
+
+        speed_ = 0F;
+
         return this;
       }
 
@@ -31523,6 +31671,10 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData result = new ca.berlingoqc.growbe_android_module.proto.Module.PhonePositionData(this);
         result.lat_ = lat_;
         result.log_ = log_;
+        result.accuracy_ = accuracy_;
+        result.altitude_ = altitude_;
+        result.bearing_ = bearing_;
+        result.speed_ = speed_;
         onBuilt();
         return result;
       }
@@ -31576,6 +31728,18 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
         }
         if (other.getLog() != 0F) {
           setLog(other.getLog());
+        }
+        if (other.getAccuracy() != 0F) {
+          setAccuracy(other.getAccuracy());
+        }
+        if (other.getAltitude() != 0D) {
+          setAltitude(other.getAltitude());
+        }
+        if (other.getBearing() != 0F) {
+          setBearing(other.getBearing());
+        }
+        if (other.getSpeed() != 0F) {
+          setSpeed(other.getSpeed());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -31664,6 +31828,130 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       public Builder clearLog() {
         
         log_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float accuracy_ ;
+      /**
+       * <code>float accuracy = 3;</code>
+       * @return The accuracy.
+       */
+      @java.lang.Override
+      public float getAccuracy() {
+        return accuracy_;
+      }
+      /**
+       * <code>float accuracy = 3;</code>
+       * @param value The accuracy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccuracy(float value) {
+        
+        accuracy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float accuracy = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccuracy() {
+        
+        accuracy_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private double altitude_ ;
+      /**
+       * <code>double altitude = 4;</code>
+       * @return The altitude.
+       */
+      @java.lang.Override
+      public double getAltitude() {
+        return altitude_;
+      }
+      /**
+       * <code>double altitude = 4;</code>
+       * @param value The altitude to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAltitude(double value) {
+        
+        altitude_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double altitude = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAltitude() {
+        
+        altitude_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private float bearing_ ;
+      /**
+       * <code>float bearing = 5;</code>
+       * @return The bearing.
+       */
+      @java.lang.Override
+      public float getBearing() {
+        return bearing_;
+      }
+      /**
+       * <code>float bearing = 5;</code>
+       * @param value The bearing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBearing(float value) {
+        
+        bearing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float bearing = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBearing() {
+        
+        bearing_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float speed_ ;
+      /**
+       * <code>float speed = 7;</code>
+       * @return The speed.
+       */
+      @java.lang.Override
+      public float getSpeed() {
+        return speed_;
+      }
+      /**
+       * <code>float speed = 7;</code>
+       * @param value The speed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeed(float value) {
+        
+        speed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float speed = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpeed() {
+        
+        speed_ = 0F;
         onChanged();
         return this;
       }
@@ -40438,49 +40726,50 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
       "ig\022!\n\005pump0\030\005 \001(\0132\022.RelayOutletConfig\022!\n" +
       "\005pump1\030\006 \001(\0132\022.RelayOutletConfig\022!\n\005pump" +
       "2\030\007 \001(\0132\022.RelayOutletConfig\022!\n\005pump3\030\010 \001" +
-      "(\0132\022.RelayOutletConfig\"-\n\021PhonePositionD" +
-      "ata\022\013\n\003lat\030\001 \001(\002\022\013\n\003log\030\002 \001(\002\"\025\n\023PhonePo" +
-      "sitionConfig\";\n\025PhoneAccelerationData\022\n\n" +
-      "\002gx\030\001 \001(\002\022\n\n\002gy\030\002 \001(\002\022\n\n\002gz\030\003 \001(\002\"\031\n\027Pho" +
-      "neAccelerationConfig\"\'\n\025PhoneAmbientLigh" +
-      "tData\022\016\n\006si_lux\030\001 \001(\002\"\031\n\027PhoneAmbientLig" +
-      "htConfig\" \n\021PhonePressureData\022\013\n\003hpa\030\001 \001" +
-      "(\002\"\025\n\023PhonePressureConfig\"\035\n\005Point\022\t\n\001x\030" +
-      "\001 \001(\005\022\t\n\001y\030\002 \001(\005\"@\n\004Rect\022\013\n\003top\030\001 \001(\005\022\r\n" +
-      "\005right\030\002 \001(\005\022\016\n\006bottom\030\003 \001(\005\022\014\n\004left\030\004 \001" +
-      "(\005\"\206\001\n\nCameraFace\022\n\n\002id\030\001 \001(\005\022\r\n\005score\030\002" +
-      " \001(\005\022\023\n\004rect\030\003 \001(\0132\005.Rect\022\025\n\005mouth\030\004 \001(\013" +
-      "2\006.Point\022\027\n\007leftEye\030\005 \001(\0132\006.Point\022\030\n\010rig" +
-      "htEye\030\006 \001(\0132\006.Point\"\204\001\n\022PhoneStreamingDa" +
-      "ta\022%\n\006status\030\001 \001(\0162\025.PhoneStreamingStatu" +
-      "s\022\013\n\003fps\030\002 \001(\002\022\017\n\007bitrate\030\003 \001(\002\022\032\n\005faces" +
-      "\030\004 \003(\0132\013.CameraFace\022\r\n\005error\030\005 \001(\t\"\361\001\n\024P" +
-      "honeStreamingConfig\022\021\n\tactivated\030\001 \001(\010\022%" +
-      "\n\006output\030\002 \001(\0162\025.PhoneStreamingOutput\022\013\n" +
-      "\003url\030\003 \001(\t\022%\n\006camera\030\004 \001(\0162\025.PhoneStream" +
-      "ingCamera\022\r\n\005light\030\005 \001(\010\022\r\n\005audio\030\006 \001(\010\022" +
-      "\021\n\tautoFocus\030\007 \001(\010\022\025\n\rstabilization\030\010 \001(" +
-      "\010\022\025\n\rfaceDetection\030\t \001(\010\022\014\n\004zoom\030\n \001(\005*Z" +
-      "\n\tActorType\022\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DU" +
-      "RATION_ACTOR\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTU" +
-      "AL_ACTOR\020\003*\220\001\n\017CalibrationStep\022\025\n\021READY_" +
-      "CALIBRATION\020\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HI" +
-      "GH_CALIBRATION\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022" +
-      "$\n WAITING_CONFIRMATION_CALIBRATION\020\004*y\n" +
-      "\025CalibrationStepStatus\022\033\n\027INSUFFISANT_DA" +
-      "TA_STATUS\020\000\022\027\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014" +
-      "ERROR_STATUS\020\002\022\030\n\024AWAITING_STEP_STATUS\020\003" +
-      "*r\n\020CalibrationError\022\016\n\nNONE_ERROR\020\000\022\031\n\025" +
-      "ALREADY_STARTED_ERROR\020\001\022\027\n\023INSTABLE_DATA" +
-      "_ERROR\020\002\022\032\n\026NOT_ENOUGHT_DATA_ERROR\020\003*@\n\017" +
-      "RelayOutletMode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013" +
-      "\n\007VIRTUAL\020\002\022\t\n\005CYCLE\020\003*;\n\024PhoneStreaming" +
-      "Status\022\013\n\007STOPPED\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERRO" +
-      "R\020\002*+\n\024PhoneStreamingCamera\022\010\n\004BACK\020\000\022\t\n" +
-      "\005FRONT\020\001*C\n\024PhoneStreamingOutput\022\n\n\006STRE" +
-      "AM\020\000\022\n\n\006RECORD\020\001\022\023\n\017STREAM_N_RECORD\020\002B+\n" +
-      ")ca.berlingoqc.growbe_android_module.pro" +
-      "tob\006proto3"
+      "(\0132\022.RelayOutletConfig\"q\n\021PhonePositionD" +
+      "ata\022\013\n\003lat\030\001 \001(\002\022\013\n\003log\030\002 \001(\002\022\020\n\010accurac" +
+      "y\030\003 \001(\002\022\020\n\010altitude\030\004 \001(\001\022\017\n\007bearing\030\005 \001" +
+      "(\002\022\r\n\005speed\030\007 \001(\002\"\025\n\023PhonePositionConfig" +
+      "\";\n\025PhoneAccelerationData\022\n\n\002gx\030\001 \001(\002\022\n\n" +
+      "\002gy\030\002 \001(\002\022\n\n\002gz\030\003 \001(\002\"\031\n\027PhoneAccelerati" +
+      "onConfig\"\'\n\025PhoneAmbientLightData\022\016\n\006si_" +
+      "lux\030\001 \001(\002\"\031\n\027PhoneAmbientLightConfig\" \n\021" +
+      "PhonePressureData\022\013\n\003hpa\030\001 \001(\002\"\025\n\023PhoneP" +
+      "ressureConfig\"\035\n\005Point\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002" +
+      " \001(\005\"@\n\004Rect\022\013\n\003top\030\001 \001(\005\022\r\n\005right\030\002 \001(\005" +
+      "\022\016\n\006bottom\030\003 \001(\005\022\014\n\004left\030\004 \001(\005\"\206\001\n\nCamer" +
+      "aFace\022\n\n\002id\030\001 \001(\005\022\r\n\005score\030\002 \001(\005\022\023\n\004rect" +
+      "\030\003 \001(\0132\005.Rect\022\025\n\005mouth\030\004 \001(\0132\006.Point\022\027\n\007" +
+      "leftEye\030\005 \001(\0132\006.Point\022\030\n\010rightEye\030\006 \001(\0132" +
+      "\006.Point\"\204\001\n\022PhoneStreamingData\022%\n\006status" +
+      "\030\001 \001(\0162\025.PhoneStreamingStatus\022\013\n\003fps\030\002 \001" +
+      "(\002\022\017\n\007bitrate\030\003 \001(\002\022\032\n\005faces\030\004 \003(\0132\013.Cam" +
+      "eraFace\022\r\n\005error\030\005 \001(\t\"\361\001\n\024PhoneStreamin" +
+      "gConfig\022\021\n\tactivated\030\001 \001(\010\022%\n\006output\030\002 \001" +
+      "(\0162\025.PhoneStreamingOutput\022\013\n\003url\030\003 \001(\t\022%" +
+      "\n\006camera\030\004 \001(\0162\025.PhoneStreamingCamera\022\r\n" +
+      "\005light\030\005 \001(\010\022\r\n\005audio\030\006 \001(\010\022\021\n\tautoFocus" +
+      "\030\007 \001(\010\022\025\n\rstabilization\030\010 \001(\010\022\025\n\rfaceDet" +
+      "ection\030\t \001(\010\022\014\n\004zoom\030\n \001(\005*Z\n\tActorType\022" +
+      "\025\n\021MANUAL_USER_ACTOR\020\000\022\022\n\016DURATION_ACTOR" +
+      "\020\001\022\017\n\013ALARM_ACTOR\020\002\022\021\n\rVIRTUAL_ACTOR\020\003*\220" +
+      "\001\n\017CalibrationStep\022\025\n\021READY_CALIBRATION\020" +
+      "\000\022\023\n\017LOW_CALIBRATION\020\001\022\024\n\020HIGH_CALIBRATI" +
+      "ON\020\002\022\025\n\021ERROR_CALIBRATION\020\003\022$\n WAITING_C" +
+      "ONFIRMATION_CALIBRATION\020\004*y\n\025Calibration" +
+      "StepStatus\022\033\n\027INSUFFISANT_DATA_STATUS\020\000\022" +
+      "\027\n\023ENOUGHT_DATA_STATUS\020\001\022\020\n\014ERROR_STATUS" +
+      "\020\002\022\030\n\024AWAITING_STEP_STATUS\020\003*r\n\020Calibrat" +
+      "ionError\022\016\n\nNONE_ERROR\020\000\022\031\n\025ALREADY_STAR" +
+      "TED_ERROR\020\001\022\027\n\023INSTABLE_DATA_ERROR\020\002\022\032\n\026" +
+      "NOT_ENOUGHT_DATA_ERROR\020\003*@\n\017RelayOutletM" +
+      "ode\022\n\n\006MANUAL\020\000\022\t\n\005ALARM\020\001\022\013\n\007VIRTUAL\020\002\022" +
+      "\t\n\005CYCLE\020\003*;\n\024PhoneStreamingStatus\022\013\n\007ST" +
+      "OPPED\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002*+\n\024Phone" +
+      "StreamingCamera\022\010\n\004BACK\020\000\022\t\n\005FRONT\020\001*C\n\024" +
+      "PhoneStreamingOutput\022\n\n\006STREAM\020\000\022\n\n\006RECO" +
+      "RD\020\001\022\023\n\017STREAM_N_RECORD\020\002B+\n)ca.berlingo" +
+      "qc.growbe_android_module.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -40671,7 +40960,7 @@ ca.berlingoqc.growbe_android_module.proto.Module.VirtualRelayItem defaultValue);
     internal_static_PhonePositionData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PhonePositionData_descriptor,
-        new java.lang.String[] { "Lat", "Log", });
+        new java.lang.String[] { "Lat", "Log", "Accuracy", "Altitude", "Bearing", "Speed", });
     internal_static_PhonePositionConfig_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_PhonePositionConfig_fieldAccessorTable = new

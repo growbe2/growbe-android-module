@@ -18,9 +18,8 @@ class SensorService : Service() , SensorEventListener {
         Sensor.TYPE_ACCELEROMETER,
         Sensor.TYPE_LIGHT,
         Sensor.TYPE_PRESSURE,
-        //Sensor.TYPE_AMBIENT_TEMPERATURE,
-        //Sensor.TYPE_RELATIVE_HUMIDITY,
-        //Sensor.TYPE_TEMPERATURE
+        Sensor.TYPE_AMBIENT_TEMPERATURE,
+        Sensor.TYPE_RELATIVE_HUMIDITY,
     )
     private lateinit var sensorManager: SensorManager
 
